@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Copy comes from js/content.en.js via the data-i18n keys. -->
+  <title data-i18n="home.pageTitle">Avalon</title>
+  <meta name="description" data-i18n-content="home.metaDescription" content="">
+
+  <!-- PLACEHOLDER: working type pairing only, not final brand type. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/avalon.css">
+
+  <script>
+    /* Hide scroll-reveal targets before first paint, but only when we are
+       actually going to animate them. animations.js removes this class again
+       if GSAP never arrives, so the site is never left blank. */
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduce) document.documentElement.classList.add("gsapReady");
+    })();
+  </script>
+</head>
+
+<body data-page="home">
+
+  <noscript>
+    <p class="noscriptNotice">
+      This site needs JavaScript to display its content. Please enable it, or write to us directly.
+    </p>
+  </noscript>
+
+  <a class="skipLink" href="#mainContent" data-i18n="nav.skipToContent">Skip to main content</a>
+
+  <!-- Header and mobile menu are injected here by js/chrome.js -->
+  <div data-site-header></div>
+
+  <main id="mainContent">
+
+    <!-- ================================================================
+         HERO
+         ================================================================ -->
+    <section class="heroSection" data-hero>
+      <div class="heroMedia" data-parallax="0.08">
+        <img src="images/house/heroTerraceView.jpg"
+             data-i18n-alt="media.altHeroTerrace" alt="" fetchpriority="high">
+      </div>
+      <div class="heroScrim"></div>
+
+      <div class="heroContent">
+        <div class="sectionShell">
+          <span class="eyebrow" data-hero-item data-i18n="home.heroEyebrow"></span>
+          <h1 class="displayXl heroTitle" data-hero-item data-i18n="home.heroTitle"></h1>
+          <p class="heroLede" data-hero-item data-i18n="home.heroLede"></p>
+
+          <div class="buttonRow" data-hero-item>
+            <a class="buttonPrimary" href="admissions.html#waitlist" data-i18n="nav.waitlist"></a>
+            <a class="buttonGhost" href="#whatAvalonIs" data-i18n="home.introLink"></a>
+          </div>
+
+          <div class="heroFooter" data-hero-item>
+            <p class="heroCaption" data-i18n="home.heroCaption"></p>
+            <span class="scrollHint" data-i18n="home.heroScrollHint"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         MISSION — one line, given the whole screen
+         ================================================================ -->
+    <section class="sectionBlock">
+      <div class="sectionShell revealItem">
+        <span class="eyebrow" data-i18n="home.missionEyebrow"></span>
+        <p class="displayLg missionStatement" data-i18n="home.missionStatement"></p>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         WHAT AVALON IS
+         ================================================================ -->
+    <section class="sectionBlock bandParchmentDeep" id="whatAvalonIs">
+      <div class="sectionShell">
+        <div class="splitBlock">
+
+          <div class="splitMedia revealItem">
+            <img src="images/house/houseFacade.jpg" data-i18n-alt="media.altFacade" alt="" loading="lazy">
+          </div>
+
+          <div class="revealItem">
+            <span class="eyebrow" data-i18n="home.introEyebrow"></span>
+            <h2 class="displayMd" data-i18n="home.introTitle"></h2>
+            <div class="stackMd marginTopLg" data-i18n-paras="home.introParagraphs"></div>
+            <p class="marginTopLg">
+              <a class="linkQuiet" href="programs.html">
+                <span data-i18n="home.introLink"></span>
+                <span class="linkArrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         TRUST STRIP
+         ================================================================ -->
+    <section class="sectionBlockTight">
+      <div class="sectionShell">
+        <div class="trustStrip revealStagger">
+          <div class="trustItem">
+            <span class="trustItemLabel" data-i18n="home.trustOneLabel"></span>
+            <span class="trustItemText" data-i18n="home.trustOneText"></span>
+          </div>
+          <div class="trustItem">
+            <span class="trustItemLabel" data-i18n="home.trustTwoLabel"></span>
+            <span class="trustItemText" data-i18n="home.trustTwoText"></span>
+          </div>
+          <div class="trustItem">
+            <span class="trustItemLabel" data-i18n="home.trustThreeLabel"></span>
+            <span class="trustItemText" data-i18n="home.trustThreeText"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         THE SIX PILLARS — teaser cards
+         ================================================================ -->
+    <section class="sectionBlock">
+      <div class="sectionShell">
+
+        <div class="sectionHead revealItem">
+          <span class="eyebrow" data-i18n="home.exploreEyebrow"></span>
+          <h2 class="displayLg" data-i18n="home.exploreTitle"></h2>
+          <p class="leadText" data-i18n="home.exploreLead"></p>
+        </div>
+
+        <div class="cardGrid revealStagger">
+
+          <a class="teaserCard" href="programs.html">
+            <div class="teaserCardMedia">
+              <img src="images/house/commonDiningRoomTwo.jpg" data-i18n-alt="media.altDiningRoomTwo" alt="" loading="lazy">
+            </div>
+            <div class="teaserCardBody">
+              <h3 class="teaserCardTitle" data-i18n="home.cardProgramsTitle"></h3>
+              <p class="teaserCardText" data-i18n="home.cardProgramsText"></p>
+              <span class="teaserCardMeta" data-i18n="home.cardLinkLabel"></span>
+            </div>
+          </a>
+
+          <a class="teaserCard" href="treatments.html">
+            <div class="teaserCardMedia">
+              <img src="images/house/roomWindow.jpg" data-i18n-alt="media.altRoomWindow" alt="" loading="lazy">
+            </div>
+            <div class="teaserCardBody">
+              <h3 class="teaserCardTitle" data-i18n="home.cardTreatmentsTitle"></h3>
+              <p class="teaserCardText" data-i18n="home.cardTreatmentsText"></p>
+              <span class="teaserCardMeta" data-i18n="home.cardLinkLabel"></span>
+            </div>
+          </a>
+
+          <a class="teaserCard" href="solutions.html">
+            <div class="teaserCardMedia">
+              <img src="images/house/interiorStaircase.jpg" data-i18n-alt="media.altStaircase" alt="" loading="lazy">
+            </div>
+            <div class="teaserCardBody">
+              <h3 class="teaserCardTitle" data-i18n="home.cardSolutionsTitle"></h3>
+              <p class="teaserCardText" data-i18n="home.cardSolutionsText"></p>
+              <span class="teaserCardMeta" data-i18n="home.cardLinkLabel"></span>
+            </div>
+          </a>
+
+          <a class="teaserCard" href="house.html">
+            <div class="teaserCardMedia">
+              <img src="images/house/gardenPath.jpg" data-i18n-alt="media.altGardenPath" alt="" loading="lazy">
+            </div>
+            <div class="teaserCardBody">
+              <h3 class="teaserCardTitle" data-i18n="home.cardHouseTitle"></h3>
+              <p class="teaserCardText" data-i18n="home.cardHouseText"></p>
+              <span class="teaserCardMeta" data-i18n="home.cardLinkLabel"></span>
+            </div>
+          </a>
+
+          <a class="teaserCard" href="family.html">
+            <div class="teaserCardMedia">
+              <img src="images/house/gardenBench.jpg" data-i18n-alt="media.altGardenBench" alt="" loading="lazy">
+            </div>
+            <div class="teaserCardBody">
+              <h3 class="teaserCardTitle" data-i18n="home.cardFamilyTitle"></h3>
+              <p class="teaserCardText" data-i18n="home.cardFamilyText"></p>
+              <span class="teaserCardMeta" data-i18n="home.cardLinkLabel"></span>
+            </div>
+          </a>
+
+          <a class="teaserCard" href="admissions.html">
+            <div class="teaserCardMedia">
+              <img src="images/house/gardenStoneSteps.jpg" data-i18n-alt="media.altGardenSteps" alt="" loading="lazy">
+            </div>
+            <div class="teaserCardBody">
+              <h3 class="teaserCardTitle" data-i18n="home.cardAdmissionsTitle"></h3>
+              <p class="teaserCardText" data-i18n="home.cardAdmissionsText"></p>
+              <span class="teaserCardMeta" data-i18n="home.cardLinkLabel"></span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         WHY SINTRA — full bleed band with parallax
+         ================================================================ -->
+    <section class="imageBand">
+      <div class="imageBandMedia" data-parallax="0.1">
+        <img src="images/house/terraceCastleView.jpg" data-i18n-alt="media.altCastleView" alt="" loading="lazy">
+      </div>
+      <div class="imageBandScrim"></div>
+
+      <div class="imageBandContent">
+        <div class="sectionShell">
+          <div class="shellMid revealItem shellFlush">
+            <span class="eyebrow" data-i18n="home.sintraBandEyebrow"></span>
+            <h2 class="displayLg" data-i18n="home.sintraBandTitle"></h2>
+            <p class="bodyText marginTopLg" data-i18n="home.sintraBandBody"></p>
+            <p class="marginTopLg">
+              <a class="linkQuiet" href="house.html#whySintra">
+                <span data-i18n="home.sintraBandLink"></span>
+                <span class="linkArrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         FOUNDER QUOTE — the emotional anchor
+         PLACEHOLDER: quote text and attribution are holding copy.
+         ================================================================ -->
+    <section class="sectionBlock bandInk">
+      <div class="sectionShell">
+        <figure class="quoteBlock shellMid revealItem shellFlush">
+          <span class="eyebrow" data-i18n="home.quoteEyebrow"></span>
+          <span class="quoteMark" aria-hidden="true">&ldquo;</span>
+          <blockquote class="quoteText" data-i18n="home.quoteText"></blockquote>
+          <figcaption class="quoteAttribution" data-i18n="home.quoteAttribution"></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         ABOUT TEASER
+         ================================================================ -->
+    <section class="sectionBlock">
+      <div class="sectionShell">
+        <div class="splitBlock splitReverse">
+
+          <div class="splitMedia revealItem">
+            <img src="images/house/gardenVista.jpg" data-i18n-alt="media.altGardenVista" alt="" loading="lazy">
+          </div>
+
+          <div class="revealItem">
+            <span class="eyebrow" data-i18n="home.aboutEyebrow"></span>
+            <h2 class="displayMd" data-i18n="home.aboutTitle"></h2>
+            <p class="bodyText marginTopLg" data-i18n="home.aboutBody"></p>
+            <p class="marginTopLg">
+              <a class="linkQuiet" href="about.html">
+                <span data-i18n="home.aboutLink"></span>
+                <span class="linkArrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         WAITLIST CALL TO ACTION
+         ================================================================ -->
+    <section class="sectionBlock ctaBand">
+      <div class="sectionShell">
+        <div class="ctaBandInner revealItem">
+          <div>
+            <span class="eyebrow" data-i18n="cta.eyebrow"></span>
+            <h2 class="displayLg" data-i18n="cta.title"></h2>
+            <p class="bodyText marginTopLg" data-i18n="cta.body"></p>
+          </div>
+          <div>
+            <a class="buttonGhost" href="admissions.html#waitlist" data-i18n="cta.button"></a>
+            <p class="marginTopLg">
+              <a class="linkQuiet" href="admissions.html#process">
+                <span data-i18n="cta.secondary"></span>
+                <span class="linkArrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </p>
+            <p class="ctaBandAside marginTopLg" data-i18n="cta.aside"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer is injected here by js/chrome.js -->
+  <div data-site-footer></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/content.en.js"></script>
+  <script src="js/content.pt.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/avalon.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

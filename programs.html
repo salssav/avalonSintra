@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="programs.pageTitle">Our Programs — Avalon</title>
+  <meta name="description" data-i18n-content="programs.metaDescription" content="">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/avalon.css">
+
+  <script>
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduce) document.documentElement.classList.add("gsapReady");
+    })();
+  </script>
+</head>
+
+<body data-page="programs">
+
+  <noscript>
+    <p class="noscriptNotice">This site needs JavaScript to display its content.</p>
+  </noscript>
+
+  <a class="skipLink" href="#mainContent" data-i18n="nav.skipToContent">Skip to main content</a>
+  <div data-site-header></div>
+
+  <main id="mainContent">
+
+    <!-- ================================================================ HERO -->
+    <section class="pageHero" data-hero>
+      <div class="heroMedia" data-parallax="0.07">
+        <img src="images/house/commonSalon.jpg" data-i18n-alt="media.altSalon" alt="" fetchpriority="high">
+      </div>
+      <div class="heroScrim"></div>
+      <div class="heroContent">
+        <div class="sectionShell">
+          <span class="eyebrow" data-hero-item data-i18n="programs.heroEyebrow"></span>
+          <h1 class="displayLg heroTitle" data-hero-item data-i18n="programs.heroTitle"></h1>
+          <p class="heroLede" data-hero-item data-i18n="programs.heroLede"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= SUB NAV -->
+    <nav class="subNav" aria-label="Sections of this page">
+      <div class="subNavInner">
+        <a class="subNavLink" href="#residence"   data-i18n="navSub.residence"></a>
+        <a class="subNavLink" href="#dayHospital" data-i18n="navSub.dayHospital"></a>
+        <a class="subNavLink" href="#outpatient"  data-i18n="navSub.outpatient"></a>
+        <a class="subNavLink" href="#activities"  data-i18n="navSub.activities"></a>
+        <a class="subNavLink" href="#therapies"   data-i18n="navSub.therapies"></a>
+      </div>
+    </nav>
+
+    <!-- =============================================================== INTRO -->
+    <section class="sectionBlock">
+      <div class="sectionShell revealItem">
+        <div class="stackMd" data-i18n-paras="programs.introParagraphs" data-i18n-class="leadText"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================== RESIDENCE -->
+    <section class="sectionBlock bandParchmentDeep" id="residence">
+      <div class="sectionShell">
+        <div class="splitBlock">
+          <div class="splitMedia revealItem">
+            <img src="images/house/roomPrincipal.jpg" data-i18n-alt="media.altRoomPrincipal" alt="" loading="lazy">
+          </div>
+          <div class="revealItem">
+            <span class="eyebrow" data-i18n="navSub.residence"></span>
+            <h2 class="displayMd" data-i18n="programs.residenceTitle"></h2>
+            <p class="leadText marginTopLg" data-i18n="programs.residenceLead"></p>
+            <div class="stackMd marginTopLg" data-i18n-paras="programs.residenceParagraphs"></div>
+            <!-- PLACEHOLDER: no bed count, room detail or schedule until confirmed. -->
+            <p class="smallText marginTopLg" data-i18n="programs.residencePlaceholder"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= DAY HOSPITAL -->
+    <section class="sectionBlock" id="dayHospital">
+      <div class="sectionShell">
+        <div class="splitBlock splitReverse">
+          <div class="splitMedia revealItem">
+            <img src="images/house/commonSittingRoom.jpg" data-i18n-alt="media.altSittingRoom" alt="" loading="lazy">
+          </div>
+          <div class="revealItem">
+            <span class="eyebrow" data-i18n="navSub.dayHospital"></span>
+            <h2 class="displayMd" data-i18n="programs.dayHospitalTitle"></h2>
+            <p class="leadText marginTopLg" data-i18n="programs.dayHospitalLead"></p>
+            <div class="stackMd marginTopLg" data-i18n-paras="programs.dayHospitalParagraphs"></div>
+            <!-- PLACEHOLDER: exact schedule to follow. -->
+            <p class="smallText marginTopLg" data-i18n="programs.dayHospitalPlaceholder"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== OUTPATIENT -->
+    <section class="sectionBlock bandParchmentDeep" id="outpatient">
+      <div class="sectionShell revealItem">
+        <span class="eyebrow" data-i18n="navSub.outpatient"></span>
+        <h2 class="displayMd" data-i18n="programs.outpatientTitle"></h2>
+        <p class="leadText marginTopLg" data-i18n="programs.outpatientLead"></p>
+        <div class="stackMd marginTopLg" data-i18n-paras="programs.outpatientParagraphs"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================== ACTIVITIES -->
+    <section class="sectionBlock" id="activities">
+      <div class="sectionShell">
+        <div class="splitBlock">
+          <div class="splitMedia revealItem">
+            <img src="images/house/gardenPavilion.jpg" data-i18n-alt="media.altGardenPavilion" alt="" loading="lazy">
+          </div>
+          <div class="revealItem">
+            <span class="eyebrow" data-i18n="navSub.activities"></span>
+            <h2 class="displayMd" data-i18n="programs.activitiesTitle"></h2>
+            <p class="leadText marginTopLg" data-i18n="programs.activitiesLead"></p>
+            <div class="stackMd marginTopLg" data-i18n-paras="programs.activitiesParagraphs"></div>
+            <!-- PLACEHOLDER: no specific activities list yet. -->
+            <p class="smallText marginTopLg" data-i18n="programs.activitiesPlaceholder"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================== THERAPIES -->
+    <section class="sectionBlock bandParchmentDeep" id="therapies">
+      <div class="sectionShell">
+
+        <div class="sectionHead shellMid revealItem shellFlush">
+          <span class="eyebrow" data-i18n="navSub.therapies"></span>
+          <h2 class="displayLg" data-i18n="programs.therapiesTitle"></h2>
+          <p class="leadText" data-i18n="programs.therapiesLead"></p>
+          <p class="bodyText marginTopLg" data-i18n="programs.therapiesIntro"></p>
+        </div>
+
+        <div class="cardGrid cardGridTwo revealStagger">
+
+          <div class="plainCard">
+            <h3 class="plainCardTitle" data-i18n="programs.therapyIndividualTitle"></h3>
+            <p class="bodyText" data-i18n="programs.therapyIndividualText"></p>
+          </div>
+
+          <div class="plainCard">
+            <h3 class="plainCardTitle" data-i18n="programs.therapySkillsTitle"></h3>
+            <p class="bodyText" data-i18n="programs.therapySkillsText"></p>
+          </div>
+
+          <div class="plainCard">
+            <h3 class="plainCardTitle" data-i18n="programs.therapyPsychiatryTitle"></h3>
+            <p class="bodyText" data-i18n="programs.therapyPsychiatryText"></p>
+          </div>
+
+          <div class="plainCard">
+            <h3 class="plainCardTitle" data-i18n="programs.therapyConsultTitle"></h3>
+            <p class="bodyText" data-i18n="programs.therapyConsultText"></p>
+          </div>
+
+        </div>
+
+        <!-- The four DBT skill modules -->
+        <div class="marginTopXl">
+          <h3 class="displaySm revealItem" data-i18n="solutions.dbtModulesTitle"></h3>
+          <div class="cardGrid revealStagger marginTopLg">
+
+            <div class="plainCard">
+              <span class="plainCardIndex">01</span>
+              <h4 class="plainCardTitle" data-i18n="programs.moduleMindfulnessTitle"></h4>
+              <p class="bodyText" data-i18n="programs.moduleMindfulnessText"></p>
+            </div>
+
+            <div class="plainCard">
+              <span class="plainCardIndex">02</span>
+              <h4 class="plainCardTitle" data-i18n="programs.moduleDistressTitle"></h4>
+              <p class="bodyText" data-i18n="programs.moduleDistressText"></p>
+            </div>
+
+            <div class="plainCard">
+              <span class="plainCardIndex">03</span>
+              <h4 class="plainCardTitle" data-i18n="programs.moduleEmotionTitle"></h4>
+              <p class="bodyText" data-i18n="programs.moduleEmotionText"></p>
+            </div>
+
+            <div class="plainCard">
+              <span class="plainCardIndex">04</span>
+              <h4 class="plainCardTitle" data-i18n="programs.moduleInterpersonalTitle"></h4>
+              <p class="bodyText" data-i18n="programs.moduleInterpersonalText"></p>
+            </div>
+
+          </div>
+
+          <p class="marginTopXl revealItem">
+            <a class="linkQuiet" href="solutions.html#dbt">
+              <span data-i18n="solutions.dbtTitle"></span>
+              <span class="linkArrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= CTA -->
+    <section class="sectionBlock ctaBand">
+      <div class="sectionShell">
+        <div class="ctaBandInner revealItem">
+          <div>
+            <span class="eyebrow" data-i18n="cta.eyebrow"></span>
+            <h2 class="displayLg" data-i18n="cta.title"></h2>
+            <p class="bodyText marginTopLg" data-i18n="cta.body"></p>
+          </div>
+          <div>
+            <a class="buttonGhost" href="admissions.html#waitlist" data-i18n="cta.button"></a>
+            <p class="marginTopLg">
+              <a class="linkQuiet" href="admissions.html#process">
+                <span data-i18n="cta.secondary"></span>
+                <span class="linkArrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </p>
+            <p class="ctaBandAside marginTopLg" data-i18n="cta.aside"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/content.en.js"></script>
+  <script src="js/content.pt.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/avalon.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

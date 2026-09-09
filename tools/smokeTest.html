@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Avalon — interactive smoke test</title>
+<style>
+  body { font: 14px/1.6 ui-monospace, Consolas, monospace; background: #fff; color: #111; padding: 20px; }
+  li { margin: 2px 0; }
+  .pass { color: #0a6b2d; }
+  .fail { color: #b00020; font-weight: 700; }
+  iframe { position: absolute; left: -9999px; width: 1280px; height: 900px; }
+  h2 { margin: 18px 0 6px; font: 700 14px/1.4 ui-monospace, monospace; }
+</style>
+</head>
+<body>
+<h1>Avalon interactive smoke test</h1>
+<div id="results">running…</div>
+<iframe id="frameHome" src="../index.html"></iframe>
+<iframe id="frameAdmissions" src="../admissions.html"></iframe>
+
+<script>
+const results = [];
+function check(name, condition, detail) {
+  results.push({ name, ok: !!condition, detail: detail || "" });
+}
+function render() {
+  const failed = results.filter(r => !r.ok).length;
+  document.getElementById("results").innerHTML =
+    "<h2>" + (failed ? failed + " FAILED" : "ALL " + results.length + " PASSED") + "</h2><ul>" +
+    results.map(r => '<li class="' + (r.ok ? "pass" : "fail") + '">' +
+      (r.ok ? "PASS " : "FAIL ") + r.name + (r.detail ? "  — " + r.detail : "") + "</li>").join("") +
+    "</ul>";
+}
+
+function whenReady(frame) {
+  return new Promise(resolve => {
+    const tryIt = () => {
+      const w = frame.contentWindow;
+      if (w && w.avalonI18n && frame.contentDocument.querySelector(".siteHeader")) resolve(w);
+      else setTimeout(tryIt, 60);
+    };
+    tryIt();
+  });
+}
+
+async function run() {
+  const home = document.getElementById("frameHome");
+  const adm  = document.getElementById("frameAdmissions");
+
+  const wHome = await whenReady(home);
+  const dHome = home.contentDocument;
+
+  // ---- chrome injection -------------------------------------------------
+  check("header injected", !!dHome.querySelector(".siteHeader"));
+  check("footer injected", !!dHome.querySelector(".siteFooter"));
+  check("mobile drawer injected", !!dHome.getElementById("mobileMenu"));
+  check("7 primary nav links", dHome.querySelectorAll(".navList .navLink").length === 7,
+        dHome.querySelectorAll(".navList .navLink").length + " found");
+  check("no unresolved mount points",
+        !dHome.querySelector("[data-site-header], [data-site-footer]"));
+
+  // ---- i18n rendered EN --------------------------------------------------
+  const heroTitle = dHome.querySelector(".heroTitle");
+  check("hero title filled", heroTitle && heroTitle.textContent.trim().length > 10,
+        heroTitle ? '"' + heroTitle.textContent.slice(0, 40) + '"' : "missing");
+  check("document title filled", dHome.title.indexOf("Avalon") !== -1, dHome.title);
+  check("meta description filled",
+        (dHome.querySelector('meta[name="description"]').getAttribute("content") || "").length > 40);
+  check("nav label filled",
+        dHome.querySelector(".navList .navLink").textContent.trim() === "Our Programs",
+        dHome.querySelector(".navList .navLink").textContent.trim());
+  check("paragraph array rendered",
+        dHome.querySelectorAll('[data-i18n-paras="home.introParagraphs"] p').length === 3,
+        dHome.querySelectorAll('[data-i18n-paras="home.introParagraphs"] p').length + " <p>");
+  check("image alt text applied",
+        (dHome.querySelector(".heroMedia img").getAttribute("alt") || "").length > 20);
+  check("placeholder tag rendered as element",
+        !!dHome.querySelector(".heroCaption .placeholderTag"));
+  check("no raw <ph> left in text",
+        dHome.body.innerText.indexOf("<ph>") === -1);
+  check("no missing-key blanks in nav",
+        Array.from(dHome.querySelectorAll(".navList .navLink")).every(a => a.textContent.trim() !== ""));
+  check("current page marked",
+        !!dHome.querySelector('.navLink[aria-current="page"]') === false,
+        "home has no nav entry — expected");
+  check("footer year injected",
+        /\d{4}/.test(dHome.querySelector("[data-current-year]").textContent),
+        dHome.querySelector("[data-current-year]").textContent);
+  check("crisis notice present", !!dHome.querySelector(".crisisNotice"));
+
+  // ---- language toggle ---------------------------------------------------
+  const enTitle = heroTitle.textContent;
+  wHome.avalonI18n.setLanguage("pt");
+  const ptTitle = heroTitle.textContent;
+  check("PT toggle changes copy", ptTitle !== enTitle && ptTitle.indexOf("PT TRANSLATION PENDING") !== -1,
+        '"' + ptTitle + '"');
+  check("html lang becomes pt", dHome.documentElement.getAttribute("lang") === "pt");
+  check("PT button marked active",
+        dHome.querySelector('.langOption[data-language="pt"]').classList.contains("isActive"));
+  wHome.avalonI18n.setLanguage("en");
+  check("EN toggle restores copy", heroTitle.textContent === enTitle);
+  check("html lang back to en", dHome.documentElement.getAttribute("lang") === "en");
+
+  // ---- mobile menu -------------------------------------------------------
+  const menuButton = dHome.querySelector(".menuButton");
+  const drawer = dHome.getElementById("mobileMenu");
+  check("drawer starts closed", !drawer.classList.contains("isOpen"));
+  menuButton.click();
+  check("menu button opens drawer", drawer.classList.contains("isOpen"));
+  check("aria-expanded true", menuButton.getAttribute("aria-expanded") === "true");
+  check("body scroll locked", dHome.body.classList.contains("menuOpen"));
+  drawer.querySelector("a").click();
+  check("clicking a link closes drawer", !drawer.classList.contains("isOpen"));
+
+  // ---- forms -------------------------------------------------------------
+  const wAdm = await whenReady(adm);
+  const dAdm = adm.contentDocument;
+  const form = dAdm.querySelector(".avalonForm");
+  const confirmation = dAdm.getElementById("waitlistConfirmation");
+
+  check("waitlist form present", !!form);
+  check("confirmation hidden initially", !confirmation.classList.contains("isVisible"));
+  check("select options translated",
+        dAdm.querySelector("#waitlistRelationship option:nth-child(2)").textContent === "Myself",
+        dAdm.querySelector("#waitlistRelationship option:nth-child(2)").textContent);
+
+  // Submit empty -> should block and flag required fields
+  form.requestSubmit ? form.requestSubmit() : form.dispatchEvent(new Event("submit", {cancelable:true}));
+  check("empty submit blocked", !confirmation.classList.contains("isVisible"));
+  check("name flagged invalid", dAdm.getElementById("waitlistName").getAttribute("aria-invalid") === "true");
+  check("select flagged invalid", dAdm.getElementById("waitlistRelationship").getAttribute("aria-invalid") === "true");
+  check("error message shown",
+        dAdm.getElementById("waitlistNameError").textContent.length > 5,
+        '"' + dAdm.getElementById("waitlistNameError").textContent + '"');
+
+  // Bad email
+  dAdm.getElementById("waitlistName").value = "Ana Silva";
+  dAdm.getElementById("waitlistEmail").value = "not-an-email";
+  dAdm.getElementById("waitlistRelationship").value = "self";
+  form.requestSubmit ? form.requestSubmit() : form.dispatchEvent(new Event("submit", {cancelable:true}));
+  check("invalid email blocked", !confirmation.classList.contains("isVisible"));
+  check("email flagged", dAdm.getElementById("waitlistEmail").getAttribute("aria-invalid") === "true");
+
+  // Valid
+  dAdm.getElementById("waitlistEmail").value = "ana@example.pt";
+  form.requestSubmit ? form.requestSubmit() : form.dispatchEvent(new Event("submit", {cancelable:true}));
+  check("valid submit shows confirmation", confirmation.classList.contains("isVisible"));
+  check("form hidden after submit", form.hidden === true);
+  check("confirmation copy filled",
+        confirmation.querySelector(".formConfirmationTitle").textContent.length > 5,
+        '"' + confirmation.querySelector(".formConfirmationTitle").textContent + '"');
+  check("confirmation paragraphs rendered",
+        confirmation.querySelectorAll("p").length === 2,
+        confirmation.querySelectorAll("p").length + " <p>");
+
+  // ---- sub navigation ----------------------------------------------------
+  check("subNav present on pillar page", !!dAdm.querySelector(".subNav"));
+  check("subNav links resolve to sections",
+        Array.from(dAdm.querySelectorAll(".subNavLink"))
+             .every(a => !!dAdm.querySelector(a.getAttribute("href"))));
+
+  render();
+}
+
+run().catch(e => {
+  results.push({ name: "TEST HARNESS ERROR", ok: false, detail: e && e.message });
+  render();
+});
+</script>
+</body>
+</html>

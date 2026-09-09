@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="about.pageTitle">About Us — Avalon</title>
+  <meta name="description" data-i18n-content="about.metaDescription" content="">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/avalon.css">
+
+  <script>
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduce) document.documentElement.classList.add("gsapReady");
+    })();
+  </script>
+</head>
+
+<body data-page="about">
+
+  <noscript>
+    <p class="noscriptNotice">This site needs JavaScript to display its content.</p>
+  </noscript>
+
+  <a class="skipLink" href="#mainContent" data-i18n="nav.skipToContent">Skip to main content</a>
+  <div data-site-header></div>
+
+  <main id="mainContent">
+
+    <!-- ================================================================ HERO -->
+    <section class="pageHero" data-hero>
+      <div class="heroMedia" data-parallax="0.07">
+        <img src="images/house/houseSideEntrance.jpg" data-i18n-alt="media.altSideEntrance" alt="" fetchpriority="high">
+      </div>
+      <div class="heroScrim"></div>
+      <div class="heroContent">
+        <div class="sectionShell">
+          <span class="eyebrow" data-hero-item data-i18n="about.heroEyebrow"></span>
+          <h1 class="displayLg heroTitle" data-hero-item data-i18n="about.heroTitle"></h1>
+          <p class="heroLede" data-hero-item data-i18n="about.heroLede"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= SUB NAV -->
+    <nav class="subNav" aria-label="Sections of this page">
+      <div class="subNavInner">
+        <a class="subNavLink" href="#beliefs"  data-i18n="navSub.beliefs"></a>
+        <a class="subNavLink" href="#origin"   data-i18n="navSub.origin"></a>
+        <a class="subNavLink" href="#team"     data-i18n="navSub.medicalTeam"></a>
+        <a class="subNavLink" href="#joinTeam" data-i18n="navSub.joinTeam"></a>
+      </div>
+    </nav>
+
+    <!-- ============================================================ BELIEFS
+         PLACEHOLDER: draft copy, written from the three commitments in the
+         stakeholder document. For the founder to rewrite or approve.
+         ==================================================================== -->
+    <section class="sectionBlock" id="beliefs">
+      <div class="sectionShell">
+
+        <div class="sectionHead shellMid revealItem shellFlush">
+          <span class="eyebrow" data-i18n="navSub.beliefs"></span>
+          <h2 class="displayLg" data-i18n="about.beliefsTitle"></h2>
+          <p class="leadText" data-i18n="about.beliefsLead"></p>
+          <p class="smallText marginTopLg" data-i18n="about.beliefsPlaceholder"></p>
+        </div>
+
+        <div class="cardGrid revealStagger">
+          <div class="plainCard">
+            <span class="plainCardIndex">01</span>
+            <h3 class="plainCardTitle" data-i18n="about.beliefOneTitle"></h3>
+            <p class="bodyText" data-i18n="about.beliefOneText"></p>
+          </div>
+          <div class="plainCard">
+            <span class="plainCardIndex">02</span>
+            <h3 class="plainCardTitle" data-i18n="about.beliefTwoTitle"></h3>
+            <p class="bodyText" data-i18n="about.beliefTwoText"></p>
+          </div>
+          <div class="plainCard">
+            <span class="plainCardIndex">03</span>
+            <h3 class="plainCardTitle" data-i18n="about.beliefThreeTitle"></h3>
+            <p class="bodyText" data-i18n="about.beliefThreeText"></p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================== ORIGIN
+         PLACEHOLDER: founding story to be added. No narrative invented.
+         ==================================================================== -->
+    <section class="sectionBlock bandParchmentDeep" id="origin">
+      <div class="sectionShell">
+        <div class="splitBlock">
+          <div class="splitMedia revealItem">
+            <img src="images/house/gardenFountain.jpg" data-i18n-alt="media.altGardenFountain" alt="" loading="lazy">
+          </div>
+          <div class="revealItem">
+            <span class="eyebrow" data-i18n="navSub.origin"></span>
+            <h2 class="displayMd" data-i18n="about.originTitle"></h2>
+            <div class="stackMd marginTopLg" data-i18n-paras="about.originParagraphs" data-i18n-class="leadText"></div>
+            <p class="smallText marginTopLg" data-i18n="about.originPlaceholder"></p>
+            <div class="calloutNote">
+              <p data-i18n="about.originNote"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ TEAM
+         PLACEHOLDER: no staff names or photographs yet. The cards below are
+         structured so a real one (photo, name, credential, one line) drops
+         straight in: replace the .teamCardPhoto contents with an <img>.
+         ==================================================================== -->
+    <section class="sectionBlock" id="team">
+      <div class="sectionShell">
+
+        <div class="contentSectionHead">
+          <div class="contentSectionTitle revealItem">
+            <span class="eyebrow" data-i18n="navSub.medicalTeam"></span>
+            <h2 class="displayMd" data-i18n="about.teamTitle"></h2>
+            <p class="leadText marginTopLg" data-i18n="about.teamLead"></p>
+          </div>
+          <div class="revealItem">
+            <div class="stackMd" data-i18n-paras="about.teamParagraphs"></div>
+            <p class="smallText marginTopLg" data-i18n="about.teamPlaceholder"></p>
+          </div>
+        </div>
+
+        <div class="teamGrid revealStagger marginTopXl">
+          <div class="teamCard">
+            <div class="teamCardPhoto" data-i18n="about.teamCardPhotoLabel"></div>
+            <span class="teamCardName" data-i18n="about.teamCardNameOne"></span>
+            <span class="teamCardCredential" data-i18n="about.teamCardCredentialOne"></span>
+          </div>
+          <div class="teamCard">
+            <div class="teamCardPhoto" data-i18n="about.teamCardPhotoLabel"></div>
+            <span class="teamCardName" data-i18n="about.teamCardNameTwo"></span>
+            <span class="teamCardCredential" data-i18n="about.teamCardCredentialTwo"></span>
+          </div>
+          <div class="teamCard">
+            <div class="teamCardPhoto" data-i18n="about.teamCardPhotoLabel"></div>
+            <span class="teamCardName" data-i18n="about.teamCardNameThree"></span>
+            <span class="teamCardCredential" data-i18n="about.teamCardCredentialThree"></span>
+          </div>
+          <div class="teamCard">
+            <div class="teamCardPhoto" data-i18n="about.teamCardPhotoLabel"></div>
+            <span class="teamCardName" data-i18n="about.teamCardNameFour"></span>
+            <span class="teamCardCredential" data-i18n="about.teamCardCredentialFour"></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================== JOIN TEAM -->
+    <section class="sectionBlock bandParchmentDeep" id="joinTeam">
+      <div class="sectionShell">
+        <div class="splitBlock">
+
+          <div class="revealItem">
+            <span class="eyebrow" data-i18n="navSub.joinTeam"></span>
+            <h2 class="displayLg" data-i18n="about.joinTitle"></h2>
+            <p class="leadText marginTopLg" data-i18n="about.joinLead"></p>
+            <div class="stackMd marginTopLg" data-i18n-paras="about.joinParagraphs"></div>
+            <!-- PLACEHOLDER: partner institute, roles and start dates to confirm. -->
+            <p class="smallText marginTopLg" data-i18n="about.joinPlaceholder"></p>
+          </div>
+
+          <div class="revealItem">
+            <div class="formShell">
+
+              <!-- PLACEHOLDER: not connected to a backend. See js/avalon.js. -->
+              <form class="avalonForm" data-confirmation="teamConfirmation" novalidate>
+                <div class="formGrid">
+
+                  <div class="fieldGroup fieldFull">
+                    <label class="fieldLabel" for="teamName" data-i18n="forms.labelName"></label>
+                    <input class="inputField" type="text" id="teamName" name="name"
+                           autocomplete="name" data-required aria-describedby="teamNameError">
+                    <span class="fieldError" id="teamNameError" role="alert"></span>
+                  </div>
+
+                  <div class="fieldGroup">
+                    <label class="fieldLabel" for="teamEmail" data-i18n="forms.labelEmail"></label>
+                    <input class="inputField" type="email" id="teamEmail" name="email"
+                           autocomplete="email" data-required data-validate="email"
+                           aria-describedby="teamEmailError">
+                    <span class="fieldError" id="teamEmailError" role="alert"></span>
+                  </div>
+
+                  <div class="fieldGroup">
+                    <label class="fieldLabel" for="teamSpecialty" data-i18n="forms.labelSpecialty"></label>
+                    <select class="selectField" id="teamSpecialty" name="specialty"
+                            data-required aria-describedby="teamSpecialtyError">
+                      <option value="" data-i18n="forms.specialtyDefault"></option>
+                      <option value="psychiatry" data-i18n="forms.specialtyPsychiatry"></option>
+                      <option value="psychology" data-i18n="forms.specialtyPsychology"></option>
+                      <option value="nursing" data-i18n="forms.specialtyNursing"></option>
+                      <option value="psychotherapy" data-i18n="forms.specialtyPsychotherapy"></option>
+                      <option value="other" data-i18n="forms.specialtyOther"></option>
+                    </select>
+                    <span class="fieldError" id="teamSpecialtyError" role="alert"></span>
+                  </div>
+
+                  <div class="fieldGroup fieldFull">
+                    <label class="fieldLabel" for="teamNote">
+                      <span data-i18n="forms.labelNote"></span>
+                      <span class="fieldOptional">(<span data-i18n="forms.optional"></span>)</span>
+                    </label>
+                    <textarea class="textareaField" id="teamNote" name="note" rows="4"></textarea>
+                  </div>
+
+                </div>
+
+                <div class="formActions">
+                  <button class="buttonPrimary" type="submit" data-i18n="forms.submitTeam"></button>
+                </div>
+
+                <p class="formConsent marginTopLg" data-i18n="forms.consent"></p>
+                <p class="formConsent" data-i18n="forms.demoNotice"></p>
+              </form>
+
+              <div class="formConfirmation" id="teamConfirmation">
+                <h3 class="formConfirmationTitle" data-i18n="forms.teamConfirmTitle"></h3>
+                <div class="stackMd" data-i18n-paras="forms.teamConfirmBody"></div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/content.en.js"></script>
+  <script src="js/content.pt.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/avalon.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="family.pageTitle">Family and Loved Ones — Avalon</title>
+  <meta name="description" data-i18n-content="family.metaDescription" content="">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/avalon.css">
+
+  <script>
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduce) document.documentElement.classList.add("gsapReady");
+    })();
+  </script>
+</head>
+
+<body data-page="family">
+
+  <noscript>
+    <p class="noscriptNotice">This site needs JavaScript to display its content.</p>
+  </noscript>
+
+  <a class="skipLink" href="#mainContent" data-i18n="nav.skipToContent">Skip to main content</a>
+  <div data-site-header></div>
+
+  <main id="mainContent">
+
+    <!-- ================================================================ HERO -->
+    <section class="pageHero" data-hero>
+      <div class="heroMedia" data-parallax="0.07">
+        <img src="images/house/gardenBench.jpg" data-i18n-alt="media.altGardenBench" alt="" fetchpriority="high">
+      </div>
+      <div class="heroScrim"></div>
+      <div class="heroContent">
+        <div class="sectionShell">
+          <span class="eyebrow" data-hero-item data-i18n="family.heroEyebrow"></span>
+          <h1 class="displayLg heroTitle" data-hero-item data-i18n="family.heroTitle"></h1>
+          <p class="heroLede" data-hero-item data-i18n="family.heroLede"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= SUB NAV -->
+    <nav class="subNav" aria-label="Sections of this page">
+      <div class="subNavInner">
+        <a class="subNavLink" href="#resources" data-i18n="navSub.familyResources"></a>
+        <a class="subNavLink" href="#access"    data-i18n="navSub.familyAccess"></a>
+      </div>
+    </nav>
+
+    <!-- =============================================================== INTRO -->
+    <section class="sectionBlock">
+      <div class="sectionShell revealItem">
+        <div class="stackMd" data-i18n-paras="family.introParagraphs" data-i18n-class="leadText"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================== RESOURCES -->
+    <section class="sectionBlock bandParchmentDeep" id="resources">
+      <div class="sectionShell">
+        <div class="splitBlock">
+          <div class="splitMedia revealItem">
+            <img src="images/house/gardenVista.jpg" data-i18n-alt="media.altGardenVista" alt="" loading="lazy">
+          </div>
+          <div class="revealItem">
+            <span class="eyebrow" data-i18n="navSub.familyResources"></span>
+            <h2 class="displayMd" data-i18n="family.resourcesTitle"></h2>
+            <p class="leadText marginTopLg" data-i18n="family.resourcesLead"></p>
+            <div class="stackMd marginTopLg" data-i18n-paras="family.resourcesParagraphs"></div>
+            <!-- PLACEHOLDER: format, schedule and eligibility of the family programme. -->
+            <p class="smallText marginTopLg" data-i18n="family.resourcesPlaceholder"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================== ACCESS -->
+    <section class="sectionBlock" id="access">
+      <div class="sectionShell">
+        <div class="contentSectionHead">
+          <div class="contentSectionTitle revealItem">
+            <span class="eyebrow" data-i18n="navSub.familyAccess"></span>
+            <h2 class="displayMd" data-i18n="family.accessTitle"></h2>
+          </div>
+          <div class="revealItem">
+            <p class="leadText" data-i18n="family.accessLead"></p>
+            <!-- PLACEHOLDER: specific visiting and communication policy to follow. -->
+            <div class="stackMd marginTopLg" data-i18n-paras="family.accessParagraphs"></div>
+            <p class="smallText marginTopLg" data-i18n="family.accessPlaceholder"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= CTA -->
+    <section class="sectionBlock ctaBand">
+      <div class="sectionShell">
+        <div class="ctaBandInner revealItem">
+          <div>
+            <span class="eyebrow" data-i18n="cta.eyebrow"></span>
+            <h2 class="displayLg" data-i18n="family.ctaTitle"></h2>
+            <p class="bodyText marginTopLg" data-i18n="family.ctaBody"></p>
+          </div>
+          <div>
+            <a class="buttonGhost" href="admissions.html#waitlist" data-i18n="cta.button"></a>
+            <p class="marginTopLg">
+              <a class="linkQuiet" href="admissions.html#process">
+                <span data-i18n="cta.secondary"></span>
+                <span class="linkArrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </p>
+            <p class="ctaBandAside marginTopLg" data-i18n="cta.aside"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/content.en.js"></script>
+  <script src="js/content.pt.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/avalon.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

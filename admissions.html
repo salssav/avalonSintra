@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="admissions.pageTitle">Admissions — Avalon</title>
+  <meta name="description" data-i18n-content="admissions.metaDescription" content="">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/avalon.css">
+
+  <script>
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduce) document.documentElement.classList.add("gsapReady");
+    })();
+  </script>
+</head>
+
+<body data-page="admissions">
+
+  <noscript>
+    <p class="noscriptNotice">This site needs JavaScript to display its content.</p>
+  </noscript>
+
+  <a class="skipLink" href="#mainContent" data-i18n="nav.skipToContent">Skip to main content</a>
+  <div data-site-header></div>
+
+  <main id="mainContent">
+
+    <!-- ================================================================ HERO -->
+    <section class="pageHero" data-hero>
+      <div class="heroMedia" data-parallax="0.07">
+        <img src="images/house/gardenStoneSteps.jpg" data-i18n-alt="media.altGardenSteps" alt="" fetchpriority="high">
+      </div>
+      <div class="heroScrim"></div>
+      <div class="heroContent">
+        <div class="sectionShell">
+          <span class="eyebrow" data-hero-item data-i18n="admissions.heroEyebrow"></span>
+          <h1 class="displayLg heroTitle" data-hero-item data-i18n="admissions.heroTitle"></h1>
+          <p class="heroLede" data-hero-item data-i18n="admissions.heroLede"></p>
+          <div class="buttonRow" data-hero-item>
+            <a class="buttonPrimary" href="#waitlist" data-i18n="nav.waitlist"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= SUB NAV -->
+    <nav class="subNav" aria-label="Sections of this page">
+      <div class="subNavInner">
+        <a class="subNavLink" href="#criteria" data-i18n="admissions.criteriaTitle"></a>
+        <a class="subNavLink" href="#process"  data-i18n="navSub.admissionProcess"></a>
+        <a class="subNavLink" href="#progress" data-i18n="navSub.trackProgress"></a>
+        <a class="subNavLink" href="#waitlist" data-i18n="navSub.waitlistForm"></a>
+      </div>
+    </nav>
+
+    <!-- ============================================================ CRITERIA -->
+    <section class="sectionBlock" id="criteria">
+      <div class="sectionShell">
+        <div class="contentSectionHead">
+          <div class="contentSectionTitle revealItem">
+            <span class="eyebrow" data-i18n="admissions.heroEyebrow"></span>
+            <h2 class="displayMd" data-i18n="admissions.criteriaTitle"></h2>
+            <p class="leadText marginTopLg" data-i18n="admissions.criteriaLead"></p>
+          </div>
+          <div class="revealItem">
+            <p class="bodyText" data-i18n="admissions.criteriaIntro"></p>
+            <ul class="signList marginTopLg" data-i18n-list="admissions.criteriaList"></ul>
+            <div class="calloutNote">
+              <p data-i18n="admissions.criteriaNote"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= PROCESS -->
+    <section class="sectionBlock bandParchmentDeep" id="process">
+      <div class="sectionShell">
+
+        <div class="sectionHead shellMid revealItem shellFlush">
+          <span class="eyebrow" data-i18n="navSub.admissionProcess"></span>
+          <h2 class="displayLg" data-i18n="admissions.processTitle"></h2>
+          <p class="leadText" data-i18n="admissions.processLead"></p>
+          <!-- PLACEHOLDER: exact operational steps to be confirmed with the clinical team. -->
+          <p class="smallText marginTopLg" data-i18n="admissions.processPlaceholder"></p>
+        </div>
+
+        <ol class="stepList shellMid revealStagger shellFlush">
+          <li class="stepItem">
+            <span class="stepNumber" aria-hidden="true">01</span>
+            <div>
+              <h3 class="stepTitle" data-i18n="admissions.stepOneTitle"></h3>
+              <p class="bodyText" data-i18n="admissions.stepOneText"></p>
+            </div>
+          </li>
+          <li class="stepItem">
+            <span class="stepNumber" aria-hidden="true">02</span>
+            <div>
+              <h3 class="stepTitle" data-i18n="admissions.stepTwoTitle"></h3>
+              <p class="bodyText" data-i18n="admissions.stepTwoText"></p>
+            </div>
+          </li>
+          <li class="stepItem">
+            <span class="stepNumber" aria-hidden="true">03</span>
+            <div>
+              <h3 class="stepTitle" data-i18n="admissions.stepThreeTitle"></h3>
+              <p class="bodyText" data-i18n="admissions.stepThreeText"></p>
+            </div>
+          </li>
+          <li class="stepItem">
+            <span class="stepNumber" aria-hidden="true">04</span>
+            <div>
+              <h3 class="stepTitle" data-i18n="admissions.stepFourTitle"></h3>
+              <p class="bodyText" data-i18n="admissions.stepFourText"></p>
+            </div>
+          </li>
+        </ol>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ PROGRESS -->
+    <section class="sectionBlock" id="progress">
+      <div class="sectionShell">
+        <div class="splitBlock splitReverse">
+          <div class="splitMedia mediaLandscape revealItem">
+            <img src="images/house/terraceUpper.jpg" data-i18n-alt="media.altTerraceUpper" alt="" loading="lazy">
+          </div>
+          <div class="revealItem">
+            <span class="eyebrow" data-i18n="navSub.trackProgress"></span>
+            <h2 class="displayMd" data-i18n="admissions.progressTitle"></h2>
+            <p class="leadText marginTopLg" data-i18n="admissions.progressLead"></p>
+            <div class="stackMd marginTopLg" data-i18n-paras="admissions.progressParagraphs"></div>
+            <!-- PLACEHOLDER: named instruments and intervals to be confirmed. -->
+            <p class="smallText marginTopLg" data-i18n="admissions.progressPlaceholder"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ WAITLIST
+         The single most important element on the site.
+         ==================================================================== -->
+    <section class="sectionBlock bandParchmentDeep" id="waitlist">
+      <div class="sectionShell">
+        <div class="splitBlock">
+
+          <div class="revealItem">
+            <span class="eyebrow" data-i18n="navSub.waitlistForm"></span>
+            <h2 class="displayLg" data-i18n="admissions.waitlistTitle"></h2>
+            <p class="leadText marginTopLg" data-i18n="admissions.waitlistLead"></p>
+            <div class="stackMd marginTopLg" data-i18n-paras="admissions.waitlistParagraphs"></div>
+          </div>
+
+          <div class="revealItem">
+            <div class="formShell">
+
+              <!-- PLACEHOLDER: this form is not connected to a backend. See the
+                   note in js/avalon.js (initForms) for where to wire it up. -->
+              <form class="avalonForm" data-confirmation="waitlistConfirmation" novalidate>
+                <div class="formGrid">
+
+                  <div class="fieldGroup fieldFull">
+                    <label class="fieldLabel" for="waitlistName" data-i18n="forms.labelName"></label>
+                    <input class="inputField" type="text" id="waitlistName" name="name"
+                           autocomplete="name" data-required
+                           aria-describedby="waitlistNameError">
+                    <span class="fieldError" id="waitlistNameError" role="alert"></span>
+                  </div>
+
+                  <div class="fieldGroup">
+                    <label class="fieldLabel" for="waitlistEmail" data-i18n="forms.labelEmail"></label>
+                    <input class="inputField" type="email" id="waitlistEmail" name="email"
+                           autocomplete="email" data-required data-validate="email"
+                           aria-describedby="waitlistEmailError">
+                    <span class="fieldError" id="waitlistEmailError" role="alert"></span>
+                  </div>
+
+                  <div class="fieldGroup">
+                    <label class="fieldLabel" for="waitlistPhone">
+                      <span data-i18n="forms.labelPhone"></span>
+                      <span class="fieldOptional">(<span data-i18n="forms.optional"></span>)</span>
+                    </label>
+                    <input class="inputField" type="tel" id="waitlistPhone" name="phone"
+                           autocomplete="tel">
+                  </div>
+
+                  <div class="fieldGroup fieldFull">
+                    <label class="fieldLabel" for="waitlistRelationship" data-i18n="forms.labelRelationship"></label>
+                    <select class="selectField" id="waitlistRelationship" name="relationship"
+                            data-required aria-describedby="waitlistRelationshipError">
+                      <option value="" data-i18n="forms.relationshipDefault"></option>
+                      <option value="self" data-i18n="forms.relationshipSelf"></option>
+                      <option value="family" data-i18n="forms.relationshipFamily"></option>
+                      <option value="clinician" data-i18n="forms.relationshipClinician"></option>
+                    </select>
+                    <span class="fieldError" id="waitlistRelationshipError" role="alert"></span>
+                  </div>
+
+                  <div class="fieldGroup fieldFull">
+                    <label class="fieldLabel" for="waitlistMessage">
+                      <span data-i18n="forms.labelMessage"></span>
+                      <span class="fieldOptional">(<span data-i18n="forms.optional"></span>)</span>
+                    </label>
+                    <textarea class="textareaField" id="waitlistMessage" name="message" rows="4"></textarea>
+                  </div>
+
+                </div>
+
+                <div class="formActions">
+                  <button class="buttonPrimary" type="submit" data-i18n="forms.submitWaitlist"></button>
+                </div>
+
+                <p class="formConsent marginTopLg" data-i18n="forms.consent"></p>
+                <p class="formConsent" data-i18n="forms.demoNotice"></p>
+              </form>
+
+              <div class="formConfirmation" id="waitlistConfirmation">
+                <h3 class="formConfirmationTitle" data-i18n="forms.waitlistConfirmTitle"></h3>
+                <div class="stackMd" data-i18n-paras="forms.waitlistConfirmBody"></div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/content.en.js"></script>
+  <script src="js/content.pt.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/avalon.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

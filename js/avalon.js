@@ -1,0 +1,297 @@
+/* ==========================================================================
+   AVALON — site behaviour
+   --------------------------------------------------------------------------
+   Header scroll state, mobile menu, in-page section navigation, form
+   validation and confirmation, and small housekeeping.
+
+   Scroll reveals and parallax live in animations.js.
+   ========================================================================== */
+
+(function () {
+  "use strict";
+
+  /* ======================================================================
+     HEADER — transparent over the hero, solid once scrolled
+     ====================================================================== */
+
+  function initHeader() {
+    var header = document.querySelector(".siteHeader");
+    if (!header) return;
+
+    // Pages with no dark hero behind the header opt in to dark header text by
+    // adding `data-header-on-light` to the <body>.
+    if (document.body.hasAttribute("data-header-on-light")) {
+      header.classList.add("headerOnLight");
+    }
+
+    var threshold = 60;
+    var isScrolled = false;
+    var ticking = false;
+
+    function update() {
+      var next = window.scrollY > threshold;
+      if (next !== isScrolled) {
+        isScrolled = next;
+        header.classList.toggle("isScrolled", isScrolled);
+      }
+      ticking = false;
+    }
+
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (!ticking) {
+          window.requestAnimationFrame(update);
+          ticking = true;
+        }
+      },
+      { passive: true }
+    );
+
+    update();
+  }
+
+  /* ======================================================================
+     MOBILE MENU
+     ====================================================================== */
+
+  function initMobileMenu() {
+    var button = document.querySelector(".menuButton");
+    var menu = document.getElementById("mobileMenu");
+    if (!button || !menu) return;
+
+    var isOpen = false;
+
+    function setOpen(next) {
+      isOpen = next;
+      menu.classList.toggle("isOpen", isOpen);
+      document.body.classList.toggle("menuOpen", isOpen);
+      button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      menu.setAttribute("aria-hidden", isOpen ? "false" : "true");
+
+      var labelKey = isOpen ? "nav.closeMenu" : "nav.openMenu";
+      if (window.avalonI18n) {
+        button.setAttribute("aria-label", window.avalonI18n.resolve(labelKey));
+      }
+
+      if (isOpen) {
+        var firstLink = menu.querySelector("a, button");
+        if (firstLink) firstLink.focus();
+      } else {
+        button.focus();
+      }
+    }
+
+    button.addEventListener("click", function () {
+      setOpen(!isOpen);
+    });
+
+    // Any navigation inside the drawer closes it.
+    menu.addEventListener("click", function (event) {
+      if (event.target.closest("a")) setOpen(false);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && isOpen) setOpen(false);
+    });
+
+    // Returning to a desktop width should never leave the drawer stuck open.
+    window.addEventListener("resize", function () {
+      if (isOpen && window.innerWidth >= 1080) setOpen(false);
+    });
+
+    setOpen(false);
+  }
+
+  /* ======================================================================
+     IN-PAGE SECTION NAVIGATION — highlights the section you are reading
+     ====================================================================== */
+
+  function initSubNav() {
+    var subNav = document.querySelector(".subNav");
+    if (!subNav) return;
+
+    var links = Array.prototype.slice.call(subNav.querySelectorAll(".subNavLink"));
+    if (!links.length) return;
+
+    var sections = links
+      .map(function (link) {
+        var id = link.getAttribute("href");
+        return id && id.charAt(0) === "#" ? document.querySelector(id) : null;
+      })
+      .filter(Boolean);
+
+    if (!sections.length || !("IntersectionObserver" in window)) return;
+
+    function setActive(id) {
+      links.forEach(function (link) {
+        link.classList.toggle("isActive", link.getAttribute("href") === "#" + id);
+      });
+    }
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        // Pick the entry nearest the top of the viewport that is on screen.
+        var visible = entries.filter(function (entry) { return entry.isIntersecting; });
+        if (!visible.length) return;
+        visible.sort(function (a, b) {
+          return a.boundingClientRect.top - b.boundingClientRect.top;
+        });
+        setActive(visible[0].target.id);
+      },
+      // The band sits just below the sticky header.
+      { rootMargin: "-25% 0px -60% 0px", threshold: 0 }
+    );
+
+    sections.forEach(function (section) { observer.observe(section); });
+    setActive(sections[0].id);
+  }
+
+  /* ======================================================================
+     CURRENT PAGE MARKER IN THE NAVIGATION
+     ====================================================================== */
+
+  function initCurrentNav() {
+    var page = document.body.getAttribute("data-page");
+    if (!page) return;
+
+    var links = document.querySelectorAll("[data-nav-page]");
+    for (var i = 0; i < links.length; i++) {
+      if (links[i].getAttribute("data-nav-page") === page) {
+        links[i].classList.add("isCurrent");
+        links[i].setAttribute("aria-current", "page");
+      }
+    }
+  }
+
+  /* ======================================================================
+     FORMS
+     --------------------------------------------------------------------
+     PLACEHOLDER: no backend is connected. Submission is intercepted, the
+     values are logged to the console for review, and the warm confirmation
+     message is shown. To go live, post `values` to a real endpoint (or wire
+     the <form> to a form service) and keep the confirmation behaviour.
+     ====================================================================== */
+
+  var EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  function initForms() {
+    var forms = document.querySelectorAll(".avalonForm");
+    for (var i = 0; i < forms.length; i++) {
+      bindForm(forms[i]);
+    }
+  }
+
+  function bindForm(form) {
+    var confirmation = document.getElementById(form.getAttribute("data-confirmation"));
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!validateForm(form)) {
+        var firstInvalid = form.querySelector('[aria-invalid="true"]');
+        if (firstInvalid) firstInvalid.focus();
+        return;
+      }
+
+      var values = {};
+      var data = new FormData(form);
+      data.forEach(function (value, key) { values[key] = value; });
+
+      // PLACEHOLDER: replace with a real submission when a backend exists.
+      if (window.console) {
+        console.info("[avalon] form submission (not sent anywhere yet):", values);
+      }
+
+      if (confirmation) {
+        form.hidden = true;
+        confirmation.classList.add("isVisible");
+        confirmation.setAttribute("tabindex", "-1");
+        confirmation.focus();
+        if (window.ScrollTrigger) window.ScrollTrigger.refresh();
+      }
+    });
+
+    // Clear an error as soon as the person starts fixing it.
+    form.addEventListener("input", function (event) {
+      var field = event.target;
+      if (field.getAttribute("aria-invalid") === "true") {
+        clearFieldError(field);
+      }
+    });
+  }
+
+  function validateForm(form) {
+    var fields = form.querySelectorAll("[data-required], [data-validate]");
+    var isValid = true;
+
+    for (var i = 0; i < fields.length; i++) {
+      var field = fields[i];
+      var value = (field.value || "").trim();
+      var errorKey = null;
+
+      if (field.hasAttribute("data-required") && value === "") {
+        errorKey = field.tagName === "SELECT" ? "forms.errorSelect" : "forms.errorRequired";
+      } else if (field.getAttribute("data-validate") === "email" && value !== "" && !EMAIL_PATTERN.test(value)) {
+        errorKey = "forms.errorEmail";
+      }
+
+      if (errorKey) {
+        setFieldError(field, errorKey);
+        isValid = false;
+      } else {
+        clearFieldError(field);
+      }
+    }
+
+    return isValid;
+  }
+
+  function errorElementFor(field) {
+    var id = field.getAttribute("aria-describedby");
+    return id ? document.getElementById(id) : null;
+  }
+
+  function setFieldError(field, errorKey) {
+    field.setAttribute("aria-invalid", "true");
+    var errorElement = errorElementFor(field);
+    if (errorElement && window.avalonI18n) {
+      errorElement.textContent = window.avalonI18n.resolve(errorKey);
+    }
+  }
+
+  function clearFieldError(field) {
+    field.removeAttribute("aria-invalid");
+    var errorElement = errorElementFor(field);
+    if (errorElement) errorElement.textContent = "";
+  }
+
+  /* ======================================================================
+     HOUSEKEEPING
+     ====================================================================== */
+
+  function initFooterYear() {
+    var nodes = document.querySelectorAll("[data-current-year]");
+    var year = String(new Date().getFullYear());
+    for (var i = 0; i < nodes.length; i++) nodes[i].textContent = year;
+  }
+
+  /* ======================================================================
+     START
+     ====================================================================== */
+
+  function init() {
+    initHeader();
+    initMobileMenu();
+    initSubNav();
+    initCurrentNav();
+    initForms();
+    initFooterYear();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
