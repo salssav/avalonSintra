@@ -293,6 +293,10 @@ window.avalonContent.pt = {
 
     heroEyebrow: "A Casa",
     roomsTitle: "Quartos",
+    elevationsTitle: "O edifício",
+    elevationsLead: "Os alçados do arquiteto, norte e sul.",
+    elevationNorthCaption: "Alçado norte, a frente de entrada.",
+    elevationSouthCaption: "Alçado sul, virado para o jardim.",
     roomsParagraphs: [
       "Espaços pensados com cuidado para o descanso e a recuperação. Oferecemos <strong>suites independentes com casa de banho privativa, varanda e vista para o castelo</strong>. Todos os espaços são desenhados com o envolvimento da equipa clínica."
     ],
@@ -677,6 +681,8 @@ window.avalonContent.pt = {
     altGardenPavilion: "Uma pequena construção de pedra entre as árvores do jardim.",
     altGardenWalledPath: "Um caminho estreito entre muros no jardim, com a pedra coberta de musgo e hera.",
     altTerraceUpper: "O terraço superior da casa, com vista sobre as copas das árvores.",
-    altSideEntrance: "A entrada lateral da casa, com uma balaustrada de ferro e azulejo junto aos degraus."
+    altSideEntrance: "A entrada lateral da casa, com uma balaustrada de ferro e azulejo junto aos degraus.",
+    altElevationNorth: "Desenho do alçado norte: uma fachada de 1887 com três pisos, corpo central rematado por frontão, janelas com portadas em cada piso e balaustrada ao nível do primeiro andar.",
+    altElevationSouth: "Desenho do alçado sul, virado para o jardim: varanda coberta assente em colunas ao nível do primeiro andar, terraço com balaustrada e vãos em arco ao nível do jardim."
   }
 };

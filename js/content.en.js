@@ -288,6 +288,10 @@ window.avalonContent.en = {
 
     heroEyebrow: "The House",
     roomsTitle: "Rooms",
+    elevationsTitle: "The building",
+    elevationsLead: "The architect's elevations, north and south.",
+    elevationNorthCaption: "North elevation, the entrance front.",
+    elevationSouthCaption: "South elevation, facing the garden.",
     roomsParagraphs: [
       "Thoughtfully designed spaces for rest and recovery. We offer <strong>independent suites with their own private bathroom, a balcony and a castle view</strong>. Every space is designed with the clinical team involved."
     ],
@@ -671,6 +675,8 @@ window.avalonContent.en = {
     altGardenPavilion: "A small stone outbuilding standing among the trees in the garden.",
     altGardenWalledPath: "A narrow walled path through the garden, the stonework covered in moss and ivy.",
     altTerraceUpper: "The upper terrace of the house, looking out over the treetops.",
-    altSideEntrance: "The side entrance of the house, with an iron balustrade and azulejo tiling beside the steps."
+    altSideEntrance: "The side entrance of the house, with an iron balustrade and azulejo tiling beside the steps.",
+    altElevationNorth: "Architect's drawing of the north elevation: a three-storey 1887 facade with a central pedimented bay, shuttered windows on each floor and a balustrade at first-floor level.",
+    altElevationSouth: "Architect's drawing of the south elevation, facing the garden: a covered veranda on columns at first-floor level, a balustraded terrace, and arched openings at garden level."
   }
 };
