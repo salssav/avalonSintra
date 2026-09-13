@@ -186,11 +186,6 @@ window.avalonContent.en = {
     cardAdmissionsText: "Who Avalon is for, how admission works, and the one short form that starts it.",
     cardLinkLabel: "Read more",
 
-    sintraBandEyebrow: "Why Sintra",
-    sintraBandTitle: "The setting was a clinical decision before it was an aesthetic one.",
-    sintraBandBody: "Dense urban environments sustain activation in the amygdala, the same structure that sits underneath emotional dysregulation in BPD. <strong>Proximity to green space is associated with the opposite.</strong> That is the argument for Sintra.",
-    sintraBandLink: "Read the reasoning",
-
     aboutEyebrow: "About us",
     aboutTitle: "Built by people who could not find this place, so decided to make it.",
     aboutBody: "Avalon began as a response to a gap that is easy to state and hard to live with: a country of ten million people with <strong>roughly four or five specialist residential beds</strong> for one of the most treatable serious psychiatric conditions there is.",

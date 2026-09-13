@@ -191,11 +191,6 @@ window.avalonContent.pt = {
     cardAdmissionsText: "Para quem é a Avalon, como funciona a admissão, e o formulário breve que a inicia.",
     cardLinkLabel: "Ler mais",
 
-    sintraBandEyebrow: "Porquê Sintra",
-    sintraBandTitle: "O lugar foi uma decisão clínica antes de ser uma decisão estética.",
-    sintraBandBody: "Os ambientes urbanos densos mantêm a amígdala ativada, a mesma estrutura que está por baixo da desregulação emocional na Perturbação da Personalidade Borderline. <strong>A proximidade a espaços verdes está associada ao contrário.</strong> É esse o argumento a favor de Sintra.",
-    sintraBandLink: "Leia o raciocínio",
-
     aboutEyebrow: "Sobre nós",
     aboutTitle: "Construído por quem não conseguiu encontrar este lugar, e decidiu fazê-lo.",
     aboutBody: "A Avalon nasceu como resposta a uma lacuna fácil de enunciar e difícil de viver: um país de dez milhões de pessoas com <strong>cerca de quatro ou cinco camas residenciais especializadas</strong> para uma das condições psiquiátricas graves mais tratáveis que existem.",

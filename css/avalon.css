@@ -78,6 +78,7 @@
   /* ---- Typography: weight, leading, tracking ---------------------------- */
   --weightDisplay:     300;
   --weightDisplayBold: 500;
+  --weightDisplayHeavy: 600;
   --weightBody:        400;
   --weightBodyMedium:  500;
   --weightBodyStrong:  600;
@@ -802,10 +803,17 @@ body.menuOpen .menuButton span:nth-child(3) { transform: translateY(-6px) rotate
 }
 
 .teaserCardBody { margin-top: auto; padding: var(--spaceLg); }
-.teaserCardTitle { font-size: var(--sizeDisplaySm); color: var(--colorOnDark); margin-bottom: var(--space2xs); }
+.teaserCardTitle {
+  font-size: var(--sizeDisplaySm);
+  font-weight: var(--weightDisplayHeavy);
+  color: var(--colorOnDark);
+  margin-bottom: var(--space2xs);
+}
 .teaserCardText { font-size: var(--sizeSmall); color: rgba(241,236,225,0.82); margin-bottom: var(--spaceSm); max-width: none; }
+/* The "Read more" label closes the card, so it sits a step below the card
+   text rather than competing with it. */
 .teaserCardMeta {
-  font-size: var(--sizeEyebrow);
+  font-size: 0.66rem;
   letter-spacing: var(--trackingEyebrow);
   text-transform: uppercase;
   color: rgba(241,236,225,0.7);
@@ -822,7 +830,7 @@ body.menuOpen .menuButton span:nth-child(3) { transform: translateY(-6px) rotate
   gap: var(--spaceXs);
 }
 .bandParchmentDeep .plainCard { border-color: transparent; }
-.plainCardTitle { font-size: var(--sizeDisplaySm); }
+.plainCardTitle { font-size: var(--sizeDisplaySm); font-weight: var(--weightDisplayHeavy); }
 .plainCardIndex {
   font-family: var(--fontDisplay);
   font-size: var(--sizeSmall);
