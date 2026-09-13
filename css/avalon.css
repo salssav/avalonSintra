@@ -156,6 +156,12 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  /* Nothing may scroll the page sideways. This sits on the root, not on body:
+     the root's overflow is what propagates to the viewport, so the clipping
+     happens at the viewport and body stays an ordinary block. Put it on both
+     and body becomes a real scroll container instead, which breaks every
+     position: sticky inside it, the sub-nav included. */
+  overflow-x: hidden;
 }
 
 /* Anchor links from the in-page section navigation must not land under the
@@ -173,17 +179,9 @@ body {
   letter-spacing: var(--trackingBody);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 body.menuOpen { overflow: hidden; }
-
-/* Nothing should ever be able to scroll the page sideways. `clip` rather than
-   `hidden` on purpose: `hidden` would turn the body into a scroll container
-   and break every `position: sticky` inside it, the sub-nav included. This is
-   a guard, not the fix for a known overflow: the sub-nav that was causing it
-   is handled where it is defined. */
-body { overflow-x: clip; }
 
 img { max-width: 100%; display: block; height: auto; }
 
