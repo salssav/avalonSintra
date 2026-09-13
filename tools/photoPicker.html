@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avalon — photo picker</title>
+<!--
+  LOCAL TOOL, not part of the site. Nothing links to it.
+  Run `npm run dev`, then open http://localhost:5173/tools/photoPicker.html
+
+  Shows every photograph under sources/ alongside the ones already in images/,
+  with the page and line each is used on, so a replacement can be chosen by
+  name. Click any card to copy its path.
+
+  Re-run `npm run photos` after adding photographs, to refresh the index.
+-->
+<style>
+  :root {
+    --ink: #1E1C19; --muted: #6C665C; --paper: #F4F0E7; --line: #C6BCAA;
+    --card: #FBF9F4; --accent: #4C5F52;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink);
+         font: 14px/1.5 "Inter", -apple-system, "Segoe UI", Roboto, sans-serif; }
+  header { position: sticky; top: 0; z-index: 5; background: var(--paper);
+           border-bottom: 1px solid var(--line); padding: 16px 20px; }
+  h1 { margin: 0 0 4px; font-size: 1.1rem; letter-spacing: .02em; }
+  p.sub { margin: 0; color: var(--muted); font-size: .82rem; }
+  .controls { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  input[type=search] { flex: 1 1 240px; min-width: 200px; padding: 8px 10px;
+    border: 1px solid var(--line); border-radius: 6px; background: var(--card); font: inherit; }
+  button { padding: 8px 12px; border: 1px solid var(--line); border-radius: 6px;
+    background: var(--card); font: inherit; cursor: pointer; }
+  button.on { background: var(--accent); color: #F1ECE1; border-color: var(--accent); }
+  h2 { margin: 28px 20px 10px; font-size: .78rem; text-transform: uppercase;
+       letter-spacing: .14em; color: var(--muted); font-weight: 600; }
+  .grid { display: grid; gap: 14px; padding: 0 20px 20px;
+          grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+  figure { margin: 0; background: var(--card); border: 1px solid var(--line);
+           border-radius: 8px; overflow: hidden; cursor: pointer; }
+  figure:hover { border-color: var(--accent); }
+  figure img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; background: #ddd6c8; }
+  figcaption { padding: 8px 10px; font-size: .76rem; word-break: break-word; }
+  .name { font-weight: 600; }
+  .where { color: var(--muted); margin-top: 3px; font-size: .72rem; }
+  .unused { color: #8C3B2E; }
+  .copied { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%);
+    background: var(--ink); color: var(--paper); padding: 9px 16px; border-radius: 20px;
+    font-size: .82rem; opacity: 0; transition: opacity .18s; pointer-events: none; }
+  .copied.show { opacity: 1; }
+  .hide { display: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Avalon photo picker</h1>
+  <p class="sub">Click a photo to copy its path. Local tool: nothing here is part of the site.
+    Run <code>npm run photos</code> after adding files.</p>
+  <div class="controls">
+    <input type="search" id="q" placeholder="Filter by path (try: jardin, cuarto, terraza, water, sintra)">
+    <button id="bSrc" class="on">Source library</button>
+    <button id="bCur" class="on">Already in images/</button>
+  </div>
+</header>
+
+<h2 id="hCur">Already in images/</h2>
+<div class="grid" id="gridCur"></div>
+
+<h2 id="hSrc">Source library — everything under sources/</h2>
+<div class="grid" id="gridSrc"></div>
+
+<div class="copied" id="toast"></div>
+
+<script>
+fetch("photoPicker.data.json")
+  .then(function (r) { return r.json(); })
+  .then(function (data) {
+    build(document.getElementById("gridCur"), data.current, data.slots);
+    build(document.getElementById("gridSrc"), data.sources, data.slots);
+    wire();
+  })
+  .catch(function () {
+    document.body.insertAdjacentHTML("beforeend",
+      "<p style='padding:20px;color:#8C3B2E'>Could not load photoPicker.data.json. " +
+      "Open this page through the dev server (npm run dev), not as a file:// path.</p>");
+  });
+
+function build(grid, paths, slots) {
+  paths.forEach(function (src) {
+    var used = slots[src];
+    var where = used
+      ? used.join("<br>")
+      : "<span class='unused'>not used on any page</span>";
+    var url = "../" + src.split("/").map(encodeURIComponent).join("/");
+    var fig = document.createElement("figure");
+    fig.innerHTML =
+      '<img loading="lazy" src="' + url + '" alt="">' +
+      '<figcaption><div class="name">' + src + '</div>' +
+      '<div class="where">' + where + "</div></figcaption>";
+    fig.addEventListener("click", function () { copy(src); });
+    grid.appendChild(fig);
+  });
+}
+
+function copy(text) {
+  var toast = document.getElementById("toast");
+  function done() {
+    toast.textContent = "Copied: " + text;
+    toast.classList.add("show");
+    clearTimeout(copy.t);
+    copy.t = setTimeout(function () { toast.classList.remove("show"); }, 1600);
+  }
+  if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, done);
+  else done();
+}
+
+function wire() {
+  var q = document.getElementById("q");
+  q.addEventListener("input", function () {
+    var term = q.value.trim().toLowerCase();
+    var figures = document.querySelectorAll("figure");
+    for (var i = 0; i < figures.length; i++) {
+      var name = figures[i].querySelector(".name").textContent.toLowerCase();
+      figures[i].classList.toggle("hide", term !== "" && name.indexOf(term) === -1);
+    }
+  });
+
+  toggle("bSrc", "gridSrc", "hSrc");
+  toggle("bCur", "gridCur", "hCur");
+}
+
+function toggle(buttonId, gridId, headingId) {
+  var button = document.getElementById(buttonId);
+  button.addEventListener("click", function () {
+    var on = button.classList.toggle("on");
+    document.getElementById(gridId).classList.toggle("hide", !on);
+    document.getElementById(headingId).classList.toggle("hide", !on);
+  });
+}
+</script>
+
+</body>
+</html>

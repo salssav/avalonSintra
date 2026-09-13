@@ -7,10 +7,13 @@
    the same wifi, and the port can be forwarded (VS Code Ports panel, ngrok,
    Cloudflare Tunnel) to share a link more widely.
 
-   Because that link may be public, a few paths are refused: the git history,
-   and the original photography in sources/ (which includes watermarked estate
-   agency images that should not be redistributed). Only the site itself is
-   served. */
+   The git history and local secrets are never served.
+
+   sources/ IS served. It holds the photo library that replacement images are
+   picked from, and blocking it only broke the preview: those same files are
+   already public in the repository and on the live site, so refusing them
+   here protected nothing. If sources/ is ever taken out of the repo, put it
+   back in BLOCKED. */
 
 const http = require('http');
 const fs = require('fs');
@@ -34,7 +37,7 @@ const types = {
 };
 
 // Never served, even though they sit inside the project folder.
-const BLOCKED = ['.git', 'sources', 'node_modules', '.env'];
+const BLOCKED = ['.git', 'node_modules', '.env'];
 
 http.createServer((req, res) => {
   let urlPath;
