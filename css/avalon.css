@@ -357,7 +357,11 @@ em { font-style: italic; }
 .buttonGhost {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  /* Labels sit against the left padding. On buttons that hug their text this
+     looks identical to centring; it only shows on the ones stretched to match
+     a neighbour, where centring left uneven gaps down the row. */
+  justify-content: flex-start;
+  text-align: left;
   gap: var(--space2xs);
   font-family: var(--fontBody);
   font-size: var(--sizeSmall);
@@ -1187,6 +1191,11 @@ body[data-page="programs"] h3 { font-weight: var(--weightDisplayHeavy); }
   color: var(--colorOnDarkMuted);
   text-decoration: none;
   transition: color var(--durationFast) var(--easeOut);
+  /* The contact address is a 25-character word with nothing to break on. In a
+     footer column on a 390px screen it ran 11px past the edge and made every
+     page on the site scroll sideways. `anywhere` only breaks a word when it
+     would otherwise overflow, so ordinary labels are untouched. */
+  overflow-wrap: anywhere;
 }
 .footerNavList a:hover { color: var(--colorOnDark); }
 
