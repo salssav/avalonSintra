@@ -60,6 +60,19 @@
     var menu = document.getElementById("mobileMenu");
     if (!button || !menu) return;
 
+    /* setOpen() moves focus deliberately, which keyboard users need. But a
+       scripted .focus() also makes the browser paint the :focus-visible ring
+       for someone who just tapped, so the menu button came back from a tap
+       wearing a green box. Record how the person is actually driving the page
+       and let the stylesheet suppress the ring for pointers only. */
+    function noteInput(mode) {
+      document.documentElement.setAttribute("data-input", mode);
+    }
+    document.addEventListener("pointerdown", function () { noteInput("pointer"); }, true);
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Tab") noteInput("keyboard");
+    }, true);
+
     var isOpen = false;
 
     function setOpen(next) {

@@ -217,6 +217,12 @@ strong { font-weight: var(--weightBodyStrong); color: var(--colorInk); }
 .siteFooter strong { color: var(--colorOnDark); }
 em { font-style: italic; }
 
+/* The menu button is focused from script when the drawer closes, which makes
+   the browser show the focus ring even to someone who only tapped. Keyboard
+   users still get it: the attribute is only "pointer" after a real pointer
+   event. See noteInput() in js/avalon.js. */
+:root[data-input="pointer"] .menuButton:focus-visible { outline: none; }
+
 :focus-visible {
   outline: 2px solid var(--colorFocusRing);
   outline-offset: 3px;
