@@ -438,6 +438,26 @@ em { font-style: italic; }
   max-width: 20rem;
 }
 
+/* On a phone these were 320x55 each, which is most of the screen width for a
+   secondary action. Roughly half the area, with the height held near 44px:
+   halving that as well would take the tap target below what a thumb can
+   reliably hit. They stay equal to each other. */
+@media (max-width: 699px) {
+  .buttonRow > .buttonPrimary,
+  .buttonRow > .buttonSecondary,
+  .buttonRow > .buttonGhost {
+    /* One per row, capped well short of the full width. Side by side they end
+       up about 160px each, and "Read about our programs" needs roughly 220px
+       to stay on one line: at 160px it wraps to two or three, which makes the
+       button taller than the one it replaced instead of smaller. */
+    flex: 0 0 100%;
+    min-width: 0;
+    max-width: 13.5rem;
+    font-size: 0.68rem;
+    padding: 1.15em 1.3em;
+  }
+}
+
 /* ==========================================================================
    6. SITE HEADER
    Transparent over the hero; becomes a solid, minimal bar once scrolled.
