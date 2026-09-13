@@ -182,9 +182,10 @@
     } catch (error) {
       /* ignore */
     }
-    // Fall back to the browser's own preference before defaulting to English.
-    var browserLanguage = (navigator.language || "").slice(0, 2).toLowerCase();
-    if (SUPPORTED.indexOf(browserLanguage) !== -1) return browserLanguage;
+    /* English is the default for everyone on a first visit. We deliberately do
+       not read navigator.language: the site is written in English first, and a
+       visitor who wants Portuguese has the toggle in the header. Once they use
+       it the choice is stored above and this function never gets this far. */
     return DEFAULT_LANGUAGE;
   }
 
