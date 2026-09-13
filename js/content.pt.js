@@ -155,8 +155,11 @@ window.avalonContent.pt = {
     metaDescription: "A Avalon é uma clínica residencial em Sintra, Portugal, especializada em Terapia Comportamental Dialética para a Perturbação da Personalidade Borderline, com cuidados para depressão, ansiedade e PSPT.",
 
     heroEyebrow: "Sintra, Portugal",
-    heroTitle: "Um refúgio seguro nas montanhas de Portugal.",
-    heroLede: "A Avalon é uma clínica especializada em <strong>terapia DBT para a Perturbação da Personalidade Borderline</strong>, com cuidados dedicados à depressão, à ansiedade e à PSPT.",
+    heroTitle: "Um refúgio seguro em Sintra, Portugal, integrado na Paisagem Cultural Património Mundial da UNESCO e rodeado pela extraordinária beleza natural da serra de Sintra.",
+    heroParagraphs: [
+      "A Avalon é um programa residencial especializado, dedicado <strong>exclusivamente à Perturbação da Personalidade Borderline</strong> e às condições que lhe estão frequentemente associadas, incluindo depressão, ansiedade e perturbação de stress pós-traumático (PSPT).",
+      "Pensada como um lugar de segurança, recuperação e transformação, a Avalon alia cuidados clínicos especializados ao ambiente restaurador de uma das paisagens mais notáveis de Portugal."
+    ],
     heroScrollHint: "Deslize",
 
     introTitle: "Três programas diferentes: Residência, Hospital de Dia e Ambulatório.",
@@ -171,7 +174,7 @@ window.avalonContent.pt = {
     trustTwoLabel: "Baseado na evidência, e medido",
     trustTwoText: "Um protocolo validado, aplicado como deve ser, com a evolução acompanhada através dos mesmos instrumentos usados na investigação em DBT.",
     trustThreeLabel: "Sintra, Portugal",
-    trustThreeText: "Uma casa de 1887 e um jardim histórico de cerca de 5 557 metros quadrados, nas colinas da Serra de Sintra.",
+    trustThreeText: "Uma elegante residência de 1887 rodeada de jardins históricos, nas colinas da Serra de Sintra.",
 
     exploreEyebrow: "Explorar a Avalon",
     exploreTitle: "Por onde começar.",
@@ -190,8 +193,12 @@ window.avalonContent.pt = {
     cardLinkLabel: "Ler mais",
 
     aboutEyebrow: "Sobre nós",
-    aboutTitle: "Construído por quem não conseguiu encontrar este lugar, e decidiu fazê-lo.",
-    aboutBody: "A Avalon nasceu como resposta a uma lacuna fácil de enunciar e difícil de viver: um país de dez milhões de pessoas com <strong>cerca de quatro ou cinco camas residenciais especializadas</strong> para uma das condições psiquiátricas graves mais tratáveis que existem.",
+    aboutTitle: "Construída a partir do amor, e de saber como é difícil enfrentar esta doença sem a ajuda certa.",
+    aboutBody: [
+      "A Avalon nasceu da experiência vivida. De compreender o quanto a Perturbação da Personalidade Borderline pode afetar não só quem vive com ela, mas também a sua família e quem dela cuida.",
+      "Foi criada a partir do amor, e da convicção de que <strong>ninguém deveria ter de atravessar essa experiência sem o apoio, a compreensão e os cuidados certos</strong>.",
+      "<em>A Avalon é o lugar que gostáramos que existisse quando precisámos dele.</em>"
+    ],
     aboutLink: "Sobre a Avalon"
   },
 

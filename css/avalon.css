@@ -703,6 +703,14 @@ body.menuOpen .menuButton span:nth-child(3) { transform: translateY(-6px) rotate
 
 .heroTitle { color: var(--colorOnDark); max-width: 15ch; margin-bottom: var(--spaceMd); }
 
+/* A headline of a sentence rather than a phrase. At the display-XL size and a
+   15ch measure it ran to eleven lines and filled the screen, so it steps down
+   to roughly a sub-heading size and is allowed a wider measure. */
+.heroTitle.heroTitleLong {
+  font-size: clamp(1.6rem, 3.2vw, 2.75rem);
+  max-width: 30ch;
+}
+
 .heroLede {
   font-size: var(--sizeLead);
   line-height: var(--leadingLead);

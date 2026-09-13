@@ -150,8 +150,11 @@ window.avalonContent.en = {
     metaDescription: "Avalon is a residential clinic in Sintra, Portugal, specialising in Dialectical Behaviour Therapy for Borderline Personality Disorder, with care for depression, anxiety and PTSD.",
 
     heroEyebrow: "Sintra, Portugal",
-    heroTitle: "A safe haven in the Portuguese mountains.",
-    heroLede: "Avalon is a clinic specialising in <strong>DBT therapy for Borderline Personality Disorder</strong>, with dedicated care for depression, anxiety and PTSD.",
+    heroTitle: "A safe haven in Sintra, Portugal, set within the UNESCO World Heritage Cultural Landscape and surrounded by the extraordinary natural beauty of the Sintra mountains.",
+    heroParagraphs: [
+      "Avalon is a specialised residential treatment program dedicated <strong>exclusively to Borderline Personality Disorder (BPD)</strong> and commonly co-occurring conditions, including depression, anxiety, and post-traumatic stress disorder (PTSD).",
+      "Designed as a place of safety, recovery, and transformation, Avalon combines specialised clinical care with the restorative environment of one of Portugal’s most remarkable landscapes."
+    ],
     heroScrollHint: "Scroll",
 
     introTitle: "Three different programs: Residential, Day Hospital and Outpatient.",
@@ -166,7 +169,7 @@ window.avalonContent.en = {
     trustTwoLabel: "Evidence-based, and measured",
     trustTwoText: "One validated protocol, delivered properly, with progress tracked using the same instruments used in DBT research.",
     trustThreeLabel: "Sintra, Portugal",
-    trustThreeText: "An 1887 house and a historic garden of roughly 5,557 square metres, in the hills of the Serra de Sintra.",
+    trustThreeText: "An elegant 1887 residence surrounded by historic gardens, nestled in the hills of the Serra de Sintra.",
 
     exploreEyebrow: "Explore Avalon",
     exploreTitle: "Where to start.",
@@ -185,8 +188,12 @@ window.avalonContent.en = {
     cardLinkLabel: "Read more",
 
     aboutEyebrow: "About us",
-    aboutTitle: "Built by people who could not find this place, so decided to make it.",
-    aboutBody: "Avalon began as a response to a gap that is easy to state and hard to live with: a country of ten million people with <strong>roughly four or five specialist residential beds</strong> for one of the most treatable serious psychiatric conditions there is.",
+    aboutTitle: "Built from love, and from knowing how hard it is to face this illness without the right help.",
+    aboutBody: [
+      "Avalon was born from lived experience. From understanding how deeply BPD can affect not only the person living with it, but also their family and those who care for them.",
+      "It was created out of love, and from the conviction that <strong>no one should have to navigate that experience without the right support, understanding and care</strong>.",
+      "<em>Avalon is the place we wished had existed when we needed it.</em>"
+    ],
     aboutLink: "About Avalon"
   },
 
