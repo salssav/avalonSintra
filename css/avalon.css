@@ -779,10 +779,9 @@ body.menuOpen .menuButton span:nth-child(3) { transform: translateY(-6px) rotate
   .subNavInner {
     flex-wrap: wrap;
     overflow-x: visible;
-    gap: var(--spaceSm) var(--spaceMd);
-    padding-block: var(--space2xs);
+    gap: 0 var(--spaceSm);
+    padding-block: 0;
   }
-  .subNavLink { padding-block: var(--spaceXs); }
 }
 
 .subNavLink {
@@ -801,6 +800,20 @@ body.menuOpen .menuButton span:nth-child(3) { transform: translateY(-6px) rotate
 }
 .subNavLink:hover { color: var(--colorInk); }
 .subNavLink.isActive { color: var(--colorAccent); border-bottom-color: var(--colorAccent); }
+
+/* Must come after the rules above, which share its specificity. This strip is
+   sticky, so every pixel of it is taken off the reading area for the whole
+   page. Smaller type and much tighter tracking fit the same links into far
+   fewer rows: the admissions nav was 284px of a 760px screen. Tracking
+   matters more than size here, because the labels are uppercase and several
+   words long. */
+@media (max-width: 699px) {
+  .subNavLink {
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
+    padding-block: var(--space2xs);
+  }
+}
 
 /* ==========================================================================
    10. CARDS
