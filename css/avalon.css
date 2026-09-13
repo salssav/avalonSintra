@@ -1049,6 +1049,24 @@ body[data-page="programs"] h3 { font-weight: var(--weightDisplayHeavy); }
 .photoStrip img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radiusLg); }
 .photoStrip figcaption { font-size: var(--sizeSmall); color: var(--colorInkMuted); margin-top: var(--space2xs); }
 
+/* ---- A single upright photograph -----------------------------------------
+   Portrait images stretched to the full page width have to be cropped hard to
+   stay a sensible height, which throws away most of the picture. This holds
+   one to a readable width and centres it instead. */
+.portraitFigure {
+  margin: 0 auto;
+  max-width: 560px;
+}
+.portraitFigure img {
+  width: 100%;
+  border-radius: var(--radiusLg);
+}
+.portraitFigure figcaption {
+  font-size: var(--sizeSmall);
+  color: var(--colorInkMuted);
+  margin-top: var(--spaceXs);
+}
+
 /* ---- Architect's drawings ------------------------------------------------
    Line drawings on white, so they get a paper card rather than the parchment
    behind them, and `contain` rather than `cover`: cropping a measured

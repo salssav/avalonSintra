@@ -676,6 +676,7 @@ window.avalonContent.en = {
     altGardenWalledPath: "A narrow walled path through the garden, the stonework covered in moss and ivy.",
     altTerraceUpper: "The upper terrace of the house, looking out over the treetops.",
     altSideEntrance: "The side entrance of the house, with an iron balustrade and azulejo tiling beside the steps.",
+    altHouseFront: "The house seen head-on from the foot of the steps: a pink-rendered facade with green shutters, a columned veranda on the upper floor above a stone balustrade, and twin stone stairways curving up around a tall clipped hedge.",
     altElevationNorth: "Architect's drawing of the north elevation: a three-storey 1887 facade with a central pedimented bay, shuttered windows on each floor and a balustrade at first-floor level.",
     altElevationSouth: "Architect's drawing of the south elevation, facing the garden: a covered veranda on columns at first-floor level, a balustraded terrace, and arched openings at garden level."
   }

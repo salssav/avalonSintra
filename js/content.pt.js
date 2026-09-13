@@ -682,6 +682,7 @@ window.avalonContent.pt = {
     altGardenWalledPath: "Um caminho estreito entre muros no jardim, com a pedra coberta de musgo e hera.",
     altTerraceUpper: "O terraço superior da casa, com vista sobre as copas das árvores.",
     altSideEntrance: "A entrada lateral da casa, com uma balaustrada de ferro e azulejo junto aos degraus.",
+    altHouseFront: "A casa vista de frente, do fundo das escadas: fachada de reboco rosa com portadas verdes, varanda de colunas no piso superior sobre uma balaustrada de pedra, e duas escadarias de pedra que sobem em curva em torno de uma sebe alta aparada.",
     altElevationNorth: "Desenho do alçado norte: uma fachada de 1887 com três pisos, corpo central rematado por frontão, janelas com portadas em cada piso e balaustrada ao nível do primeiro andar.",
     altElevationSouth: "Desenho do alçado sul, virado para o jardim: varanda coberta assente em colunas ao nível do primeiro andar, terraço com balaustrada e vãos em arco ao nível do jardim."
   }
