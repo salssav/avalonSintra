@@ -70,12 +70,12 @@ async function run() {
         dHome.querySelector(".navList .navLink").textContent.trim() === "Our Programs",
         dHome.querySelector(".navList .navLink").textContent.trim());
   check("paragraph array rendered",
-        dHome.querySelectorAll('[data-i18n-paras="home.introParagraphs"] p').length === 3,
+        dHome.querySelectorAll('[data-i18n-paras="home.introParagraphs"] p').length === 2,
         dHome.querySelectorAll('[data-i18n-paras="home.introParagraphs"] p').length + " <p>");
   check("image alt text applied",
         (dHome.querySelector(".heroMedia img").getAttribute("alt") || "").length > 20);
   check("placeholder tag rendered as element",
-        !!dHome.querySelector(".heroCaption .placeholderTag"));
+        !!dHome.querySelector(".siteFooter .placeholderTag"));
   check("no raw <ph> left in text",
         dHome.body.innerText.indexOf("<ph>") === -1);
   check("no missing-key blanks in nav",
@@ -92,7 +92,7 @@ async function run() {
   const enTitle = heroTitle.textContent;
   wHome.avalonI18n.setLanguage("pt");
   const ptTitle = heroTitle.textContent;
-  check("PT toggle changes copy", ptTitle !== enTitle && ptTitle.indexOf("PT TRANSLATION PENDING") !== -1,
+  check("PT toggle changes copy", ptTitle !== enTitle && ptTitle.trim().length > 10,
         '"' + ptTitle + '"');
   check("html lang becomes pt", dHome.documentElement.getAttribute("lang") === "pt");
   check("PT button marked active",

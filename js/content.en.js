@@ -76,10 +76,7 @@ window.avalonContent.en = {
     emdr: "EMDR",
     mindfulness: "Mindfulness",
     familyResources: "Resources for Family and Friends",
-    familyAccess: "Patient Access to Family and Friends",
     beliefs: "What We Believe",
-    origin: "How Avalon Started",
-    medicalTeam: "Medical Team",
     joinTeam: "Join Our Team"
   },
 
@@ -87,7 +84,7 @@ window.avalonContent.en = {
   cta: {
     eyebrow: "Admissions are open",
     title: "Join the waitlist.",
-    body: "Avalon is not open yet. The waitlist is how we stay in touch with the people who want a place when it is — and it is the simplest way to start a conversation with us. It commits you to nothing at all.",
+    body: "Avalon is not open yet. The waitlist is how we stay in touch with the people who want a place when it is, and it is the simplest way to start a conversation with us. <strong>It commits you to nothing at all.</strong>",
     button: "Join the waitlist",
     secondary: "Read how admission works",
     aside: "If you would rather just talk to someone first, say so in the message field. That is a completely normal way to begin."
@@ -99,25 +96,10 @@ window.avalonContent.en = {
     programsTitle: "Our Programs",
     careTitle: "Care",
     contactTitle: "Contact",
-    /* PLACEHOLDER: confirm the public contact address and phone number before launch. */
-    email: "[PLACEHOLDER: email address]",
-    phone: "[PLACEHOLDER: phone number]",
-    /* PLACEHOLDER: confirm the street address to publish, if any, during renovation. */
-    address: "Sintra, Portugal <ph>address to confirm</ph>",
-    legalNote: "Avalon is a clinic in development. Nothing on this site is an offer of treatment or a substitute for individual clinical advice.",
+    email: "alfredov@avalonsintra.com",
+    phone: "+351 912 102 647",
+    address: "Sintra, Portugal",
     copyright: "Avalon. All rights reserved.",
-    /* PLACEHOLDER: privacy policy and terms pages to be drafted before launch. */
-    privacy: "Privacy Policy <ph>to follow</ph>",
-    terms: "Terms <ph>to follow</ph>"
-  },
-
-  /* ---- Crisis notice — required on any mental health site ---------------- */
-  crisis: {
-    title: "If you need help right now",
-    /* PLACEHOLDER: confirm these numbers with the clinical team before launch.
-       112 is the European emergency number; SNS 24 is Portugal's national
-       health line. */
-    body: "Avalon is not an emergency service and cannot respond to a crisis. If you or someone you love is in immediate danger, call 112. In Portugal you can also reach SNS 24 on 808 24 24 24, at any hour, for health advice including mental health. <ph>numbers to confirm</ph>"
   },
 
   /* ---- Forms ------------------------------------------------------------ */
@@ -143,16 +125,13 @@ window.avalonContent.en = {
     specialtyOther: "Something else",
     submitWaitlist: "Join the waitlist",
     submitTeam: "Send your interest",
-    consent: "We will only use your details to reply to you about Avalon. We will not share them with anyone else.",
+    consent: "We will only use your details to reply to you about Avalon. <strong>We will not share them with anyone else.</strong>",
     errorRequired: "Please fill this in so we can reply.",
     errorEmail: "Please check this email address.",
     errorSelect: "Please choose an option.",
-    /* PLACEHOLDER: no form backend is connected yet. Submissions are handled
-       in the browser only and are not sent or stored anywhere. */
-    demoNotice: "This form is not connected to a mailbox yet. <ph>backend to connect</ph>",
     waitlistConfirmTitle: "Thank you. We have you.",
     waitlistConfirmBody: [
-      "Someone from Avalon will write to you personally. Not an automated sequence, and not a sales call — a real reply from a real person, so you can ask whatever you actually want to ask.",
+      "Someone from Avalon will write to you personally. Not an automated sequence, and not a sales call. A real reply from a real person, so you can ask whatever you actually want to ask.",
       "Reaching out is often the hardest part, and you have done it. There is nothing else you need to do today."
     ],
     teamConfirmTitle: "Thank you for getting in touch.",
@@ -167,25 +146,18 @@ window.avalonContent.en = {
      ====================================================================== */
 
   home: {
-    pageTitle: "Avalon — Residential DBT for Borderline Personality Disorder, Sintra",
+    pageTitle: "Avalon | Residential DBT for Borderline Personality Disorder, Sintra",
     metaDescription: "Avalon is a residential clinic in Sintra, Portugal, specialising in Dialectical Behaviour Therapy for Borderline Personality Disorder, with care for depression, anxiety and PTSD.",
 
     heroEyebrow: "Sintra, Portugal",
-    heroTitle: "A house built for the work of getting better.",
-    heroLede: "Avalon is a residential clinic specialising in Dialectical Behaviour Therapy for Borderline Personality Disorder — with dedicated care for depression, anxiety and PTSD.",
-    /* PLACEHOLDER: opening date not confirmed. */
-    heroCaption: "The house, built in 1887, seen from its upper terrace. In renovation now, opening <ph>date to confirm</ph>",
+    heroTitle: "A safe haven in the Portuguese mountains.",
+    heroLede: "Avalon is a clinic specialising in <strong>DBT therapy for Borderline Personality Disorder</strong>, with dedicated care for depression, anxiety and PTSD.",
     heroScrollHint: "Scroll",
 
-    missionEyebrow: "Why we exist",
-    missionStatement: "Portugal has almost no specialist residential capacity for Borderline Personality Disorder. Avalon exists to close that gap.",
-
-    introEyebrow: "What Avalon is",
-    introTitle: "One clinic, one protocol, three levels of intensity.",
+    introTitle: "Three different programs: Residential, Day Hospital and Outpatient.",
     introParagraphs: [
-      "Avalon is a private residential clinic taking shape in a historic house above Sintra. It offers a full continuum of care — residential, day hospital and outpatient — organised around Dialectical Behaviour Therapy, the most extensively validated treatment there is for Borderline Personality Disorder.",
-      "Our patients are adults who come voluntarily, and who are clinically stable at the point they arrive. Avalon is not a crisis service. People in acute crisis, or under involuntary treatment, are helped towards the right care elsewhere.",
-      "The house is in renovation now. The waitlist is open, and joining it commits you to nothing."
+      "Our patients are adults who come <strong>voluntarily</strong>, and who are <strong>clinically stable</strong> at the point they arrive.",
+      "<strong>The waitlist is open.</strong>"
     ],
     introLink: "Read about our programs",
 
@@ -203,7 +175,7 @@ window.avalonContent.en = {
     cardProgramsTitle: "Our Programs",
     cardProgramsText: "Residential, day hospital and outpatient care, delivered by one team, at the intensity a person needs right now.",
     cardTreatmentsTitle: "Treatments",
-    cardTreatmentsText: "BPD, depression, anxiety and PTSD — what they are, and why specialist treatment changes the outcome.",
+    cardTreatmentsText: "BPD, depression, anxiety and PTSD: what they are, and why specialist treatment changes the outcome.",
     cardSolutionsTitle: "Solutions",
     cardSolutionsText: "DBT, EMDR and mindfulness: the methods the programme is actually built from.",
     cardHouseTitle: "The House",
@@ -216,18 +188,12 @@ window.avalonContent.en = {
 
     sintraBandEyebrow: "Why Sintra",
     sintraBandTitle: "The setting was a clinical decision before it was an aesthetic one.",
-    sintraBandBody: "Dense urban environments sustain activation in the amygdala — the same structure that sits underneath emotional dysregulation in BPD. Proximity to green space is associated with the opposite. That is the argument for Sintra.",
+    sintraBandBody: "Dense urban environments sustain activation in the amygdala, the same structure that sits underneath emotional dysregulation in BPD. <strong>Proximity to green space is associated with the opposite.</strong> That is the argument for Sintra.",
     sintraBandLink: "Read the reasoning",
-
-    quoteEyebrow: "From our founder",
-    /* PLACEHOLDER: founder quote is holding text. To be written or approved by
-       the founder before launch. Attribution also pending. */
-    quoteText: "There are people in this country who have been told, over and over, that there is nowhere for them to go. We are building the place.",
-    quoteAttribution: "[FOUNDER NAME], Founder <ph>quote and attribution pending</ph>",
 
     aboutEyebrow: "About us",
     aboutTitle: "Built by people who could not find this place, so decided to make it.",
-    aboutBody: "Avalon began as a response to a gap that is easy to state and hard to live with: a country of ten million people with roughly four or five specialist residential beds for one of the most treatable serious psychiatric conditions there is.",
+    aboutBody: "Avalon began as a response to a gap that is easy to state and hard to live with: a country of ten million people with <strong>roughly four or five specialist residential beds</strong> for one of the most treatable serious psychiatric conditions there is.",
     aboutLink: "About Avalon"
   },
 
@@ -236,17 +202,12 @@ window.avalonContent.en = {
      ====================================================================== */
 
   programs: {
-    pageTitle: "Our Programs — Avalon",
+    pageTitle: "Our Programs | Avalon",
     metaDescription: "Residence, Day Hospital, Outpatient care, activities and therapies at Avalon, a residential DBT clinic in Sintra, Portugal.",
 
     heroEyebrow: "Our Programs",
     heroTitle: "Care that steps down in intensity, never in quality.",
-    heroLede: "One clinical programme, delivered at three levels of intensity, so treatment can follow a person as they steady — without making them start again with a new team.",
-
-    introParagraphs: [
-      "Most people do not need the same intensity of care for the whole of their recovery, and most systems handle that badly: a person improves, is discharged, and lands somewhere else entirely, with a different team and a different model, and loses much of what they had built.",
-      "Avalon is designed as one continuum. The protocol, the language and — as far as possible — the people stay the same as intensity comes down."
-    ],
+    heroLede: "One clinical programme, delivered at three levels of intensity, so treatment can follow a person as they steady, <em>without making them start again with a new team.</em>",
 
     residenceTitle: "Residence",
     residenceLead: "An intensive treatment programme, lived in.",
@@ -271,10 +232,6 @@ window.avalonContent.en = {
       "We regularly adjust each treatment plan according to the person's symptoms, risks, preferences and progress.",
       "At Avalon, we base admission, continued stay, transfer and discharge on clinical need and safety, while respecting each person's dignity, autonomy and active participation in care."
     ],
-    /* PLACEHOLDER: no bed count, length of stay or daily timetable until
-       confirmed by the clinical team. */
-    residencePlaceholder: "Programme length and residential capacity <ph>to follow</ph>",
-
     dayHospitalTitle: "Day Hospitalisation",
     dayHospitalLead: "Full clinical intensity, evenings at home.",
     dayHospitalParagraphs: [
@@ -283,9 +240,6 @@ window.avalonContent.en = {
       "The programme typically includes individualised assessment, individual and group psychotherapy, psychiatric follow-up when indicated, skills training, psychoeducation, emotional regulation work, family involvement, and ongoing clinical monitoring.",
       "The goal is to provide intensive support, strengthen coping and emotional regulation skills, improve daily functioning, and help individuals progressively return to greater independence and stability in their everyday lives."
     ],
-    /* PLACEHOLDER: exact schedule to follow. */
-    dayHospitalPlaceholder: "Exact daily and weekly schedule <ph>to follow</ph>",
-
     outpatientTitle: "Outpatient",
     outpatientLead: "The same protocol, at the pace of an ordinary life.",
     outpatientParagraphs: [
@@ -298,12 +252,9 @@ window.avalonContent.en = {
     activitiesParagraphs: [
       "Alongside clinical treatment, Avalon offers a program of therapeutic and community activities designed to support recovery in daily life."
     ],
-    /* PLACEHOLDER: no specific activities list yet. */
-    activitiesPlaceholder: "Specific activities programme <ph>to follow</ph>",
-
     therapiesTitle: "Therapies",
     therapiesLead: "What actually happens, week to week.",
-    therapiesIntro: "Full DBT is not a single therapy but a set of components that only work properly together. Avalon delivers all of them.",
+    therapiesIntro: "Full DBT is not a single therapy but a set of components that <strong>only work properly together</strong>. Avalon delivers all of them.",
 
     therapyIndividualTitle: "Individual DBT therapy",
     therapyIndividualText: "Every patient works with an individual DBT therapist. This is the thread that runs through everything else: a structured weekly session where skills stop being abstract and get applied to whatever is actually happening in a person's life this week.",
@@ -314,7 +265,7 @@ window.avalonContent.en = {
     moduleMindfulnessTitle: "Mindfulness",
     moduleMindfulnessText: "Noticing what is happening, inside and around you, without immediately having to act on it.",
     moduleDistressTitle: "Distress Tolerance",
-    moduleDistressText: "Getting through the worst moments without making them worse — crisis survival skills, and the harder practice of accepting what cannot be changed right now.",
+    moduleDistressText: "Getting through the worst moments without making them worse: crisis survival skills, and the harder practice of accepting what cannot be changed right now.",
     moduleEmotionTitle: "Emotion Regulation",
     moduleEmotionText: "Understanding what emotions are doing, reducing vulnerability to them, and changing the ones that do not fit the facts.",
     moduleInterpersonalTitle: "Interpersonal Effectiveness",
@@ -324,7 +275,7 @@ window.avalonContent.en = {
     therapyPsychiatryText: "Regular psychiatric review sits alongside the therapy, not above it. Medication is considered where it helps and questioned where it does not.",
 
     therapyConsultTitle: "The clinical consultation team",
-    therapyConsultText: "Once a week, the clinicians treating you meet as a team — not for administration, but to help each other deliver the therapy properly. In DBT this is not optional; the consultation team is a formal part of the treatment model, on the principle that therapists doing this work need support too. We mention it because it is one of the clearest signals of whether a programme is genuinely doing DBT, or borrowing the name."
+    therapyConsultText: "Once a week, the clinicians treating you meet as a team, not for administration, but to help each other deliver the therapy properly. In DBT this is <em>not</em> optional; the consultation team is a formal part of the treatment model, on the principle that therapists doing this work need support too. We mention it because it is one of the clearest signals of whether a programme is genuinely doing DBT, or borrowing the name."
   },
 
   /* ======================================================================
@@ -332,54 +283,27 @@ window.avalonContent.en = {
      ====================================================================== */
 
   house: {
-    pageTitle: "The House — Avalon, Sintra",
+    pageTitle: "The House | Avalon, Sintra",
     metaDescription: "An 1887 house in Sintra with a historic garden of roughly 5,557 square metres: rooms, common areas, outdoor spaces, and why Sintra was chosen.",
 
     heroEyebrow: "The House",
-    heroTitle: "An 1887 house, and the garden that came with it.",
-    heroLede: "Avalon is taking shape inside a historic mansion in Sintra. The purchase completed in May 2026; the house is in renovation now.",
-    heroCaption: "The facade from the lane below. Photographed during the purchase, before renovation began.",
-
-    introParagraphs: [
-      "The building dates from 1887 and has the proportions of its period: high ceilings, deep windows, a staircase that takes its time, painted tile at the thresholds. Very little about it is neutral, and that is deliberate — a person in treatment is not helped by feeling institutional.",
-      "Renovation is underway. The photographs on this page show the house as it was bought, not as it will open. They are here because they are honest, and because the bones of the place are the reason it was chosen."
-    ],
-
     roomsTitle: "Rooms",
-    /* PLACEHOLDER: no room counts, room types, or interior specifics until the
-       renovation and clinical fit-out are confirmed. Warm general language only. */
     roomsParagraphs: [
-      "Thoughtfully designed spaces for rest and recovery — quiet, private, and made for actually sleeping in rather than merely being accommodated in.",
-      "The rooms are being redesigned as part of the renovation, with the clinical team involved in the specification from the start."
+      "Thoughtfully designed spaces for rest and recovery. We offer <strong>independent suites with their own private bathroom, a balcony and a castle view</strong>. Every space is designed with the clinical team involved."
     ],
-    roomsPlaceholder: "Room detail, numbers and photography <ph>to follow</ph>",
-    roomsMediaNote: "Photography of the finished rooms to follow",
-
     commonAreasTitle: "Common Areas",
-    /* PLACEHOLDER: general only until the renovation is complete. */
     commonAreasParagraphs: [
-      "Shared rooms for eating together, sitting together, and being quietly in the same space as other people without having to perform anything. In a residential program these rooms carry more weight than they look like they do.",
-      "The salon, the dining room and the upper corridors are being restored rather than replaced."
+      "Shared rooms for eating together, spending time with others, playing and resting."
     ],
-    commonAreasPlaceholder: "Final layout and use of the common rooms <ph>to follow</ph>",
-
     outdoorTitle: "Outdoor Spaces",
-    outdoorLead: "A historic garden of roughly 5,557 square metres.",
     outdoorParagraphs: [
-      "The property includes a historic garden of approximately 5,557 square metres, laid out across the slope in stone terraces. There are old stone walls holding the levels, water tanks, and a well — the working infrastructure of a nineteenth-century Sintra garden, most of it still in place.",
-      "Steps run down through the planting from the house to the lower level. In places the garden has grown over itself completely; camellias, ferns and mature trees have had decades to do as they liked. Restoring it is part of the project rather than a detail of it.",
-      "It matters clinically as well as aesthetically. A garden this size means a person can go outside, walk, and be genuinely alone without leaving the property or asking anyone's permission."
+      "The property includes a historic garden of <strong>approximately 5,557 square metres</strong>, and a pool with views of the castle. The garden will serve as a space for outdoor workshops and for relaxation."
     ],
 
     sintraTitle: "Why Sintra",
-    sintraLead: "Chosen on clinical grounds before aesthetic ones.",
     sintraParagraphs: [
-      "There is now a consistent body of research on what environments do to the brain's threat system, and it is specific enough to build on.",
-      "Dense urban living is associated with sustained hyperactivation of the amygdala — the same structure that, in Borderline Personality Disorder, is repeatedly found to be over-reactive and slow to settle. The amygdala is, in a real sense, the neurobiological substrate of emotional dysregulation. Asking someone to do the hardest psychological work of their life in an environment that keeps that system switched on is a strange way to begin.",
-      "The corresponding finding is the more useful one. Proximity to green space is associated with reduced amygdala activation, and with measurable structural differences in the brain regions involved in regulating emotion.",
-      "That is the argument for Sintra: woodland, Atlantic air off the Serra, and a microclimate that has drawn people here to recover for two centuries. None of this replaces treatment. The therapy does the work. But the setting decides how much of a person's capacity is available to do it with."
+      "Sintra is considered <strong>one of the most magical places in Portugal</strong>, with access to gardens and castles, and close to both the coast and Lisbon. It is the perfect location to heal and to concentrate on a new chapter."
     ],
-    sintraCaption: "Looking north from the terrace towards the Castelo dos Mouros."
   },
 
   /* ======================================================================
@@ -387,12 +311,12 @@ window.avalonContent.en = {
      ====================================================================== */
 
   admissions: {
-    pageTitle: "Admissions — Avalon",
+    pageTitle: "Admissions | Avalon",
     metaDescription: "Who Avalon is for, how the admission process works, how progress is measured, and how to join the waitlist.",
 
     heroEyebrow: "Admissions",
     heroTitle: "How someone comes to Avalon.",
-    heroLede: "Admission is a conversation before it is a decision. Nothing about the first step is binding, and nobody is assessed on the strength of a form.",
+    heroLede: "Admission is a conversation before it is a decision. <strong>Nothing about the first step is binding</strong>, and nobody is assessed on the strength of a form.",
 
     criteriaTitle: "Who Avalon is for",
     criteriaLead: "Being clear about this early spares people a difficult conversation later.",
@@ -403,7 +327,7 @@ window.avalonContent.en = {
       "are clinically stabilised rather than in acute crisis at the point of admission;",
       "do not have a primary substance use disorder as their presenting diagnosis."
     ],
-    criteriaNote: "If Avalon is not the right setting, we will say so, and we will try to point towards something that is. Being turned down here is not a judgement about anyone's worth or seriousness — it is a judgement about fit, and getting it wrong helps nobody.",
+    criteriaNote: "If Avalon is not the right setting, we will say so, and we will try to point towards something that is. Being turned down here is <em>not</em> a judgement about anyone's worth or seriousness. It is a judgement about fit, and getting it wrong helps nobody.",
 
     processTitle: "Admission Process",
     processLead: "Six stages, from the first phone call to the day someone arrives.",
@@ -424,7 +348,7 @@ window.avalonContent.en = {
     stepThreeTitle: "Treatment programme",
     stepThreeText: "The assessment determines which programme fits:",
     stepThreeList: [
-      "DBT as a residential bridge programme — an intermediate residential model for people who need structure and support before returning to everyday life.",
+      "DBT as a residential bridge programme: an intermediate residential model for people who need structure and support before returning to everyday life.",
       "DBT as a day-treatment bridge programme."
     ],
 
@@ -440,7 +364,7 @@ window.avalonContent.en = {
       "Clothing requirements, including specific restrictions such as trainers without laces or trousers without drawstrings.",
       "Food allergies.",
       "Food preferences and availability.",
-      "Dietary practice — kosher, vegetarian, or other restrictions.",
+      "Dietary practice: kosher, vegetarian, or other restrictions.",
       "Restricted items."
     ],
 
@@ -466,16 +390,7 @@ window.avalonContent.en = {
     progressQualityText: "Ultimately, progress means more than feeling less distressed. It means being increasingly able to build and participate in a life that feels stable, meaningful and worth living.",
 
     progressClosing: "Progress is reviewed throughout the programme using evidence-based clinical measures and regular multidisciplinary assessment, allowing each treatment plan to evolve as the person's needs and goals change.",
-    /* PLACEHOLDER: the specific instruments and measurement intervals to be
-       confirmed and named by the clinical team. */
-    progressPlaceholder: "Named instruments and measurement intervals <ph>to confirm</ph>",
-
     waitlistTitle: "Join Our Waitlist",
-    waitlistLead: "Short, and it commits you to nothing.",
-    waitlistParagraphs: [
-      "Avalon is not open yet, so the waitlist is how we keep in touch with the people who want a place when it is. It is also, in practice, how most conversations with us start.",
-      "Five fields. No intake questionnaire, no history, nothing you have to steel yourself to write. If you would rather just talk to someone before anything else, say that in the message and we will do that instead."
-    ]
   },
 
   /* ======================================================================
@@ -483,12 +398,12 @@ window.avalonContent.en = {
      ====================================================================== */
 
   treatments: {
-    pageTitle: "Treatments — Avalon",
+    pageTitle: "Treatments | Avalon",
     metaDescription: "Patient-facing explanations of Borderline Personality Disorder, depression, anxiety and PTSD, and why specialist treatment matters.",
 
     heroEyebrow: "Treatments",
     heroTitle: "What we treat, explained plainly.",
-    heroLede: "Written for someone trying to understand what is happening to them, or to someone they love — not for a clinical audience.",
+    heroLede: "Written for someone trying to understand what is happening to them, or to someone they love, <em>not</em> for a clinical audience.",
 
     introParagraphs: [
       "A diagnosis is a useful shorthand, not a description of a person. What follows is meant to be recognisable rather than exhaustive: enough to know whether you are in the right place, and what specialist treatment would actually involve.",
@@ -518,20 +433,20 @@ window.avalonContent.en = {
     bpdMisdiagnosisTitle: "Why it is so often missed",
     bpdMisdiagnosisParagraphs: [
       "BPD is frequently misdiagnosed, most often as bipolar disorder, depression, or treatment-resistant anxiety. The reasons are understandable: the mood shifts look similar from the outside, depression genuinely is present much of the time, and the person in front of the clinician is usually there because of a crisis rather than a pattern.",
-      "The cost of getting it wrong is years — years of treatment aimed at the wrong target, and the reasonable conclusion, on the patient's side, that nothing works and they are the problem.",
-      "It is worth saying plainly: BPD is one of the more treatable serious psychiatric conditions, and the evidence for that is strong. Many people meet criteria at one point in their lives and not at another. The prognosis is genuinely good when the treatment is the right one."
+      "The cost of getting it wrong is years. Years of treatment aimed at the wrong target, and the reasonable conclusion, on the patient's side, that nothing works and they are the problem.",
+      "It is worth saying plainly: BPD is <strong>one of the more treatable serious psychiatric conditions</strong>, and the evidence for that is strong. Many people meet criteria at one point in their lives and not at another. The prognosis is genuinely good when the treatment is the right one."
     ],
     bpdWhySpecialistTitle: "Why specialist treatment matters",
     bpdWhySpecialistParagraphs: [
       "General mental health care is not designed for this. Supportive therapy without structure tends not to help and can make things harder; medication alone has no strong evidence base for BPD itself.",
-      "What does have evidence is structured, protocol-driven therapy — above all DBT, which was developed specifically for this population and has been tested more thoroughly than any alternative.",
-      "That is the whole argument for a specialist setting. Not a nicer building: a team trained in one model, delivering it completely, with the supervision structure that keeps it honest."
+      "What does have evidence is structured, protocol-driven therapy, above all DBT, which was developed specifically for this population and has been tested more thoroughly than any alternative.",
+      "That is the whole argument for a specialist setting. <em>Not a nicer building:</em> a team trained in one model, delivering it completely, with the supervision structure that keeps it honest."
     ],
     /* PLACEHOLDER: mortality and suicide data appears once, gently, with a
        supportive frame, and is never repeated or used as an opening line —
        per the brief. Wording to be reviewed by the clinical team. */
     bpdCalloutParagraphs: [
-      "BPD carries a real risk of suicide, and we are not going to pretend otherwise on a page written for people living with it. We say it once, here, and only for this reason: that risk falls substantially with proper treatment. If you are somewhere dark right now, that is exactly the circumstance this kind of care exists for. Please talk to someone today — a doctor, a crisis line, or us."
+      "BPD carries a real risk of suicide, and we are not going to pretend otherwise on a page written for people living with it. We say it once, here, and only for this reason: <strong>that risk falls substantially with proper treatment</strong>. If you are somewhere dark right now, that is exactly the circumstance this kind of care exists for. Please talk to someone today: a doctor, a crisis line, or us."
     ],
 
     /* ---- Depression ---- */
@@ -539,7 +454,7 @@ window.avalonContent.en = {
     depressionLead: "More than low mood, and treatable.",
     depressionWhatParagraphs: [
       "Depression can gradually affect the way a person feels, thinks, connects with others, and experiences everyday life. It may involve persistent sadness, emotional numbness, loss of interest or pleasure, exhaustion, difficulty concentrating, changes in sleep, or a sense of hopelessness.",
-      "Depression is not simply a lack of motivation or a temporary low mood. It is a complex condition that can have biological, psychological and environmental dimensions. With appropriate treatment and support, recovery and renewed engagement with life are possible."
+      "Depression is <em>not</em> simply a lack of motivation or a temporary low mood. It is a complex condition that can have biological, psychological and environmental dimensions. With appropriate treatment and support, recovery and renewed engagement with life are possible."
     ],
     depressionSignsTitle: "Common signs",
     depressionSignsList: [
@@ -553,7 +468,7 @@ window.avalonContent.en = {
       "Thoughts of death or of not wanting to be here"
     ],
     depressionWhyParagraphs: [
-      "Depression is very common alongside BPD, and the two are often confused — which matters, because they need different things. Depression that is really part of an emotional regulation disorder responds poorly to antidepressants alone, and well to skills-based treatment.",
+      "Depression is very common alongside BPD, and the two are often confused. That matters, because they need different things. Depression that is really part of an emotional regulation disorder responds poorly to antidepressants alone, and well to skills-based treatment.",
       "At Avalon, depression is treated in its own right where it is the primary problem, and treated as part of the whole picture where it is not."
     ],
 
@@ -574,7 +489,7 @@ window.avalonContent.en = {
       "Exhaustion from vigilance that never switches off"
     ],
     anxietyWhyParagraphs: [
-      "Anxiety responds well to structured, evidence-based treatment, and several of the DBT skill modules — distress tolerance and mindfulness in particular — target exactly the mechanisms that keep it going.",
+      "Anxiety responds well to structured, evidence-based treatment, and several of the DBT skill modules, distress tolerance and mindfulness in particular, target exactly the mechanisms that keep it going.",
       "Where anxiety sits alongside BPD or trauma, treating it in isolation tends to disappoint. Treating it as part of one formulation works better."
     ],
 
@@ -616,7 +531,7 @@ window.avalonContent.en = {
      ====================================================================== */
 
   solutions: {
-    pageTitle: "Solutions — DBT, EMDR and Mindfulness at Avalon",
+    pageTitle: "Solutions | DBT, EMDR and Mindfulness at Avalon",
     metaDescription: "Dialectical Behaviour Therapy, EMDR and mindfulness at Avalon: what each method is, and how it is used in the programme.",
 
     heroEyebrow: "Solutions",
@@ -628,7 +543,7 @@ window.avalonContent.en = {
     dbtLead: "The core of everything Avalon does.",
     dbtWhatTitle: "What is DBT?",
     dbtWhatParagraphs: [
-      "Dialectical Behaviour Therapy (DBT) is an evidence-based, structured form of psychotherapy designed to help people better understand and manage intense emotions, navigate difficult situations, and build healthier relationships. DBT provides practical skills for emotional regulation, distress tolerance, mindfulness and interpersonal effectiveness, helping individuals respond to challenging experiences with greater awareness and flexibility.",
+      "Dialectical Behaviour Therapy (DBT) is an <strong>evidence-based, structured form of psychotherapy</strong> designed to help people better understand and manage intense emotions, navigate difficult situations, and build healthier relationships. DBT provides practical skills for emotional regulation, distress tolerance, mindfulness and interpersonal effectiveness, helping individuals respond to challenging experiences with greater awareness and flexibility.",
       "Originally developed for Borderline Personality Disorder (BPD), DBT is now used to support people experiencing a wide range of emotional and behavioural difficulties, including impulsivity, emotional overwhelm, relationship challenges, and difficulty coping with distress. The approach balances acceptance and compassion with meaningful behavioural change, helping individuals develop greater stability, self-understanding and confidence in managing their lives."
     ],
     dbtModulesTitle: "The four skill modules",
@@ -639,9 +554,6 @@ window.avalonContent.en = {
       "Our programmes are led by experienced clinicians with many years of clinical practice, supported by advanced training and internationally recognised certifications. We stay closely connected to current research and evidence-based practice, while providing care that is thoughtful, individualised and grounded in the highest clinical standards.",
       "You are at the centre of everything we do. Our goal is not only to reduce symptoms, but to help you build greater stability, connection, independence and, ultimately, a life worth living."
     ],
-    /* PLACEHOLDER: keep DBT-at-Avalon general until staffing and programme
-       structure are confirmed. No named clinicians, ratios or schedules. */
-    dbtAtAvalonPlaceholder: "Programme structure and team detail <ph>to follow</ph>",
     dbtLink: "See the therapies in the programme",
 
     /* ---- EMDR ---- */
@@ -650,7 +562,7 @@ window.avalonContent.en = {
     emdrWhatTitle: "What is EMDR?",
     emdrWhatParagraphs: [
       "Eye Movement Desensitisation and Reprocessing (EMDR) is a trauma-focused psychotherapy that helps people process distressing or traumatic experiences that may continue to influence how they feel, think, relate to others, or respond in the present. The goal is to help process the memory in a way that reduces its emotional intensity and allows it to become less disruptive in everyday life.",
-      "EMDR has its strongest research support for the treatment of Post-Traumatic Stress Disorder (PTSD) and is recommended by major international clinical guidelines. It can help reduce symptoms such as intrusive memories, emotional distress, avoidance, hyperarousal and other trauma-related reactions.",
+      "EMDR has its <strong>strongest research support</strong> for the treatment of Post-Traumatic Stress Disorder (PTSD) and is recommended by major international clinical guidelines. It can help reduce symptoms such as intrusive memories, emotional distress, avoidance, hyperarousal and other trauma-related reactions.",
       "EMDR may also be integrated into the treatment of Complex PTSD (C-PTSD), Borderline Personality Disorder (BPD), depression and anxiety, particularly when traumatic or adverse experiences, distressing memories or specific triggers contribute to current difficulties.",
       "In BPD, EMDR can complement treatments such as DBT by addressing traumatic or adverse experiences that may continue to contribute to emotional dysregulation, negative beliefs about oneself, interpersonal difficulties and heightened emotional responses. While DBT focuses on developing skills to manage emotions and behaviours in the present, EMDR can help process experiences from the past that may continue to influence those responses.",
       "The use of EMDR is individualised according to each person's clinical needs, history, stability and treatment goals."
@@ -665,31 +577,21 @@ window.avalonContent.en = {
       "Our EMDR clinicians bring many years of experience, advanced training and internationally recognised certifications, while remaining committed to current research, evidence-based practice and the highest standards of clinical care.",
       "EMDR is thoughtfully integrated into each person's treatment when clinically appropriate, and at a safe and manageable pace. Our aim is to help reduce the impact of painful experiences from the past, and to support each person in moving toward a more stable, connected and fulfilling life."
     ],
-    /* PLACEHOLDER: named EMDR clinicians and staffing still to be confirmed. */
-    emdrAtAvalonPlaceholder: "EMDR staffing detail <ph>to follow</ph>",
-
     /* ---- Mindfulness ---- */
     mindfulnessTitle: "Mindfulness at Avalon",
     mindfulnessLead: "Yoga, meditation and workshops, alongside the clinical work.",
     mindfulnessParagraphs: [
       "Mindfulness is a core therapeutic practice that helps develop present-moment awareness, emotional regulation, and the ability to respond to difficult experiences with greater stability. At Avalon it is an important support for DBT, and can also help build the grounding, awareness and emotional readiness needed when preparing for EMDR.",
-      "It therefore has two lives here. It is one of the four DBT skill modules, taught clinically and practised as a skill — and it is also a quieter, non-clinical layer running alongside the programme.",
+      "It therefore has two lives here. It is one of the four DBT skill modules, taught clinically and practised as a skill. It is also a quieter, non-clinical layer running alongside the programme.",
       "That second layer is not treatment and is not presented as treatment. It exists because a day made only of therapy is a hard day, and because attention, breath and movement are useful things to practise somewhere other than a consulting room. It is optional, and it is meant to be."
     ],
-    /* PLACEHOLDER: specific mindfulness and wellness offering intentionally
-       light until confirmed. */
-    mindfulnessPlaceholder: "Schedule and practitioners <ph>to follow</ph>",
-
     offersTitle: "Our offers",
     offersIntro: "The non-clinical layer, as it currently stands.",
     /* PLACEHOLDER: the three offers below are named but not yet described.
        Content, schedule and practitioners to be confirmed. */
     offerMeditationTitle: "Meditation",
-    offerMeditationText: "Description <ph>to follow</ph>",
     offerYogaTitle: "Yoga",
-    offerYogaText: "Description <ph>to follow</ph>",
     offerWorkshopsTitle: "Workshops",
-    offerWorkshopsText: "Description <ph>to follow</ph>"
   },
 
   /* ======================================================================
@@ -697,39 +599,24 @@ window.avalonContent.en = {
      ====================================================================== */
 
   family: {
-    pageTitle: "Family and Loved Ones — Avalon",
+    pageTitle: "Family and Loved Ones | Avalon",
     metaDescription: "Support and psychoeducation for the families and loved ones of people in treatment at Avalon.",
 
     heroEyebrow: "Family and Loved Ones",
-    heroTitle: "You are not on the outside of this.",
-    heroLede: "Families are usually exhausted long before anyone reaches a specialist service, and are rarely offered anything of their own.",
+    heroTitle: "You are not alone.",
+    heroLede: "We know how difficult it can be when someone you care about is struggling with a mental health condition.",
 
     introParagraphs: [
       "If you love someone with BPD, you have probably been told a great deal about what you are doing wrong, and very little about what actually helps. You may have spent years reacting to emergencies, walking on eggshells, or being cast alternately as the only safe person and the source of the problem.",
-      "That is not a failure of love or of effort. It is what happens when people are asked to manage a serious clinical condition with no training and no support."
+      "<strong>That is not a failure of love or of effort.</strong> It is what happens when people are asked to manage a serious clinical condition with no training and no support."
     ],
 
     resourcesTitle: "Resources for Family and Friends",
-    resourcesLead: "Psychoeducation, because knowing what is happening changes what you do.",
     resourcesParagraphs: [
-      "Supporting someone who is struggling emotionally can be challenging, and families need support too. At Avalon we provide families with practical resources to better understand what their loved one is experiencing, and how to respond in helpful and compassionate ways.",
+      "At Avalon we provide families with practical resources to better understand what their loved one is experiencing, and how to respond in helpful and compassionate ways.",
       "With a particular focus on DBT-informed support, families can learn skills for validation, healthier communication, emotional regulation, boundaries, and navigating difficult moments. We also provide guidance and psychoeducation for families supporting someone experiencing depression, anxiety, PTSD or Complex PTSD.",
-      "Our goal is to help families feel more informed, supported and better prepared to walk alongside their loved one through the recovery process."
+      "Our goal is to help families feel <strong>more informed, supported and better prepared</strong> to walk alongside their loved one through the recovery process."
     ],
-    /* PLACEHOLDER: the exact family programme — format, length, whether it runs
-       for relatives of non-patients — is not confirmed. No overpromising. */
-    resourcesPlaceholder: "Format, schedule and eligibility <ph>to follow</ph>",
-
-    accessTitle: "Patient Access to Family and Friends",
-    accessLead: "Connection is part of recovery, not a reward for it.",
-    /* PLACEHOLDER: specific visiting and communication policy to follow.
-       Deliberately general per the brief. */
-    accessParagraphs: [
-      "Connection to loved ones is part of recovery, and Avalon supports that connection throughout treatment.",
-      "Contact with family and friends is treated as clinically important, not as a privilege to be earned or withdrawn. Where structure around contact is useful, it is agreed with the patient and explained, rather than imposed."
-    ],
-    accessPlaceholder: "Specific visiting and communication policy <ph>to follow</ph>",
-
     ctaTitle: "If you are the one looking for help on someone else's behalf",
     ctaBody: "That is one of the options on the waitlist form, and a very common way for people to reach us. You do not need the person's permission to ask us a question."
   },
@@ -739,60 +626,23 @@ window.avalonContent.en = {
      ====================================================================== */
 
   about: {
-    pageTitle: "About Us — Avalon",
+    pageTitle: "About Us | Avalon",
     metaDescription: "What Avalon believes in, how it started, the clinical team, and how to join it.",
 
     heroEyebrow: "About Us",
     heroTitle: "Why this place is being built.",
-    heroLede: "A country of ten million people has roughly four or five specialist residential beds for one of the most treatable serious psychiatric conditions there is. All of them public, all shared with a different patient population.",
+    heroLede: "A country of ten million people has <strong>roughly four or five specialist residential beds</strong> for one of the most treatable serious psychiatric conditions there is. All of them public, all shared with a different patient population.",
 
     beliefsTitle: "What We Believe",
     beliefsLead: "There are comprehensive, integrative approaches to addressing emotional distress and psychological disorders.",
     beliefsParagraphs: [
       "We believe that there are comprehensive, integrative approaches to addressing emotional distress and psychological disorders.",
-      "Our work brings together some of the most effective evidence-based psychotherapy techniques, with Dialectical Behaviour Therapy (DBT) as a fundamental pillar, particularly in the treatment of Borderline Personality Disorder (BPD).",
+      "Our work brings together some of the most effective evidence-based psychotherapy techniques, with <strong>Dialectical Behaviour Therapy (DBT) as a fundamental pillar</strong>, particularly in the treatment of Borderline Personality Disorder (BPD).",
       "Our approach seeks to address the person as a whole, integrating therapeutic tools that support emotional regulation, resilience, interpersonal relationships, and lasting psychological well-being."
     ],
 
-    originTitle: "How Avalon Started",
-    /* PLACEHOLDER: founding story to be added. Do not invent a narrative. */
-    originParagraphs: [
-      "[PLACEHOLDER: founding story to be added.]"
-    ],
-    originPlaceholder: "Founding story to be written <ph>content pending</ph>",
-    originNote: "This section is deliberately empty. The real story will be written by the people it belongs to.",
-
-    teamTitle: "Medical Team",
-    teamLead: "Being assembled now.",
-    /* PLACEHOLDER: no staff names, photographs or biographies until
-       appointments are confirmed. The grid below is structured so that a card
-       (photo, name, credential, one line) can be dropped straight in. */
-    teamParagraphs: [
-      "Avalon's clinical team is being built to standards aligned with the DBT Linehan Board of Certification, with structured weekly supervision and a formal consultation team as part of the model rather than an addition to it.",
-      "Named biographies will follow as appointments are confirmed."
-    ],
-    teamPlaceholder: "Team names, photographs and biographies <ph>to follow</ph>",
-    teamCardPhotoLabel: "Photograph to follow",
-    teamCardNameOne: "[Name]",
-    teamCardCredentialOne: "Consultant Psychiatrist",
-    teamCardNameTwo: "[Name]",
-    teamCardCredentialTwo: "Clinical Psychologist, DBT",
-    teamCardNameThree: "[Name]",
-    teamCardCredentialThree: "Clinical Lead",
-    teamCardNameFour: "[Name]",
-    teamCardCredentialFour: "Mental Health Nurse",
-
     joinTitle: "Join Our Team",
     joinLead: "One of the only structured DBT training pathways in Portugal.",
-    joinParagraphs: [
-      "This is the part of the project that clinicians tend to respond to first. Avalon is building one of the only structured DBT training and supervision pathways in Portugal, in partnership with an institute affiliated with the Behavioral Tech Institute — the training organisation founded by Marsha Linehan, who developed DBT.",
-      "If you are a Portuguese clinician who has wanted to train properly in DBT, you will already know the problem: there has been almost nowhere in the country to do it. Getting to a genuine standard has generally meant going abroad, at your own expense, and coming back to a system with no supervision structure to practise inside.",
-      "That is what this pathway exists to change. Structured training, real supervision, and a consultation team that meets every week — for the clinicians as much as for the patients.",
-      "We would like to hear from psychiatrists, clinical psychologists, psychotherapists and mental health nurses. If you are interested but not sure you are qualified yet, write anyway and say so."
-    ],
-    /* PLACEHOLDER: partner institute to be named once the agreement is public;
-       roles, contracts and start dates to be confirmed. */
-    joinPlaceholder: "Partner institute, open roles and start dates <ph>to confirm</ph>"
   },
 
   /* ======================================================================
@@ -811,8 +661,6 @@ window.avalonContent.en = {
     altStaircase: "The main staircase of the house, turning on a half landing beneath a tall window.",
     altCorridor: "The second-floor corridor, with doors along one side and light from the far end.",
     altRoomPrincipal: "One of the principal bedrooms, with a window looking out into the trees.",
-    altRoomMap: "A bedroom on an upper floor, photographed before renovation.",
-    altRoomGuest: "A guest bedroom in the house, photographed before renovation.",
     altRoomWindow: "Light coming through the shutters of a bedroom window onto a wooden floor.",
     altGardenPath: "A stone path running down through the garden beneath mature trees, with the pool visible below.",
     altGardenSteps: "Old stone steps in the garden, overgrown with ivy and ferns between high stone walls.",

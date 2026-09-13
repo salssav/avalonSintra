@@ -67,21 +67,31 @@
       .replace(/>/g, "&gt;");
   }
 
-  var PLACEHOLDER_PATTERN = /&lt;ph&gt;([\s\S]*?)&lt;\/ph&gt;/g;
+  /* Copy is escaped, then a very short whitelist is put back: <ph> for the
+     dashed placeholder tag, and <strong>/<em> so editors can emphasise a
+     phrase without any other markup becoming a route for injection. */
+  var INLINE_PATTERNS = [
+    [/&lt;ph&gt;([\s\S]*?)&lt;\/ph&gt;/g, '<span class="placeholderTag">$1</span>'],
+    [/&lt;strong&gt;([\s\S]*?)&lt;\/strong&gt;/g, '<strong>$1</strong>'],
+    [/&lt;em&gt;([\s\S]*?)&lt;\/em&gt;/g, '<em>$1</em>']
+  ];
 
-  function hasPlaceholderTag(value) {
-    return typeof value === "string" && value.indexOf("<ph>") !== -1;
+  var INLINE_TAG = /<\/?(?:ph|strong|em)>/;
+
+  function hasInlineMarkup(value) {
+    return typeof value === "string" && INLINE_TAG.test(value);
   }
 
   function toHtml(value) {
-    return escapeHtml(value).replace(
-      PLACEHOLDER_PATTERN,
-      '<span class="placeholderTag">$1</span>'
-    );
+    var html = escapeHtml(value);
+    for (var i = 0; i < INLINE_PATTERNS.length; i++) {
+      html = html.replace(INLINE_PATTERNS[i][0], INLINE_PATTERNS[i][1]);
+    }
+    return html;
   }
 
   function writeText(element, value) {
-    if (hasPlaceholderTag(value)) {
+    if (hasInlineMarkup(value)) {
       element.innerHTML = toHtml(value);
     } else {
       element.textContent = String(value);

@@ -182,6 +182,45 @@
     }
   }
 
+  /* The site is static, so there is no server to post to. On submit we compose
+     the message and hand it to the visitor's own mail client, which means the
+     enquiry arrives from their real address and they keep a copy in Sent.
+     If a form backend is added later, this is the one function to replace. */
+  var CONTACT_EMAIL = "alfredov@avalonsintra.com";
+
+  var FIELD_LABELS = {
+    name: "Name",
+    email: "Email",
+    phone: "Phone",
+    relationship: "Enquiring as",
+    message: "Message",
+    specialty: "Area of specialty",
+    note: "Note"
+  };
+
+  function openMailClient(form, values) {
+    var isTeam = form.getAttribute("data-confirmation") === "teamConfirmation";
+    var subject = isTeam
+      ? "Avalon - joining the team: " + (values.name || "")
+      : "Avalon - waitlist enquiry: " + (values.name || "");
+
+    var lines = [];
+    for (var key in values) {
+      if (!Object.prototype.hasOwnProperty.call(values, key)) continue;
+      var value = (values[key] || "").trim();
+      if (value === "") continue;
+      lines.push((FIELD_LABELS[key] || key) + ": " + value);
+    }
+
+    var href = "mailto:" + CONTACT_EMAIL +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(lines.join("\n"));
+
+    /* Opened in a new context so a missing mail client cannot blank the page
+       the person is reading. */
+    window.open(href, "_blank");
+  }
+
   function bindForm(form) {
     var confirmation = document.getElementById(form.getAttribute("data-confirmation"));
 
@@ -198,10 +237,7 @@
       var data = new FormData(form);
       data.forEach(function (value, key) { values[key] = value; });
 
-      // PLACEHOLDER: replace with a real submission when a backend exists.
-      if (window.console) {
-        console.info("[avalon] form submission (not sent anywhere yet):", values);
-      }
+      openMailClient(form, values);
 
       if (confirmation) {
         form.hidden = true;

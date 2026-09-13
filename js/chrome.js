@@ -84,8 +84,7 @@
       href: "family.html",
       labelKey: "nav.family",
       children: [
-        { href: "family.html#resources", labelKey: "navSub.familyResources" },
-        { href: "family.html#access",    labelKey: "navSub.familyAccess" }
+        { href: "family.html#resources", labelKey: "navSub.familyResources" }
       ]
     },
     {
@@ -94,8 +93,6 @@
       labelKey: "nav.about",
       children: [
         { href: "about.html#beliefs",  labelKey: "navSub.beliefs" },
-        { href: "about.html#origin",   labelKey: "navSub.origin" },
-        { href: "about.html#team",     labelKey: "navSub.medicalTeam" },
         { href: "about.html#joinTeam", labelKey: "navSub.joinTeam" }
       ]
     }
@@ -227,20 +224,13 @@
     var contactLinks = [
       { href: WAITLIST_HREF,           labelKey: "navSub.waitlistForm" },
       { href: "about.html#joinTeam",   labelKey: "navSub.joinTeam" },
-      { href: "#",                     labelKey: "footer.email" },
-      { href: "#",                     labelKey: "footer.phone" }
+      { href: "mailto:alfredov@avalonsintra.com", labelKey: "footer.email" },
+      { href: "tel:+351912102647",            labelKey: "footer.phone" }
     ];
 
     return (
       '<footer class="siteFooter">' +
         '<div class="sectionShell">' +
-
-          /* The crisis notice comes first inside the footer: a person looking
-             for it is usually scrolling to the bottom of the page. */
-          '<aside class="crisisNotice">' +
-            '<p><strong data-i18n="crisis.title"></strong></p>' +
-            '<p data-i18n="crisis.body"></p>' +
-          "</aside>" +
 
           '<div class="footerTop">' +
             '<div class="footerBrand">' +
@@ -261,14 +251,6 @@
               "&copy; <span data-current-year></span> " +
               '<span data-i18n="footer.copyright"></span>' +
             "</p>" +
-            /* PLACEHOLDER: privacy policy and terms pages are not written yet,
-               so these are inert until the pages exist. */
-            '<p class="smallText">' +
-              '<span data-i18n="footer.privacy"></span>' +
-              "&nbsp;&nbsp;&middot;&nbsp;&nbsp;" +
-              '<span data-i18n="footer.terms"></span>' +
-            "</p>" +
-            '<p class="smallText" data-i18n="footer.legalNote"></p>' +
           "</div>" +
 
         "</div>" +

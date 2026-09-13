@@ -80,6 +80,7 @@
   --weightDisplayBold: 500;
   --weightBody:        400;
   --weightBodyMedium:  500;
+  --weightBodyStrong:  600;
 
   --leadingDisplay: 1.06;
   --leadingTitle:   1.18;
@@ -192,7 +193,17 @@ ul, ol { margin: 0 0 var(--spaceMd); padding-left: 1.15rem; }
 li { margin-bottom: var(--space2xs); }
 li:last-child { margin-bottom: 0; }
 
-strong { font-weight: var(--weightBodyMedium); }
+/* Inline emphasis inside body copy. Body text is set in a muted ink, so a
+   <strong> both gains weight and steps up to the full ink colour, which is
+   what actually makes it read as emphasis. On dark surfaces it steps the
+   other way, towards the light. <em> stays quiet and is for phrasing. */
+strong { font-weight: var(--weightBodyStrong); color: var(--colorInk); }
+.bandInk strong,
+.ctaBand strong,
+.imageBandContent strong,
+.heroContent strong,
+.siteFooter strong { color: var(--colorOnDark); }
+em { font-style: italic; }
 
 :focus-visible {
   outline: 2px solid var(--colorFocusRing);
@@ -290,12 +301,6 @@ strong { font-weight: var(--weightBodyMedium); }
 .sectionHead .leadText { margin-top: var(--spaceMd); }
 
 /* The single-sentence mission statement, given a screen of its own. */
-.missionStatement {
-  font-family: var(--fontDisplay);
-  line-height: var(--leadingTitle);
-  max-width: 22ch;
-}
-
 .measureShort { max-width: 24ch; }
 
 /* --------------------------------------------------------------------------
@@ -389,6 +394,10 @@ strong { font-weight: var(--weightBodyMedium); }
 .linkQuiet .linkArrow { transition: transform var(--durationMedium) var(--easeOut); }
 .linkQuiet:hover .linkArrow { transform: translateX(4px); }
 .bandInk .linkQuiet { color: var(--colorOnDark); }
+/* The CTA band is a dark green surface: the accent green used for links on
+   parchment all but disappears against it. Light ink instead. */
+.ctaBand .linkQuiet { color: var(--colorOnDark); }
+.ctaBand .linkQuiet:hover { color: var(--colorOnDark); }
 
 .buttonRow {
   display: flex;
@@ -674,6 +683,8 @@ body.menuOpen .menuButton span:nth-child(3) { transform: translateY(-6px) rotate
   max-width: 52ch;
 }
 
+/* Carries a caption, a scroll hint, or both — house.html has only the caption
+   and index.html only the hint, so this has to sit correctly with one child. */
 .heroFooter {
   display: flex;
   flex-wrap: wrap;
@@ -682,6 +693,7 @@ body.menuOpen .menuButton span:nth-child(3) { transform: translateY(-6px) rotate
   gap: var(--spaceMd);
   margin-top: var(--spaceXl);
 }
+.heroFooter > .scrollHint:only-child { margin-left: auto; }
 
 .heroCaption { font-size: var(--sizeSmall); color: rgba(241,236,225,0.62); max-width: 36ch; }
 
@@ -932,32 +944,6 @@ body.menuOpen .menuButton span:nth-child(3) { transform: translateY(-6px) rotate
    14. QUOTE BLOCK
    ========================================================================== */
 
-.quoteBlock { text-align: left; }
-.quoteMark {
-  font-family: var(--fontDisplay);
-  font-size: 4rem;
-  line-height: 0.6;
-  color: var(--colorAccentWarm);
-  display: block;
-  margin-bottom: var(--spaceMd);
-}
-.quoteText {
-  font-family: var(--fontDisplay);
-  font-size: clamp(1.55rem, 3vw, 2.4rem);
-  font-weight: var(--weightDisplay);
-  line-height: 1.32;
-  letter-spacing: var(--trackingDisplay);
-  color: var(--colorOnDark);
-  max-width: 26ch;
-  margin: 0 0 var(--spaceLg);
-}
-.quoteAttribution {
-  font-size: var(--sizeSmall);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--colorOnDarkMuted);
-}
-
 /* ==========================================================================
    15. LONG-FORM CONTENT SECTIONS (conditions, therapies, policies)
    ========================================================================== */
@@ -992,37 +978,6 @@ body.menuOpen .menuButton span:nth-child(3) { transform: translateY(-6px) rotate
   margin-block: var(--spaceLg);
 }
 .calloutNote p { font-size: var(--sizeBody); color: var(--colorInkSoft); }
-
-/* ==========================================================================
-   16. TEAM GRID (structured now, populated later)
-   ========================================================================== */
-
-.teamGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
-  gap: clamp(1.25rem, 2.4vw, 2rem);
-}
-.teamCard { display: flex; flex-direction: column; gap: var(--space2xs); }
-.teamCardPhoto {
-  aspect-ratio: 3 / 4;
-  border-radius: var(--radiusLg);
-  overflow: hidden;
-  background-color: var(--colorParchmentWarm);
-  border: 1px dashed var(--colorStone);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: var(--spaceSm);
-  color: var(--colorInkMuted);
-  font-size: var(--sizeEyebrow);
-  letter-spacing: var(--trackingEyebrow);
-  text-transform: uppercase;
-  margin-bottom: var(--space2xs);
-}
-.teamCardPhoto img { width: 100%; height: 100%; object-fit: cover; }
-.teamCardName { font-size: 1.2rem; font-family: var(--fontDisplay); }
-.teamCardCredential { font-size: var(--sizeSmall); color: var(--colorInkMuted); }
 
 /* ==========================================================================
    17. FORMS
@@ -1145,20 +1100,6 @@ body.menuOpen .menuButton span:nth-child(3) { transform: translateY(-6px) rotate
   padding-top: var(--spaceLg);
   font-size: var(--sizeSmall);
 }
-
-/* ---- Crisis notice: this is a mental health site. It must be easy to find
-        and honest about what Avalon is not. ------------------------------- */
-.crisisNotice {
-  border: 1px solid rgba(241,236,225,0.24);
-  border-radius: var(--radiusLg);
-  padding: var(--spaceMd) var(--spaceLg);
-  margin-bottom: var(--spaceXl);
-  font-size: var(--sizeSmall);
-  line-height: 1.65;
-  color: var(--colorOnDark);
-  max-width: 72ch;
-}
-.crisisNotice p { max-width: none; }
 
 /* ==========================================================================
    20. SCROLL REVEAL
