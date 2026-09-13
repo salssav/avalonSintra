@@ -422,6 +422,18 @@ em { font-style: italic; }
   margin-top: var(--spaceLg);
 }
 
+/* Buttons side by side are sized to match each other rather than to their
+   labels, so a long label does not make one button visibly bigger than its
+   neighbour. flex-basis 0 is what equalises them: with `auto` they would
+   still be measured from their text. */
+.buttonRow > .buttonPrimary,
+.buttonRow > .buttonSecondary,
+.buttonRow > .buttonGhost {
+  flex: 1 1 0;
+  min-width: 15.5rem;
+  max-width: 20rem;
+}
+
 /* ==========================================================================
    6. SITE HEADER
    Transparent over the hero; becomes a solid, minimal bar once scrolled.

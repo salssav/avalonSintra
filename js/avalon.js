@@ -329,6 +329,64 @@
      START
      ====================================================================== */
 
+  /* ======================================================================
+     OVERFLOW DEBUG
+
+     Off unless the URL carries ?debugOverflow. Add it to any page, on the
+     device that actually shows the problem, and this lists whatever is
+     sticking out past the right edge. It exists because horizontal scrolling
+     was reported on a real phone that no desktop browser would reproduce, and
+     guessing at the cause from here was not working.
+
+       https://avalonsintra.com/?debugOverflow
+     ====================================================================== */
+
+  function initOverflowDebug() {
+    if (window.location.search.indexOf("debugOverflow") === -1) return;
+
+    var panel = document.createElement("div");
+    panel.setAttribute("style", [
+      "position:fixed", "left:0", "right:0", "bottom:0", "z-index:99999",
+      "max-height:52vh", "overflow:auto", "background:#14120f", "color:#eae4d8",
+      "font:11px/1.5 ui-monospace,Menlo,Consolas,monospace", "padding:10px",
+      "border-top:2px solid #4C5F52"
+    ].join(";"));
+    document.body.appendChild(panel);
+
+    function scan() {
+      var doc = document.documentElement;
+      var width = doc.clientWidth;
+      var lines = [
+        "viewport " + window.innerWidth + "  client " + width +
+        "  scrollWidth " + doc.scrollWidth +
+        (doc.scrollWidth > width ? "  <-- PAGE IS WIDER" : "  (fits)"),
+        "scrollX " + Math.round(window.scrollX) + "   dpr " + window.devicePixelRatio
+      ];
+
+      var all = document.body.querySelectorAll("*");
+      var found = 0;
+      for (var i = 0; i < all.length && found < 14; i++) {
+        if (all[i] === panel || panel.contains(all[i])) continue;
+        var r = all[i].getBoundingClientRect();
+        if (r.width === 0 || r.height === 0) continue;
+        if (Math.round(r.right) <= width + 1 && Math.round(r.left) >= -1) continue;
+        var name = all[i].tagName.toLowerCase();
+        if (all[i].id) name += "#" + all[i].id;
+        if (typeof all[i].className === "string" && all[i].className) {
+          name += "." + all[i].className.trim().split(/\s+/).slice(0, 3).join(".");
+        }
+        lines.push(name + "  left:" + Math.round(r.left) + " right:" + Math.round(r.right));
+        found++;
+      }
+      if (found === 0) lines.push("no element extends past the edge right now");
+      panel.textContent = lines.join("\n");
+    }
+
+    scan();
+    window.addEventListener("scroll", scan, { passive: true });
+    window.addEventListener("resize", scan);
+  }
+
   function init() {
     initHeader();
     initMobileMenu();
@@ -336,6 +394,7 @@
     initCurrentNav();
     initForms();
     initFooterYear();
+    initOverflowDebug();
   }
 
   if (document.readyState === "loading") {
