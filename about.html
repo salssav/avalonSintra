@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-i18n="about.pageTitle">About Us — Avalon</title>
   <meta name="description" data-i18n-content="about.metaDescription" content="">
+  <!-- Brand marks. The SVG icon is the primary one and stays crisp at every
+       size; the PNG covers iOS home screens and older browsers. -->
+  <link rel="icon" href="images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/brand/appleTouchIcon.png">
+  <meta name="theme-color" content="#1E1C19">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,10 +60,7 @@
       </div>
     </nav>
 
-    <!-- ============================================================ BELIEFS
-         PLACEHOLDER: draft copy, written from the three commitments in the
-         stakeholder document. For the founder to rewrite or approve.
-         ==================================================================== -->
+    <!-- ============================================================ BELIEFS -->
     <section class="sectionBlock" id="beliefs">
       <div class="sectionShell">
 
@@ -66,26 +68,10 @@
           <span class="eyebrow" data-i18n="navSub.beliefs"></span>
           <h2 class="displayLg" data-i18n="about.beliefsTitle"></h2>
           <p class="leadText" data-i18n="about.beliefsLead"></p>
-          <p class="smallText marginTopLg" data-i18n="about.beliefsPlaceholder"></p>
         </div>
 
-        <div class="cardGrid revealStagger">
-          <div class="plainCard">
-            <span class="plainCardIndex">01</span>
-            <h3 class="plainCardTitle" data-i18n="about.beliefOneTitle"></h3>
-            <p class="bodyText" data-i18n="about.beliefOneText"></p>
-          </div>
-          <div class="plainCard">
-            <span class="plainCardIndex">02</span>
-            <h3 class="plainCardTitle" data-i18n="about.beliefTwoTitle"></h3>
-            <p class="bodyText" data-i18n="about.beliefTwoText"></p>
-          </div>
-          <div class="plainCard">
-            <span class="plainCardIndex">03</span>
-            <h3 class="plainCardTitle" data-i18n="about.beliefThreeTitle"></h3>
-            <p class="bodyText" data-i18n="about.beliefThreeText"></p>
-          </div>
-        </div>
+        <div class="stackMd shellMid revealItem shellFlush"
+             data-i18n-paras="about.beliefsParagraphs"></div>
 
       </div>
     </section>

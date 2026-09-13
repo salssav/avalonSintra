@@ -9,9 +9,18 @@ install.
 For a slightly better experience (correct MIME types, no `file://` quirks):
 
 ```
-node tools/devServer.js
+npm run dev
 # then open http://localhost:5173
 ```
+
+There is nothing to `npm install` — the site has no dependencies. `package.json`
+exists only to give the scripts friendly names.
+
+To share the preview with someone else, forward **port 5173** (VS Code's Ports
+panel, or a tunnel like ngrok / Cloudflare Tunnel). The server binds to all
+interfaces, so the network URL it prints on start also works for anyone on the
+same wifi. It refuses to serve `.git/` and `sources/`, and sends
+`X-Robots-Tag: noindex` so a leaked link cannot end up in search results.
 
 ---
 
@@ -31,8 +40,8 @@ Open items are listed in [PLACEHOLDERS.md](PLACEHOLDERS.md), regenerated with
 
 ```
 index.html          Home — long scroll, teases each pillar
-programs.html       Residence · Day Hospital · Outpatient · Activities · Therapies
-treatments.html     BPD · Depression · Anxiety · PTSD
+programs.html       Residence · Day Hospitalisation · Outpatient · Activities · Therapies
+treatments.html     BPD · Depression · Anxiety · PTSD · C-PTSD
 solutions.html      DBT · EMDR · Mindfulness
 house.html          Rooms · Common Areas · Outdoor Spaces · Why Sintra
 admissions.html     Who it's for · Process · Progress · Join the waitlist
@@ -84,17 +93,17 @@ The current palette (parchment / stone / ink, with a muted forest green and the
 house's own terracotta as accents) and the type pairing (Cormorant Garamond +
 Inter) are **working defaults chosen to be replaced**, not proposals.
 
-### Swap in the real logo
+### The logo
 
-The wordmark is a text placeholder. In `js/chrome.js`, in the `wordmark()`
-function, replace the inner `<span>` with:
+The Avalon wordmark lives in `images/brand/avalonLogo.svg`, and is also inlined
+into the page by the `wordmark()` function in `js/chrome.js` — inlined rather
+than linked because the header sits over photography and flips between light and
+dark, and an inline `fill="currentColor"` lets the stylesheet move the logo with
+everything else. Size is set by `.brandWordmarkArt` in the stylesheet.
 
-```html
-<img src="images/brand/avalonLogo.svg" alt="Avalon">
-```
-
-The `.brandWordmark img` rule in the stylesheet already sizes it. One line, one
-place, both header and footer.
+The favicon is the `A` from the same wordmark: `images/brand/favicon.svg` for
+browsers, `images/brand/appleTouchIcon.png` (180px) for iOS home screens. Both
+are linked from the `<head>` of every page.
 
 ### Add the Portuguese translation
 
@@ -164,8 +173,8 @@ the warmth of that message was deliberate.
 ## Checks
 
 ```
-node tools/checkContentKeys.js     # the main one — see below
-node tools/listPlaceholders.js     # regenerate the open-items index
+npm run check          # the main one — see below
+npm run placeholders   # regenerate the open-items index
 ```
 
 `checkContentKeys.js` verifies that every `data-i18n` key in the markup exists,

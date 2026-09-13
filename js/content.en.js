@@ -28,7 +28,8 @@ window.avalonContent.en = {
      ====================================================================== */
 
   brand: {
-    /* PLACEHOLDER: logo not final. This text wordmark stands in for it. */
+    /* The logo is artwork now (images/brand/avalonLogo.svg). This string is the
+       accessible name on the link that wraps it. */
     wordmark: "Avalon",
     footerBlurb: "A residential clinic for Dialectical Behaviour Therapy, taking shape in an 1887 house in the hills of Sintra."
   },
@@ -54,7 +55,7 @@ window.avalonContent.en = {
 
   navSub: {
     residence: "Residence",
-    dayHospital: "Day Hospital",
+    dayHospital: "Day Hospitalisation",
     outpatient: "Outpatient",
     activities: "Activities",
     therapies: "Therapies",
@@ -70,12 +71,13 @@ window.avalonContent.en = {
     depression: "Depression",
     anxiety: "Anxiety",
     ptsd: "PTSD",
+    cptsd: "C-PTSD",
     dbt: "DBT",
     emdr: "EMDR",
     mindfulness: "Mindfulness",
     familyResources: "Resources for Family and Friends",
     familyAccess: "Patient Access to Family and Friends",
-    beliefs: "What We Believe In",
+    beliefs: "What We Believe",
     origin: "How Avalon Started",
     medicalTeam: "Medical Team",
     joinTeam: "Join Our Team"
@@ -247,20 +249,39 @@ window.avalonContent.en = {
     ],
 
     residenceTitle: "Residence",
-    residenceLead: "The residential program.",
+    residenceLead: "An intensive treatment programme, lived in.",
     residenceParagraphs: [
-      "Avalon's residential program is for adults who are ready for structured, immersive treatment away from daily pressures, while remaining fully voluntary participants in their own care.",
-      "Residential treatment is not about being removed from your life. It is about being given enough room, and enough support, to practise new skills before you take them back into a life that will test them."
+      "At Avalon, we offer an intensive treatment programme in which a person temporarily lives in a therapeutic setting while receiving multidisciplinary care.",
+      "Our programme includes defined goals, treatment phases, ongoing assessment, and a plan for returning to daily life. Our common objectives are to stabilise symptoms, ensure safety, improve coping skills, address substance use or medical needs, strengthen daily routines, and involve the person's support system."
     ],
-    /* PLACEHOLDER: no bed count, room detail, length of stay or daily schedule
-       until confirmed by the clinical team. Kept intentionally general. */
-    residencePlaceholder: "Programme length, daily structure and residential capacity <ph>to follow</ph>",
+    residenceStepsIntro: "Our programme typically includes:",
 
-    dayHospitalTitle: "Day Hospital",
+    residenceStepOneTitle: "Assessment",
+    residenceStepOneText: "We review each person's psychiatric, medical, social and safety needs.",
+    residenceStepTwoTitle: "Stabilisation",
+    residenceStepTwoText: "We develop safety plans, establish daily routines, manage medications when appropriate, and support therapeutic engagement.",
+    residenceStepThreeTitle: "Active treatment",
+    residenceStepThreeText: "We provide individual and group therapy, family work, psychoeducation, and life-skills training.",
+    residenceStepFourTitle: "Discharge preparation",
+    residenceStepFourText: "We review progress, develop relapse-prevention strategies, and coordinate housing, work, education and community-care needs.",
+    residenceStepFiveTitle: "Transition and follow-up",
+    residenceStepFiveText: "We connect each person with outpatient services and ongoing support.",
+
+    residenceClosingParagraphs: [
+      "We regularly adjust each treatment plan according to the person's symptoms, risks, preferences and progress.",
+      "At Avalon, we base admission, continued stay, transfer and discharge on clinical need and safety, while respecting each person's dignity, autonomy and active participation in care."
+    ],
+    /* PLACEHOLDER: no bed count, length of stay or daily timetable until
+       confirmed by the clinical team. */
+    residencePlaceholder: "Programme length and residential capacity <ph>to follow</ph>",
+
+    dayHospitalTitle: "Day Hospitalisation",
     dayHospitalLead: "Full clinical intensity, evenings at home.",
     dayHospitalParagraphs: [
-      "For patients who need intensive treatment during the day but can return home or to independent living in the evening, Avalon's Day Hospital offers the same clinical intensity as the residential program on a nine to five schedule.",
-      "For many people this is the right first step. For others it is the natural step down from residence, and a way of testing new skills against real evenings and real weekends while the full weight of the programme is still behind them."
+      "The Day Programme is an intensive and structured mental health treatment programme in which individuals receive comprehensive therapeutic and clinical support during the day, while continuing to live at home or in their own community.",
+      "The programme provides a structured therapeutic environment without requiring residential admission. It allows individuals to participate in intensive treatment while maintaining their family, educational, professional and social routines whenever clinically appropriate.",
+      "The programme typically includes individualised assessment, individual and group psychotherapy, psychiatric follow-up when indicated, skills training, psychoeducation, emotional regulation work, family involvement, and ongoing clinical monitoring.",
+      "The goal is to provide intensive support, strengthen coping and emotional regulation skills, improve daily functioning, and help individuals progressively return to greater independence and stability in their everyday lives."
     ],
     /* PLACEHOLDER: exact schedule to follow. */
     dayHospitalPlaceholder: "Exact daily and weekly schedule <ph>to follow</ph>",
@@ -268,8 +289,8 @@ window.avalonContent.en = {
     outpatientTitle: "Outpatient",
     outpatientLead: "The same protocol, at the pace of an ordinary life.",
     outpatientParagraphs: [
-      "As patients progress, care steps down in intensity, not in quality. Outpatient consultations and therapy continue the same evidence-based protocol at a pace suited to daily life outside the clinic.",
-      "Individual therapy, skills work and psychiatric review continue — around a job, a family, a degree. This is usually where the gains made in more intensive care get consolidated into something durable."
+      "Our Outpatient Programme provides personalised mental health care for individuals who do not require residential or day treatment. Clients attend scheduled therapy sessions while continuing to live independently and maintain their daily routines.",
+      "Treatment may include individual psychotherapy, group therapy, and specialised approaches such as DBT and EMDR, according to each person's individual needs and treatment goals."
     ],
 
     activitiesTitle: "Activities",
@@ -385,28 +406,66 @@ window.avalonContent.en = {
     criteriaNote: "If Avalon is not the right setting, we will say so, and we will try to point towards something that is. Being turned down here is not a judgement about anyone's worth or seriousness — it is a judgement about fit, and getting it wrong helps nobody.",
 
     processTitle: "Admission Process",
-    processLead: "Four steps, at a human pace.",
-    /* PLACEHOLDER: the operational detail of each step — who leads it, how long
-       it takes, what documentation is required — must be confirmed with the
-       clinical team before launch. The shape below is standard and safe. */
-    processPlaceholder: "Exact operational steps <ph>confirm with clinical team before launch</ph>",
+    processLead: "Six stages, from the first phone call to the day someone arrives.",
 
     stepOneTitle: "Initial contact",
-    stepOneText: "You write to us, or join the waitlist, or a clinician refers you. Someone replies personally. Nothing is assessed at this stage; it is a first conversation about whether this is worth pursuing.",
-    stepTwoTitle: "Clinical screening call",
-    stepTwoText: "A call with a clinician to understand the situation, the history and what has already been tried, and to answer whatever you want to ask. This is as much about you assessing us as us assessing you.",
-    stepThreeTitle: "Assessment",
-    stepThreeText: "A fuller assessment, in person or remotely, covering diagnosis, risk, current stability, and what level of care actually fits. Family are often involved here, with the patient's agreement.",
-    stepFourTitle: "Admission decision",
-    stepFourText: "A clear answer, with the reasoning behind it, and — if Avalon is right — a start date and a plan. If it is not right, a considered view of what would be.",
-
-    progressTitle: "How We Track Progress",
-    progressLead: "Progress should never be only a feeling.",
-    progressParagraphs: [
-      "Avalon tracks outcomes using validated clinical measures, taken at intervals across treatment. These are the same standardised instruments used in DBT research worldwide, which means your progress can be compared against something other than an impression.",
-      "In practice this is quiet and undramatic: short, structured questionnaires at set points, reviewed with your therapist. The point is not to grade anyone. It is so that when treatment is working we can show you where, and when it is not working we find out early enough to change it.",
-      "We measure what matters, with the same tools the research uses — so progress is never just a feeling, it is tracked."
+    stepOneList: [
+      "First contact with Avalon.",
+      "Voluntary participation. We admit only people who are willing to engage in the process and to make changes. We do not accept anyone who has been coerced into coming, or who is ambivalent about being here.",
+      "Behavioural commitment: an attitude and a willingness to change.",
+      "Admission criteria: no substance use, not in a critical or emergency condition, not requiring hospitalisation, and not being pressed into it by another person.",
+      "A preliminary assessment, which leads into the assessment stage below.",
+      "The Admissions Coordinator carries out a telephone assessment of the person's medical records and needs, to determine whether Avalon has a programme appropriate for them."
     ],
+
+    stepTwoTitle: "Assessment",
+    stepTwoText: "Standardised psychometric testing is required. Where a person does not already have it, Avalon carries out comprehensive psychiatric and neuropsychiatric assessment in an intensive format, in order to arrive at an accurate diagnosis.",
+
+    stepThreeTitle: "Treatment programme",
+    stepThreeText: "The assessment determines which programme fits:",
+    stepThreeList: [
+      "DBT as a residential bridge programme — an intermediate residential model for people who need structure and support before returning to everyday life.",
+      "DBT as a day-treatment bridge programme."
+    ],
+
+    stepFourTitle: "Financial and admission requirements",
+    stepFourText: "Financial, admission and payment requirements are confirmed.",
+
+    stepFiveTitle: "Health insurance coverage",
+    stepFiveText: "Medical insurance is required, as regulations oblige. It is not intended as a means of paying for the programme through insurance.",
+
+    stepSixTitle: "Admission session and preparing for the stay",
+    stepSixText: "A final session covers the practical detail of arriving:",
+    stepSixList: [
+      "Clothing requirements, including specific restrictions such as trainers without laces or trousers without drawstrings.",
+      "Food allergies.",
+      "Food preferences and availability.",
+      "Dietary practice — kosher, vegetarian, or other restrictions.",
+      "Restricted items."
+    ],
+
+    progressTitle: "How Do We Track Progress?",
+    progressLead: "Recovery is more than symptom reduction.",
+    progressParagraphs: [
+      "At Avalon, progress is understood as meaningful change in how a person feels, functions, relates to others and manages everyday life.",
+      "We combine clinical observation, validated psychological measures, individualised treatment goals and real-life functioning to understand each person's progress over time."
+    ],
+    progressDomainsIntro: "We look at changes in:",
+
+    progressEmotionTitle: "Emotional regulation",
+    progressEmotionText: "The ability to understand, tolerate and manage difficult emotions, and to recover more effectively from emotional distress.",
+    progressSymptomsTitle: "Symptoms",
+    progressSymptomsText: "Changes in depression, anxiety, trauma-related symptoms, emotional instability and other difficulties relevant to each person's clinical needs.",
+    progressFunctioningTitle: "Daily functioning",
+    progressFunctioningText: "Sleep, routines, self-care, responsibilities, and the ability to participate more consistently in everyday life.",
+    progressRelationshipsTitle: "Relationships and connection",
+    progressRelationshipsText: "Communication, boundaries, conflict management, trust, and the ability to develop healthier connections with others.",
+    progressAutonomyTitle: "Autonomy",
+    progressAutonomyText: "Increasing confidence and ability to make decisions, manage responsibilities and function with greater independence.",
+    progressQualityTitle: "Quality of life",
+    progressQualityText: "Ultimately, progress means more than feeling less distressed. It means being increasingly able to build and participate in a life that feels stable, meaningful and worth living.",
+
+    progressClosing: "Progress is reviewed throughout the programme using evidence-based clinical measures and regular multidisciplinary assessment, allowing each treatment plan to evolve as the person's needs and goals change.",
     /* PLACEHOLDER: the specific instruments and measurement intervals to be
        confirmed and named by the clinical team. */
     progressPlaceholder: "Named instruments and measurement intervals <ph>to confirm</ph>",
@@ -441,9 +500,8 @@ window.avalonContent.en = {
     bpdLead: "The condition Avalon was built around.",
     bpdWhatTitle: "What it is",
     bpdWhatParagraphs: [
-      "Borderline Personality Disorder is a disorder of emotional regulation. The emotional system responds faster, harder and for longer than it does in most people — feelings arrive at full volume, and take much longer to come back down.",
-      "Almost everything else follows from that. Relationships become intense and precarious, because the fear of being left is not a mild worry but a genuine emergency. Identity becomes unstable, because it is difficult to build a settled sense of who you are on ground that keeps moving. Impulsive behaviour, self-harm and a chronic feeling of emptiness are often, at bottom, attempts to manage emotion that has become unbearable.",
-      "None of this reflects a flaw in someone's character, and it is not manipulation, and it is not attention-seeking. It is a nervous system doing too much, without the skills to bring itself back down — and skills can be taught."
+      "Borderline Personality Disorder can make emotions feel exceptionally intense and difficult to regulate. It may affect relationships, self-image, impulse control, and the ability to feel emotionally secure. People may experience strong sensitivity to rejection or abandonment, rapid shifts in mood, or periods of overwhelming distress.",
+      "With the right therapeutic support, emotional regulation and interpersonal stability can improve significantly. Evidence-based approaches such as DBT can provide practical tools for creating a more balanced and fulfilling life."
     ],
     bpdSignsTitle: "Common signs",
     bpdSignsList: [
@@ -480,8 +538,8 @@ window.avalonContent.en = {
     depressionTitle: "Depression",
     depressionLead: "More than low mood, and treatable.",
     depressionWhatParagraphs: [
-      "Depression is a persistent change in mood, energy and thinking that lasts weeks or months and interferes with ordinary life. It is not sadness, and it does not lift because circumstances improve or because someone tries harder.",
-      "Its most misleading feature is that it argues in its own favour. It tells you that this is simply what life is, that you have always been like this, and that nothing would help. Those are symptoms, presenting themselves as conclusions."
+      "Depression can gradually affect the way a person feels, thinks, connects with others, and experiences everyday life. It may involve persistent sadness, emotional numbness, loss of interest or pleasure, exhaustion, difficulty concentrating, changes in sleep, or a sense of hopelessness.",
+      "Depression is not simply a lack of motivation or a temporary low mood. It is a complex condition that can have biological, psychological and environmental dimensions. With appropriate treatment and support, recovery and renewed engagement with life are possible."
     ],
     depressionSignsTitle: "Common signs",
     depressionSignsList: [
@@ -503,8 +561,8 @@ window.avalonContent.en = {
     anxietyTitle: "Anxiety",
     anxietyLead: "A threat system that will not stand down.",
     anxietyWhatParagraphs: [
-      "Anxiety is a normal and useful system running when there is nothing to run from. The body prepares for danger — heart, breath, muscles, attention — and the mind supplies a reason afterwards.",
-      "It becomes a disorder when it is persistent, out of proportion, and shaping decisions: when life narrows around the things being avoided. That narrowing is usually the real damage, more than the fear itself."
+      "Anxiety is the mind and body's response to a perceived threat or uncertainty. When it becomes persistent or overwhelming, it can interfere with sleep, concentration, relationships, and the ability to feel present in everyday life.",
+      "Anxiety may appear as excessive worry, physical tension, restlessness, fear, or a constant sense of being on alert. Therapy can help identify the patterns that maintain anxiety, and develop new ways of responding to uncertainty, stress and difficult emotions."
     ],
     anxietySignsTitle: "Common signs",
     anxietySignsList: [
@@ -521,11 +579,11 @@ window.avalonContent.en = {
     ],
 
     /* ---- PTSD ---- */
-    ptsdTitle: "PTSD",
+    ptsdTitle: "Post-Traumatic Stress Disorder",
     ptsdLead: "When the nervous system has not been told it is over.",
     ptsdWhatParagraphs: [
-      "Post-Traumatic Stress Disorder can follow an event, or a long period, in which a person was overwhelmed, frightened or unsafe. The memory does not settle into the past the way other memories do; it stays live, and can be triggered into the present with all its original force.",
-      "People often assume PTSD requires a single dramatic event. It does not. Prolonged or repeated experiences — particularly early ones, particularly in relationships that were supposed to be safe — are among the most common origins, and are strongly represented among people who also meet criteria for BPD."
+      "PTSD can occur when the nervous system remains affected by an experience that was overwhelming, threatening or traumatic. A person may experience intrusive memories, nightmares, avoidance, heightened alertness, emotional reactivity, or a persistent difficulty feeling safe.",
+      "These responses are often the nervous system's attempt to protect the individual from danger that has already passed. Specialised trauma-informed treatment can help process what happened, and gradually restore a greater sense of safety, connection and control."
     ],
     ptsdSignsTitle: "Common signs",
     ptsdSignsList: [
@@ -541,7 +599,16 @@ window.avalonContent.en = {
       "Trauma treatment has to be sequenced properly. Processing traumatic memory before a person has the capacity to tolerate the distress it raises can destabilise them, which is why Avalon treats stabilisation and skills as the ground floor rather than a preliminary.",
       "Once that ground is there, EMDR and other trauma-focused work can begin, at a pace the person sets."
     ],
-    ptsdLink: "Read about EMDR"
+    ptsdLink: "Read about EMDR",
+
+    /* ---- Complex trauma / C-PTSD ---- */
+    cptsdTitle: "Complex Trauma and Complex PTSD",
+    cptsdLead: "When the adversity was prolonged, and happened inside relationships.",
+    cptsdWhatParagraphs: [
+      "Complex trauma often develops in the context of prolonged or repeated experiences of adversity, particularly when they occur within relationships or during important developmental periods.",
+      "Its effects can extend beyond traumatic memories, influencing emotional regulation, self-worth, relationships, trust, and a person's sense of identity or safety. Complex PTSD may therefore require a broader and more individualised therapeutic approach.",
+      "Treatment can help rebuild internal stability, strengthen relationships, and develop healthier ways of relating to oneself and the world."
+    ]
   },
 
   /* ======================================================================
@@ -559,18 +626,18 @@ window.avalonContent.en = {
     /* ---- DBT ---- */
     dbtTitle: "Dialectical Behaviour Therapy",
     dbtLead: "The core of everything Avalon does.",
-    dbtWhatTitle: "What DBT is",
+    dbtWhatTitle: "What is DBT?",
     dbtWhatParagraphs: [
-      "DBT was developed by Marsha Linehan, a clinical psychologist who built it for people other treatments were failing — and who later disclosed that she had been one of them. It is the most extensively validated protocol that exists for Borderline Personality Disorder.",
-      "Its central move is in the name. Dialectical means holding two apparently opposed things at once: you are doing the best you can with what you have, and you need to change. Most therapies lean to one side. Treatments that only push for change feel invalidating and people leave; treatments that only offer acceptance feel warm and change nothing. DBT insists on both, deliberately, all the way through.",
-      "In practice it is highly structured: individual therapy, skills training in four modules, coaching for the moments when skills are needed outside a session, and a consultation team supporting the clinicians. Its results come from delivering all of those components, not a selection of them."
+      "Dialectical Behaviour Therapy (DBT) is an evidence-based, structured form of psychotherapy designed to help people better understand and manage intense emotions, navigate difficult situations, and build healthier relationships. DBT provides practical skills for emotional regulation, distress tolerance, mindfulness and interpersonal effectiveness, helping individuals respond to challenging experiences with greater awareness and flexibility.",
+      "Originally developed for Borderline Personality Disorder (BPD), DBT is now used to support people experiencing a wide range of emotional and behavioural difficulties, including impulsivity, emotional overwhelm, relationship challenges, and difficulty coping with distress. The approach balances acceptance and compassion with meaningful behavioural change, helping individuals develop greater stability, self-understanding and confidence in managing their lives."
     ],
     dbtModulesTitle: "The four skill modules",
     dbtModulesIntro: "The skills are the part people carry out of treatment with them.",
     dbtAtAvalonTitle: "DBT at Avalon",
     dbtAtAvalonParagraphs: [
-      "Avalon delivers comprehensive DBT rather than DBT-informed care — a distinction that sounds like semantics and is not. Clinical training and supervision are built to standards aligned with the DBT Linehan Board of Certification, the body that certifies adherence to the model as it was actually tested.",
-      "The treating team meets weekly as a formal clinical consultation team. This is a structural requirement of the model, not an optional extra, and it is one of the few reliable outward signs that a programme is doing the real thing."
+      "At Avalon, DBT is at the heart of our therapeutic approach. We offer a warm, supportive environment where you can develop practical skills to understand and regulate emotions, strengthen relationships, and navigate everyday challenges with greater confidence.",
+      "Our programmes are led by experienced clinicians with many years of clinical practice, supported by advanced training and internationally recognised certifications. We stay closely connected to current research and evidence-based practice, while providing care that is thoughtful, individualised and grounded in the highest clinical standards.",
+      "You are at the centre of everything we do. Our goal is not only to reduce symptoms, but to help you build greater stability, connection, independence and, ultimately, a life worth living."
     ],
     /* PLACEHOLDER: keep DBT-at-Avalon general until staffing and programme
        structure are confirmed. No named clinicians, ratios or schedules. */
@@ -580,29 +647,49 @@ window.avalonContent.en = {
     /* ---- EMDR ---- */
     emdrTitle: "EMDR",
     emdrLead: "Eye Movement Desensitisation and Reprocessing.",
+    emdrWhatTitle: "What is EMDR?",
     emdrWhatParagraphs: [
-      "EMDR is an evidence-based therapy for trauma. It works from the premise that some memories are stored unprocessed — held in the nervous system in their original, undigested form, which is why they can be triggered into the present with all their initial intensity.",
-      "In a session, the person brings the memory to mind while following a repeated side-to-side stimulus, usually eye movements, sometimes taps or tones. Over repetitions, the memory typically loses its charge. It is still remembered; it stops behaving like something that is happening now.",
-      "The mechanism is still debated. The outcomes are not: EMDR is recommended for PTSD by major clinical guidelines internationally, and it does not require anyone to narrate their trauma in detail, which for some people is the difference between starting treatment and not."
+      "Eye Movement Desensitisation and Reprocessing (EMDR) is a trauma-focused psychotherapy that helps people process distressing or traumatic experiences that may continue to influence how they feel, think, relate to others, or respond in the present. The goal is to help process the memory in a way that reduces its emotional intensity and allows it to become less disruptive in everyday life.",
+      "EMDR has its strongest research support for the treatment of Post-Traumatic Stress Disorder (PTSD) and is recommended by major international clinical guidelines. It can help reduce symptoms such as intrusive memories, emotional distress, avoidance, hyperarousal and other trauma-related reactions.",
+      "EMDR may also be integrated into the treatment of Complex PTSD (C-PTSD), Borderline Personality Disorder (BPD), depression and anxiety, particularly when traumatic or adverse experiences, distressing memories or specific triggers contribute to current difficulties.",
+      "In BPD, EMDR can complement treatments such as DBT by addressing traumatic or adverse experiences that may continue to contribute to emotional dysregulation, negative beliefs about oneself, interpersonal difficulties and heightened emotional responses. While DBT focuses on developing skills to manage emotions and behaviours in the present, EMDR can help process experiences from the past that may continue to influence those responses.",
+      "The use of EMDR is individualised according to each person's clinical needs, history, stability and treatment goals."
+    ],
+    emdrSafetyTitle: "Safety and readiness",
+    emdrSafetyParagraphs: [
+      "EMDR is introduced when clinically appropriate and at a pace that considers each person's readiness, emotional stability and ability to manage distress. Preparation, ongoing assessment and appropriate support are incorporated throughout the process, to help ensure that trauma processing is conducted safely and responsibly."
     ],
     emdrAtAvalonTitle: "EMDR at Avalon",
-    /* PLACEHOLDER: EMDR provision at Avalon is not yet detailed. */
     emdrAtAvalonParagraphs: [
-      "EMDR will be offered as part of the programme, sequenced after stabilisation and skills, at a pace the patient sets."
+      "At Avalon, EMDR is delivered with sensitivity, experience and respect for each person's individual story. Trauma work requires trust and safety, which is why we carefully consider each person's readiness, needs and emotional stability throughout the process.",
+      "Our EMDR clinicians bring many years of experience, advanced training and internationally recognised certifications, while remaining committed to current research, evidence-based practice and the highest standards of clinical care.",
+      "EMDR is thoughtfully integrated into each person's treatment when clinically appropriate, and at a safe and manageable pace. Our aim is to help reduce the impact of painful experiences from the past, and to support each person in moving toward a more stable, connected and fulfilling life."
     ],
-    emdrAtAvalonPlaceholder: "EMDR provision and staffing detail <ph>to follow</ph>",
+    /* PLACEHOLDER: named EMDR clinicians and staffing still to be confirmed. */
+    emdrAtAvalonPlaceholder: "EMDR staffing detail <ph>to follow</ph>",
 
     /* ---- Mindfulness ---- */
-    mindfulnessTitle: "Mindfulness",
+    mindfulnessTitle: "Mindfulness at Avalon",
     mindfulnessLead: "Yoga, meditation and workshops, alongside the clinical work.",
     mindfulnessParagraphs: [
-      "Mindfulness has two lives at Avalon. It is one of the four DBT skill modules, taught clinically and practised as a skill — and it is also a quieter, non-clinical layer running alongside the programme: yoga, meditation, and workshops.",
-      "That second layer is not treatment and is not presented as treatment. It exists because a day made only of therapy is a hard day, and because attention, breath and movement are useful things to practise somewhere other than a consulting room.",
-      "It is optional, and it is meant to be."
+      "Mindfulness is a core therapeutic practice that helps develop present-moment awareness, emotional regulation, and the ability to respond to difficult experiences with greater stability. At Avalon it is an important support for DBT, and can also help build the grounding, awareness and emotional readiness needed when preparing for EMDR.",
+      "It therefore has two lives here. It is one of the four DBT skill modules, taught clinically and practised as a skill — and it is also a quieter, non-clinical layer running alongside the programme.",
+      "That second layer is not treatment and is not presented as treatment. It exists because a day made only of therapy is a hard day, and because attention, breath and movement are useful things to practise somewhere other than a consulting room. It is optional, and it is meant to be."
     ],
     /* PLACEHOLDER: specific mindfulness and wellness offering intentionally
        light until confirmed. */
-    mindfulnessPlaceholder: "Schedule and practitioners <ph>to follow</ph>"
+    mindfulnessPlaceholder: "Schedule and practitioners <ph>to follow</ph>",
+
+    offersTitle: "Our offers",
+    offersIntro: "The non-clinical layer, as it currently stands.",
+    /* PLACEHOLDER: the three offers below are named but not yet described.
+       Content, schedule and practitioners to be confirmed. */
+    offerMeditationTitle: "Meditation",
+    offerMeditationText: "Description <ph>to follow</ph>",
+    offerYogaTitle: "Yoga",
+    offerYogaText: "Description <ph>to follow</ph>",
+    offerWorkshopsTitle: "Workshops",
+    offerWorkshopsText: "Description <ph>to follow</ph>"
   },
 
   /* ======================================================================
@@ -625,9 +712,9 @@ window.avalonContent.en = {
     resourcesTitle: "Resources for Family and Friends",
     resourcesLead: "Psychoeducation, because knowing what is happening changes what you do.",
     resourcesParagraphs: [
-      "Avalon's programme includes family psychoeducation, in the spirit of established programmes such as Family Connections — the structured, evidence-informed course developed specifically for the relatives of people with BPD.",
-      "The content is practical rather than theoretical: what emotional dysregulation actually is, why validation works when reassurance does not, how to respond to crisis without escalating it, and how to set limits that hold without severing the relationship.",
-      "There is a second aim, which families often say matters more. Meeting other people in the same position tends to end a particular kind of isolation quite quickly."
+      "Supporting someone who is struggling emotionally can be challenging, and families need support too. At Avalon we provide families with practical resources to better understand what their loved one is experiencing, and how to respond in helpful and compassionate ways.",
+      "With a particular focus on DBT-informed support, families can learn skills for validation, healthier communication, emotional regulation, boundaries, and navigating difficult moments. We also provide guidance and psychoeducation for families supporting someone experiencing depression, anxiety, PTSD or Complex PTSD.",
+      "Our goal is to help families feel more informed, supported and better prepared to walk alongside their loved one through the recovery process."
     ],
     /* PLACEHOLDER: the exact family programme — format, length, whether it runs
        for relatives of non-patients — is not confirmed. No overpromising. */
@@ -659,21 +746,13 @@ window.avalonContent.en = {
     heroTitle: "Why this place is being built.",
     heroLede: "A country of ten million people has roughly four or five specialist residential beds for one of the most treatable serious psychiatric conditions there is. All of them public, all shared with a different patient population.",
 
-    beliefsTitle: "What We Believe In",
-    /* PLACEHOLDER: draft copy, written from the three commitments in the
-       stakeholder document and rewritten into a first-person mission voice.
-       For the founder to personally rewrite or approve. Not final. */
-    beliefsPlaceholder: "Draft for the founder to rewrite or approve <ph>not final copy</ph>",
-    beliefsLead: "Three commitments, in our own words.",
-
-    beliefOneTitle: "We treat the people who have nowhere else to go.",
-    beliefOneText: "Not the most straightforward cases, and not the ones that make a service look good on paper. The people who have been passed between services, told they are too complex, too risky or too much, and who have often concluded that the problem is them. That is who this is for.",
-
-    beliefTwoTitle: "We build the capacity Portugal does not have.",
-    beliefTwoText: "It is not enough to run one good clinic. Specialist DBT capacity in this country barely exists, which means training clinicians, holding to a real standard of supervision, and being open about what we are doing so that others can do it too. A clinic that hoards its expertise has misunderstood the problem.",
-
-    beliefThreeTitle: "We measure success by people going home.",
-    beliefThreeText: "Not by occupancy, not by length of stay. The point of treatment is to return someone to their family, their work and their own life — with skills they keep. If people are not leaving better than they arrived, nothing else we do counts for much.",
+    beliefsTitle: "What We Believe",
+    beliefsLead: "There are comprehensive, integrative approaches to addressing emotional distress and psychological disorders.",
+    beliefsParagraphs: [
+      "We believe that there are comprehensive, integrative approaches to addressing emotional distress and psychological disorders.",
+      "Our work brings together some of the most effective evidence-based psychotherapy techniques, with Dialectical Behaviour Therapy (DBT) as a fundamental pillar, particularly in the treatment of Borderline Personality Disorder (BPD).",
+      "Our approach seeks to address the person as a whole, integrating therapeutic tools that support emotional regulation, resilience, interpersonal relationships, and lasting psychological well-being."
+    ],
 
     originTitle: "How Avalon Started",
     /* PLACEHOLDER: founding story to be added. Do not invent a narrative. */

@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-i18n="admissions.pageTitle">Admissions — Avalon</title>
   <meta name="description" data-i18n-content="admissions.metaDescription" content="">
+  <!-- Brand marks. The SVG icon is the primary one and stays crisp at every
+       size; the PNG covers iOS home screens and older browsers. -->
+  <link rel="icon" href="images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/brand/appleTouchIcon.png">
+  <meta name="theme-color" content="#1E1C19">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,8 +91,6 @@
           <span class="eyebrow" data-i18n="navSub.admissionProcess"></span>
           <h2 class="displayLg" data-i18n="admissions.processTitle"></h2>
           <p class="leadText" data-i18n="admissions.processLead"></p>
-          <!-- PLACEHOLDER: exact operational steps to be confirmed with the clinical team. -->
-          <p class="smallText marginTopLg" data-i18n="admissions.processPlaceholder"></p>
         </div>
 
         <ol class="stepList shellMid revealStagger shellFlush">
@@ -95,7 +98,7 @@
             <span class="stepNumber" aria-hidden="true">01</span>
             <div>
               <h3 class="stepTitle" data-i18n="admissions.stepOneTitle"></h3>
-              <p class="bodyText" data-i18n="admissions.stepOneText"></p>
+              <ul class="signList" data-i18n-list="admissions.stepOneList"></ul>
             </div>
           </li>
           <li class="stepItem">
@@ -110,6 +113,7 @@
             <div>
               <h3 class="stepTitle" data-i18n="admissions.stepThreeTitle"></h3>
               <p class="bodyText" data-i18n="admissions.stepThreeText"></p>
+              <ul class="signList" data-i18n-list="admissions.stepThreeList"></ul>
             </div>
           </li>
           <li class="stepItem">
@@ -117,6 +121,21 @@
             <div>
               <h3 class="stepTitle" data-i18n="admissions.stepFourTitle"></h3>
               <p class="bodyText" data-i18n="admissions.stepFourText"></p>
+            </div>
+          </li>
+          <li class="stepItem">
+            <span class="stepNumber" aria-hidden="true">05</span>
+            <div>
+              <h3 class="stepTitle" data-i18n="admissions.stepFiveTitle"></h3>
+              <p class="bodyText" data-i18n="admissions.stepFiveText"></p>
+            </div>
+          </li>
+          <li class="stepItem">
+            <span class="stepNumber" aria-hidden="true">06</span>
+            <div>
+              <h3 class="stepTitle" data-i18n="admissions.stepSixTitle"></h3>
+              <p class="bodyText" data-i18n="admissions.stepSixText"></p>
+              <ul class="signList" data-i18n-list="admissions.stepSixList"></ul>
             </div>
           </li>
         </ol>
@@ -136,10 +155,45 @@
             <h2 class="displayMd" data-i18n="admissions.progressTitle"></h2>
             <p class="leadText marginTopLg" data-i18n="admissions.progressLead"></p>
             <div class="stackMd marginTopLg" data-i18n-paras="admissions.progressParagraphs"></div>
-            <!-- PLACEHOLDER: named instruments and intervals to be confirmed. -->
-            <p class="smallText marginTopLg" data-i18n="admissions.progressPlaceholder"></p>
           </div>
         </div>
+
+        <!-- The six domains progress is read against -->
+        <div class="marginTopXl">
+          <p class="bodyText revealItem" data-i18n="admissions.progressDomainsIntro"></p>
+
+          <div class="cardGrid revealStagger marginTopLg">
+            <div class="plainCard">
+              <h3 class="plainCardTitle" data-i18n="admissions.progressEmotionTitle"></h3>
+              <p class="bodyText" data-i18n="admissions.progressEmotionText"></p>
+            </div>
+            <div class="plainCard">
+              <h3 class="plainCardTitle" data-i18n="admissions.progressSymptomsTitle"></h3>
+              <p class="bodyText" data-i18n="admissions.progressSymptomsText"></p>
+            </div>
+            <div class="plainCard">
+              <h3 class="plainCardTitle" data-i18n="admissions.progressFunctioningTitle"></h3>
+              <p class="bodyText" data-i18n="admissions.progressFunctioningText"></p>
+            </div>
+            <div class="plainCard">
+              <h3 class="plainCardTitle" data-i18n="admissions.progressRelationshipsTitle"></h3>
+              <p class="bodyText" data-i18n="admissions.progressRelationshipsText"></p>
+            </div>
+            <div class="plainCard">
+              <h3 class="plainCardTitle" data-i18n="admissions.progressAutonomyTitle"></h3>
+              <p class="bodyText" data-i18n="admissions.progressAutonomyText"></p>
+            </div>
+            <div class="plainCard">
+              <h3 class="plainCardTitle" data-i18n="admissions.progressQualityTitle"></h3>
+              <p class="bodyText" data-i18n="admissions.progressQualityText"></p>
+            </div>
+          </div>
+
+          <p class="bodyText marginTopXl revealItem" data-i18n="admissions.progressClosing"></p>
+          <!-- PLACEHOLDER: named instruments and intervals to be confirmed. -->
+          <p class="smallText marginTopLg revealItem" data-i18n="admissions.progressPlaceholder"></p>
+        </div>
+
       </div>
     </section>
 

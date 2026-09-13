@@ -1,0 +1,15 @@
+{
+  "name": "avalon-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Avalon — residential DBT clinic, Sintra. Static site: plain HTML, CSS and JavaScript, no build step and no dependencies.",
+  "scripts": {
+    "dev": "node tools/devServer.js",
+    "start": "node tools/devServer.js",
+    "check": "node tools/checkContentKeys.js",
+    "placeholders": "node tools/listPlaceholders.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

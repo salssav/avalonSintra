@@ -436,26 +436,29 @@ strong { font-weight: var(--weightBodyMedium); }
 }
 
 /* ---- Wordmark ------------------------------------------------------------
-   PLACEHOLDER: logo is not final. This is a text-based placeholder wordmark.
-   To swap in a real logo file later, replace the text inside
-   <a class="brandWordmark"> with <img src="images/brand/avalonLogo.svg" alt="Avalon">
-   and the `.brandWordmark img` rule below takes over. One-line change. */
+   The logo is an inline <svg> (see wordmark() in js/chrome.js) filled with
+   currentColor, so the light/dark colour rules below move the artwork with
+   the rest of the header. Height is set here; width follows the aspect ratio. */
 .brandWordmark {
   flex: none;
-  font-family: var(--fontDisplay);
-  font-size: 1.4rem;
-  font-weight: var(--weightDisplayBold);
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
   color: var(--colorOnDark);
   line-height: 1;
-  white-space: nowrap;
   transition: color var(--durationMedium) var(--easeOut);
 }
-.brandWordmark img { height: 22px; width: auto; }
+.brandWordmarkArt {
+  display: block;
+  height: 20px;
+  width: auto;
+}
+@media (min-width: 760px) { .brandWordmarkArt { height: 24px; } }
 .siteHeader.isScrolled .brandWordmark,
 .siteHeader.headerOnLight .brandWordmark { color: var(--colorInk); }
+
+/* The footer sits on a dark surface and carries the logo a little larger. */
+.footerBrand .brandWordmarkArt { height: 28px; }
 
 /* ---- Primary navigation --------------------------------------------------
    Seven top-level items plus a language toggle and a call to action is a lot
@@ -1091,9 +1094,6 @@ body.menuOpen .menuButton span:nth-child(3) { transform: translateY(-6px) rotate
 .ctaBand { position: relative; overflow: hidden; background-color: var(--colorAccentDeep); color: var(--colorOnDark); }
 .ctaBand h2 { color: var(--colorOnDark); }
 .ctaBand .bodyText { color: rgba(241,236,225,0.82); }
-.ctaBand .eyebrow { color: rgba(241,236,225,0.7); }
-.ctaBand .linkQuiet { color: var(--colorOnDark); }
-.ctaBandAside { font-size: var(--sizeSmall); color: rgba(241,236,225,0.62); line-height: 1.6; }
 .ctaBandInner { display: grid; gap: var(--spaceLg); align-items: center; }
 @media (min-width: 900px) { .ctaBandInner { grid-template-columns: 1.4fr 1fr; gap: var(--space2xl); } }
 

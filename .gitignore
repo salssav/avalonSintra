@@ -1,0 +1,8 @@
+# OS and editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node (the site itself has no dependencies; this is for tooling only)
+node_modules/
+npm-debug.log*

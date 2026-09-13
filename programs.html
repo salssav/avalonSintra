@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-i18n="programs.pageTitle">Our Programs — Avalon</title>
   <meta name="description" data-i18n-content="programs.metaDescription" content="">
+  <!-- Brand marks. The SVG icon is the primary one and stays crisp at every
+       size; the PNG covers iOS home screens and older browsers. -->
+  <link rel="icon" href="images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/brand/appleTouchIcon.png">
+  <meta name="theme-color" content="#1E1C19">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,10 +80,57 @@
             <h2 class="displayMd" data-i18n="programs.residenceTitle"></h2>
             <p class="leadText marginTopLg" data-i18n="programs.residenceLead"></p>
             <div class="stackMd marginTopLg" data-i18n-paras="programs.residenceParagraphs"></div>
-            <!-- PLACEHOLDER: no bed count, room detail or schedule until confirmed. -->
-            <p class="smallText marginTopLg" data-i18n="programs.residencePlaceholder"></p>
           </div>
         </div>
+
+        <!-- The five stages of the residential programme -->
+        <div class="marginTopXl">
+          <p class="bodyText revealItem" data-i18n="programs.residenceStepsIntro"></p>
+
+          <ol class="stepList revealStagger marginTopLg">
+            <li class="stepItem">
+              <span class="stepNumber" aria-hidden="true">01</span>
+              <div>
+                <h3 class="stepTitle" data-i18n="programs.residenceStepOneTitle"></h3>
+                <p class="bodyText" data-i18n="programs.residenceStepOneText"></p>
+              </div>
+            </li>
+            <li class="stepItem">
+              <span class="stepNumber" aria-hidden="true">02</span>
+              <div>
+                <h3 class="stepTitle" data-i18n="programs.residenceStepTwoTitle"></h3>
+                <p class="bodyText" data-i18n="programs.residenceStepTwoText"></p>
+              </div>
+            </li>
+            <li class="stepItem">
+              <span class="stepNumber" aria-hidden="true">03</span>
+              <div>
+                <h3 class="stepTitle" data-i18n="programs.residenceStepThreeTitle"></h3>
+                <p class="bodyText" data-i18n="programs.residenceStepThreeText"></p>
+              </div>
+            </li>
+            <li class="stepItem">
+              <span class="stepNumber" aria-hidden="true">04</span>
+              <div>
+                <h3 class="stepTitle" data-i18n="programs.residenceStepFourTitle"></h3>
+                <p class="bodyText" data-i18n="programs.residenceStepFourText"></p>
+              </div>
+            </li>
+            <li class="stepItem">
+              <span class="stepNumber" aria-hidden="true">05</span>
+              <div>
+                <h3 class="stepTitle" data-i18n="programs.residenceStepFiveTitle"></h3>
+                <p class="bodyText" data-i18n="programs.residenceStepFiveText"></p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="stackMd marginTopXl revealItem"
+               data-i18n-paras="programs.residenceClosingParagraphs"></div>
+          <!-- PLACEHOLDER: no bed count or length of stay until confirmed. -->
+          <p class="smallText marginTopLg revealItem" data-i18n="programs.residencePlaceholder"></p>
+        </div>
+
       </div>
     </section>
 
