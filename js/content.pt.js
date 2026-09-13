@@ -92,7 +92,7 @@ window.avalonContent.pt = {
     body: "A Avalon ainda não abriu. A lista de espera é a forma de mantermos contacto com quem quer um lugar quando abrir, e é a maneira mais simples de iniciar uma conversa connosco. <strong>Não o compromete a absolutamente nada.</strong>",
     button: "Entrar na lista de espera",
     secondary: "Saiba como funciona a admissão",
-    aside: "Se preferir apenas falar primeiro com alguém, diga-o no campo da mensagem. É uma forma perfeitamente normal de começar."
+    aside: "Se preferir apenas falar primeiro com alguém, diga-o no campo da mensagem. <em>É uma forma perfeitamente normal de começar.</em>"
   },
 
   /* ---- Rodapé ----------------------------------------------------------- */
@@ -136,13 +136,13 @@ window.avalonContent.pt = {
     errorSelect: "Escolha uma opção.",
     waitlistConfirmTitle: "Obrigado. Ficámos com os seus dados.",
     waitlistConfirmBody: [
-      "Alguém da Avalon irá escrever-lhe pessoalmente. Não é uma sequência automática nem uma chamada comercial. É uma resposta real de uma pessoa real, para que possa perguntar aquilo que realmente quer perguntar.",
+      "Alguém da Avalon irá escrever-lhe pessoalmente. Não é uma sequência automática nem uma chamada comercial. <strong>É uma resposta real de uma pessoa real</strong>, para que possa perguntar aquilo que realmente quer perguntar.",
       "Dar o primeiro passo costuma ser a parte mais difícil, e já o deu. Não há mais nada que tenha de fazer hoje."
     ],
     teamConfirmTitle: "Obrigado pelo seu contacto.",
     teamConfirmBody: [
       "Entraremos em contacto para lhe dizer em que ponto está a equipa clínica e o percurso de formação.",
-      "A Avalon está a ser construída devagar e de forma deliberada, pelo que os prazos são honestos em vez de urgentes. Preferimos dizer-lhe exatamente onde estamos a apressá-lo."
+      "A Avalon está a ser construída devagar e de forma deliberada, pelo que os prazos são <em>honestos em vez de urgentes</em>. Preferimos dizer-lhe exatamente onde estamos a apressá-lo."
     ]
   },
 
@@ -172,14 +172,14 @@ window.avalonContent.pt = {
     trustOneLabel: "Alinhados com a DBT Linehan Board",
     trustOneText: "Formação e supervisão clínicas construídas segundo padrões alinhados com a DBT Linehan Board of Certification.",
     trustTwoLabel: "Baseado na evidência, e medido",
-    trustTwoText: "Um protocolo validado, aplicado como deve ser, com a evolução acompanhada através dos mesmos instrumentos usados na investigação em DBT.",
+    trustTwoText: "<strong>Um protocolo validado, aplicado como deve ser</strong>, com a evolução acompanhada através dos mesmos instrumentos usados na investigação em DBT.",
     trustThreeLabel: "Sintra, Portugal",
     trustThreeText: "Uma elegante residência de 1887 rodeada de jardins históricos, nas colinas da Serra de Sintra.",
 
     exploreEyebrow: "Explorar a Avalon",
     exploreTitle: "Por onde começar.",
     cardProgramsTitle: "Os Nossos Programas",
-    cardProgramsText: "Cuidados residenciais, em hospital de dia e em ambulatório, prestados por uma só equipa, na intensidade de que a pessoa precisa neste momento.",
+    cardProgramsText: "Cuidados residenciais, em hospital de dia e em ambulatório, prestados por uma só equipa, <strong>na intensidade de que a pessoa precisa neste momento</strong>.",
     cardTreatmentsTitle: "Tratamentos",
     cardTreatmentsText: "Borderline, depressão, ansiedade e PSPT: o que são, e porque é que o tratamento especializado muda o desfecho.",
     cardSolutionsTitle: "Soluções",
@@ -195,7 +195,7 @@ window.avalonContent.pt = {
     aboutEyebrow: "Sobre nós",
     aboutTitle: "Construída a partir do amor, e de saber como é difícil enfrentar esta doença sem a ajuda certa.",
     aboutBody: [
-      "A Avalon nasceu da experiência vivida. De compreender o quanto a Perturbação da Personalidade Borderline pode afetar não só quem vive com ela, mas também a sua família e quem dela cuida.",
+      "<strong>A Avalon nasceu da experiência vivida.</strong> De compreender o quanto a Perturbação da Personalidade Borderline pode afetar não só quem vive com ela, mas também a sua família e quem dela cuida.",
       "Foi criada a partir do amor, e da convicção de que <strong>ninguém deveria ter de atravessar essa experiência sem o apoio, a compreensão e os cuidados certos</strong>.",
       "<em>A Avalon é o lugar que gostáramos que existisse quando precisámos dele.</em>"
     ],
@@ -217,67 +217,67 @@ window.avalonContent.pt = {
     residenceTitle: "Residência",
     residenceLead: "Um programa de tratamento intensivo, vivido por dentro.",
     residenceParagraphs: [
-      "Na Avalon, oferecemos um programa de tratamento intensivo em que a pessoa vive temporariamente num contexto terapêutico enquanto recebe cuidados multidisciplinares.",
-      "O nosso programa inclui objetivos definidos, fases de tratamento, avaliação contínua e um plano de regresso à vida quotidiana. Os nossos objetivos comuns são estabilizar sintomas, garantir segurança, melhorar as estratégias de coping, responder ao consumo de substâncias ou a necessidades médicas, reforçar rotinas diárias e envolver a rede de apoio da pessoa."
+      "Na Avalon, oferecemos um programa de tratamento intensivo em que a pessoa <strong>vive temporariamente num contexto terapêutico</strong> enquanto recebe cuidados multidisciplinares.",
+      "O nosso programa inclui objetivos definidos, fases de tratamento, avaliação contínua e <strong>um plano de regresso à vida quotidiana</strong>. Os nossos objetivos comuns são estabilizar sintomas, garantir segurança, melhorar as estratégias de coping, responder ao consumo de substâncias ou a necessidades médicas, reforçar rotinas diárias e envolver a rede de apoio da pessoa."
     ],
     residenceStepsIntro: "O nosso programa inclui habitualmente:",
 
     residenceStepOneTitle: "Avaliação",
     residenceStepOneText: "Analisamos as necessidades psiquiátricas, médicas, sociais e de segurança de cada pessoa.",
     residenceStepTwoTitle: "Estabilização",
-    residenceStepTwoText: "Desenvolvemos planos de segurança, estabelecemos rotinas diárias, gerimos a medicação quando adequado e apoiamos o envolvimento terapêutico.",
+    residenceStepTwoText: "Desenvolvemos <strong>planos de segurança</strong>, estabelecemos rotinas diárias, gerimos a medicação quando adequado e apoiamos o envolvimento terapêutico.",
     residenceStepThreeTitle: "Tratamento ativo",
     residenceStepThreeText: "Asseguramos terapia individual e de grupo, trabalho com a família, psicoeducação e treino de competências de vida.",
     residenceStepFourTitle: "Preparação da alta",
-    residenceStepFourText: "Revemos a evolução, desenvolvemos estratégias de prevenção de recaída e articulamos necessidades de habitação, trabalho, educação e cuidados na comunidade.",
+    residenceStepFourText: "Revemos a evolução, desenvolvemos <strong>estratégias de prevenção de recaída</strong> e articulamos necessidades de habitação, trabalho, educação e cuidados na comunidade.",
     residenceStepFiveTitle: "Transição e seguimento",
     residenceStepFiveText: "Ligamos cada pessoa a serviços de ambulatório e a apoio continuado.",
 
     residenceClosingParagraphs: [
       "Ajustamos regularmente cada plano de tratamento de acordo com os sintomas, os riscos, as preferências e a evolução da pessoa.",
-      "Na Avalon, baseamos a admissão, a continuidade do internamento, a transferência e a alta na necessidade clínica e na segurança, respeitando a dignidade, a autonomia e a participação ativa de cada pessoa nos seus cuidados."
+      "Na Avalon, baseamos a admissão, a continuidade do internamento, a transferência e a alta na necessidade clínica e na segurança, respeitando <strong>a dignidade, a autonomia e a participação ativa</strong> de cada pessoa nos seus cuidados."
     ],
     dayHospitalTitle: "Hospital de Dia",
     dayHospitalLead: "Intensidade clínica completa, noites em casa.",
     dayHospitalParagraphs: [
-      "O Programa de Dia é um programa de tratamento em saúde mental intensivo e estruturado, no qual as pessoas recebem apoio terapêutico e clínico abrangente durante o dia, continuando a viver em casa ou na sua própria comunidade.",
-      "O programa proporciona um ambiente terapêutico estruturado sem exigir internamento residencial. Permite que as pessoas participem num tratamento intensivo mantendo as suas rotinas familiares, escolares, profissionais e sociais sempre que isso seja clinicamente adequado.",
+      "O Programa de Dia é um programa de tratamento em saúde mental intensivo e estruturado, no qual as pessoas recebem apoio terapêutico e clínico abrangente durante o dia, <strong>continuando a viver em casa ou na sua própria comunidade</strong>.",
+      "O programa proporciona um ambiente terapêutico estruturado <strong>sem exigir internamento residencial</strong>. Permite que as pessoas participem num tratamento intensivo mantendo as suas rotinas familiares, escolares, profissionais e sociais sempre que isso seja clinicamente adequado.",
       "O programa inclui habitualmente avaliação individualizada, psicoterapia individual e de grupo, seguimento psiquiátrico quando indicado, treino de competências, psicoeducação, trabalho de regulação emocional, envolvimento da família e monitorização clínica contínua.",
-      "O objetivo é oferecer apoio intensivo, reforçar as competências de coping e de regulação emocional, melhorar o funcionamento diário e ajudar as pessoas a regressar progressivamente a maior independência e estabilidade no seu dia a dia."
+      "O objetivo é oferecer apoio intensivo, reforçar as competências de coping e de regulação emocional, melhorar o funcionamento diário e ajudar as pessoas a regressar progressivamente a <strong>maior independência e estabilidade</strong> no seu dia a dia."
     ],
     outpatientTitle: "Ambulatório",
     outpatientLead: "O mesmo protocolo, ao ritmo de uma vida normal.",
     outpatientParagraphs: [
-      "O nosso Programa de Ambulatório oferece cuidados de saúde mental personalizados a pessoas que não necessitam de tratamento residencial ou em hospital de dia. Os utentes comparecem a sessões de terapia agendadas, continuando a viver de forma independente e a manter as suas rotinas diárias.",
-      "O tratamento pode incluir psicoterapia individual, terapia de grupo e abordagens especializadas como a DBT e o EMDR, de acordo com as necessidades e os objetivos terapêuticos de cada pessoa."
+      "O nosso Programa de Ambulatório oferece cuidados de saúde mental personalizados a pessoas que não necessitam de tratamento residencial ou em hospital de dia. Os utentes comparecem a sessões de terapia agendadas, <strong>continuando a viver de forma independente</strong> e a manter as suas rotinas diárias.",
+      "O tratamento pode incluir psicoterapia individual, terapia de grupo e abordagens especializadas como <strong>a DBT e o EMDR</strong>, de acordo com as necessidades e os objetivos terapêuticos de cada pessoa."
     ],
 
     activitiesTitle: "Atividades",
     activitiesLead: "O tratamento não é a única coisa que acontece aqui.",
     activitiesParagraphs: [
-      "A par do tratamento clínico, a Avalon oferece um programa de atividades terapêuticas e comunitárias pensado para apoiar a recuperação na vida quotidiana."
+      "A par do tratamento clínico, a Avalon oferece um programa de atividades terapêuticas e comunitárias pensado para <strong>apoiar a recuperação na vida quotidiana</strong>."
     ],
     therapiesTitle: "Terapias",
     therapiesLead: "O que acontece, de facto, semana a semana.",
     therapiesIntro: "A DBT completa não é uma única terapia, mas um conjunto de componentes que <strong>só funcionam devidamente em conjunto</strong>. A Avalon assegura-os a todos.",
 
     therapyIndividualTitle: "Terapia DBT individual",
-    therapyIndividualText: "Cada doente trabalha com um terapeuta DBT individual. É este o fio que atravessa tudo o resto: uma sessão semanal estruturada onde as competências deixam de ser abstratas e passam a aplicar-se ao que está realmente a acontecer na vida da pessoa nesta semana.",
+    therapyIndividualText: "Cada doente trabalha com um terapeuta DBT individual. É este <em>o fio que atravessa tudo o resto</em>: uma sessão semanal estruturada onde as competências deixam de ser abstratas e passam a aplicar-se ao que está realmente a acontecer na vida da pessoa nesta semana.",
 
     therapySkillsTitle: "Grupos de competências DBT",
-    therapySkillsText: "As competências são ensinadas em grupo, em quatro módulos. Muitas pessoas esperam que o grupo seja a parte difícil e acabam por descobrir que é a parte de que mais sentem falta depois.",
+    therapySkillsText: "As competências são ensinadas em grupo, em quatro módulos. Muitas pessoas esperam que o grupo seja a parte difícil e acabam por descobrir que é <em>a parte de que mais sentem falta depois</em>.",
 
     moduleMindfulnessTitle: "Mindfulness",
     moduleMindfulnessText: "Reparar no que está a acontecer, dentro e à sua volta, sem ter de agir imediatamente sobre isso.",
     moduleDistressTitle: "Tolerância ao Mal-Estar",
-    moduleDistressText: "Atravessar os piores momentos sem os agravar: competências de sobrevivência à crise, e a prática mais difícil de aceitar aquilo que não pode ser mudado agora.",
+    moduleDistressText: "Atravessar os piores momentos <strong>sem os agravar</strong>: competências de sobrevivência à crise, e a prática mais difícil de aceitar aquilo que não pode ser mudado agora.",
     moduleEmotionTitle: "Regulação Emocional",
-    moduleEmotionText: "Compreender o que as emoções estão a fazer, reduzir a vulnerabilidade a elas e mudar aquelas que não correspondem aos factos.",
+    moduleEmotionText: "Compreender o que as emoções estão a fazer, reduzir a vulnerabilidade a elas e <strong>mudar aquelas que não correspondem aos factos</strong>.",
     moduleInterpersonalTitle: "Eficácia Interpessoal",
-    moduleInterpersonalText: "Pedir aquilo de que precisa, dizer não, e manter intactos tanto a relação como o respeito por si próprio enquanto o faz.",
+    moduleInterpersonalText: "Pedir aquilo de que precisa, dizer não, e manter intactos tanto <strong>a relação como o respeito por si próprio</strong> enquanto o faz.",
 
     therapyPsychiatryTitle: "Consulta de psiquiatria",
-    therapyPsychiatryText: "A avaliação psiquiátrica regular acompanha a terapia, não se sobrepõe a ela. A medicação é ponderada onde ajuda e questionada onde não ajuda.",
+    therapyPsychiatryText: "A avaliação psiquiátrica regular acompanha a terapia, <em>não se sobrepõe a ela</em>. A medicação é ponderada onde ajuda e questionada onde não ajuda.",
 
     therapyConsultTitle: "A equipa de consultadoria clínica",
     therapyConsultText: "Uma vez por semana, os clínicos que o acompanham reúnem-se em equipa, não por razões administrativas, mas para se ajudarem mutuamente a aplicar a terapia como deve ser. Em DBT isto <em>não</em> é opcional: a equipa de consultadoria é uma parte formal do modelo de tratamento, assente no princípio de que os terapeutas que fazem este trabalho também precisam de apoio. Mencionamo-lo porque é um dos sinais mais claros de se um programa está genuinamente a fazer DBT, ou apenas a usar o nome."
@@ -344,15 +344,15 @@ window.avalonContent.pt = {
     stepOneTitle: "Contacto inicial",
     stepOneList: [
       "Primeiro contacto com a Avalon.",
-      "Participação voluntária. Admitimos apenas pessoas dispostas a envolver-se no processo e a fazer mudanças. Não aceitamos ninguém que tenha sido coagido a vir, ou que esteja ambivalente quanto a estar aqui.",
+      "<strong>Participação voluntária.</strong> Admitimos apenas pessoas dispostas a envolver-se no processo e a fazer mudanças. Não aceitamos ninguém que tenha sido coagido a vir, ou que esteja ambivalente quanto a estar aqui.",
       "Compromisso comportamental: uma atitude e uma disponibilidade para mudar.",
-      "Critérios de admissão: sem consumo de substâncias, não estar em situação crítica ou de emergência, não necessitar de internamento hospitalar, e não estar a ser pressionado por outra pessoa.",
+      "Critérios de admissão: <strong>sem consumo de substâncias, não estar em situação crítica ou de emergência</strong>, não necessitar de internamento hospitalar, e não estar a ser pressionado por outra pessoa.",
       "Uma avaliação preliminar, que conduz à etapa de avaliação descrita abaixo.",
       "O Coordenador de Admissões realiza uma avaliação telefónica do histórico clínico e das necessidades da pessoa, para determinar se a Avalon tem um programa adequado para ela."
     ],
 
     stepTwoTitle: "Avaliação",
-    stepTwoText: "É exigida avaliação psicométrica padronizada. Quando a pessoa ainda não a tem, a Avalon realiza uma avaliação psiquiátrica e neuropsiquiátrica abrangente, em formato intensivo, de modo a chegar a um diagnóstico rigoroso.",
+    stepTwoText: "<strong>É exigida avaliação psicométrica padronizada.</strong> Quando a pessoa ainda não a tem, a Avalon realiza uma avaliação psiquiátrica e neuropsiquiátrica abrangente, em formato intensivo, de modo a chegar a um diagnóstico rigoroso.",
 
     stepThreeTitle: "Programa de tratamento",
     stepThreeText: "A avaliação determina qual o programa adequado:",
@@ -365,7 +365,7 @@ window.avalonContent.pt = {
     stepFourText: "São confirmados os requisitos financeiros, de admissão e de pagamento.",
 
     stepFiveTitle: "Cobertura de seguro de saúde",
-    stepFiveText: "É exigido seguro de saúde, conforme obrigam os regulamentos. Não se destina a servir de meio de pagamento do programa através do seguro.",
+    stepFiveText: "<strong>É exigido seguro de saúde</strong>, conforme obrigam os regulamentos. Não se destina a servir de meio de pagamento do programa através do seguro.",
 
     stepSixTitle: "Sessão de admissão e preparação do internamento",
     stepSixText: "Uma sessão final trata dos aspetos práticos da chegada:",
@@ -380,7 +380,7 @@ window.avalonContent.pt = {
     progressTitle: "Como Acompanhamos a Evolução?",
     progressLead: "Recuperar é mais do que reduzir sintomas.",
     progressParagraphs: [
-      "Na Avalon, a evolução é entendida como mudança significativa na forma como uma pessoa se sente, funciona, se relaciona com os outros e gere a vida quotidiana.",
+      "Na Avalon, a evolução é entendida como <strong>mudança significativa</strong> na forma como uma pessoa se sente, funciona, se relaciona com os outros e gere a vida quotidiana.",
       "Combinamos observação clínica, medidas psicológicas validadas, objetivos terapêuticos individualizados e o funcionamento na vida real para compreender a evolução de cada pessoa ao longo do tempo."
     ],
     progressDomainsIntro: "Olhamos para mudanças em:",
@@ -396,9 +396,9 @@ window.avalonContent.pt = {
     progressAutonomyTitle: "Autonomia",
     progressAutonomyText: "Confiança e capacidade crescentes para tomar decisões, gerir responsabilidades e funcionar com maior independência.",
     progressQualityTitle: "Qualidade de vida",
-    progressQualityText: "No fim, evoluir significa mais do que sofrer menos. Significa ser cada vez mais capaz de construir e participar numa vida que se sente estável, com sentido, e que vale a pena viver.",
+    progressQualityText: "No fim, evoluir significa mais do que sofrer menos. Significa ser cada vez mais capaz de construir e participar <em>numa vida que se sente estável, com sentido, e que vale a pena viver</em>.",
 
-    progressClosing: "A evolução é revista ao longo de todo o programa através de medidas clínicas baseadas na evidência e de avaliação multidisciplinar regular, permitindo que cada plano de tratamento evolua à medida que as necessidades e os objetivos da pessoa mudam.",
+    progressClosing: "A evolução é revista ao longo de todo o programa através de <strong>medidas clínicas baseadas na evidência</strong> e de avaliação multidisciplinar regular, permitindo que cada plano de tratamento evolua à medida que as necessidades e os objetivos da pessoa mudam.",
     waitlistTitle: "Entrar na Nossa Lista de Espera",
   },
 
@@ -415,7 +415,7 @@ window.avalonContent.pt = {
     heroLede: "Escrito para quem está a tentar perceber o que lhe está a acontecer, ou o que acontece a alguém que ama, e <em>não</em> para um público clínico.",
 
     introParagraphs: [
-      "Um diagnóstico é uma abreviatura útil, não a descrição de uma pessoa. O que se segue pretende ser reconhecível e não exaustivo: o suficiente para saber se está no sítio certo, e o que envolveria de facto um tratamento especializado.",
+      "Um diagnóstico é uma abreviatura útil, <em>não a descrição de uma pessoa</em>. O que se segue pretende ser reconhecível e não exaustivo: o suficiente para saber se está no sítio certo, e o que envolveria de facto um tratamento especializado.",
       "Nada disto substitui uma avaliação feita por um clínico que conheça a sua situação."
     ],
 
@@ -424,8 +424,8 @@ window.avalonContent.pt = {
     bpdLead: "A condição em torno da qual a Avalon foi construída.",
     bpdWhatTitle: "O que é",
     bpdWhatParagraphs: [
-      "A Perturbação da Personalidade Borderline pode tornar as emoções excecionalmente intensas e difíceis de regular. Pode afetar as relações, a imagem de si, o controlo dos impulsos e a capacidade de se sentir emocionalmente seguro. As pessoas podem sentir grande sensibilidade à rejeição ou ao abandono, mudanças rápidas de humor, ou períodos de sofrimento avassalador.",
-      "Com o apoio terapêutico certo, a regulação emocional e a estabilidade interpessoal podem melhorar significativamente. Abordagens baseadas na evidência como a DBT oferecem ferramentas práticas para construir uma vida mais equilibrada e gratificante."
+      "A Perturbação da Personalidade Borderline pode tornar as emoções <strong>excecionalmente intensas e difíceis de regular</strong>. Pode afetar as relações, a imagem de si, o controlo dos impulsos e a capacidade de se sentir emocionalmente seguro. As pessoas podem sentir grande sensibilidade à rejeição ou ao abandono, mudanças rápidas de humor, ou períodos de sofrimento avassalador.",
+      "Com o apoio terapêutico certo, a regulação emocional e a estabilidade interpessoal <strong>podem melhorar significativamente</strong>. Abordagens baseadas na evidência como a DBT oferecem ferramentas práticas para construir uma vida mais equilibrada e gratificante."
     ],
     bpdSignsTitle: "Sinais comuns",
     bpdSignsList: [
@@ -441,14 +441,14 @@ window.avalonContent.pt = {
     ],
     bpdMisdiagnosisTitle: "Porque passa tantas vezes despercebida",
     bpdMisdiagnosisParagraphs: [
-      "A Perturbação da Personalidade Borderline é frequentemente mal diagnosticada, na maioria das vezes como perturbação bipolar, depressão, ou ansiedade resistente ao tratamento. As razões são compreensíveis: as oscilações de humor parecem semelhantes vistas de fora, a depressão está genuinamente presente grande parte do tempo, e a pessoa que chega ao clínico está ali habitualmente por causa de uma crise e não de um padrão.",
-      "O custo de errar são anos. Anos de tratamento dirigido ao alvo errado, e a conclusão razoável, do lado do doente, de que nada funciona e de que o problema é ele.",
+      "A Perturbação da Personalidade Borderline é <strong>frequentemente mal diagnosticada</strong>, na maioria das vezes como perturbação bipolar, depressão, ou ansiedade resistente ao tratamento. As razões são compreensíveis: as oscilações de humor parecem semelhantes vistas de fora, a depressão está genuinamente presente grande parte do tempo, e a pessoa que chega ao clínico está ali habitualmente por causa de uma crise e não de um padrão.",
+      "<strong>O custo de errar são anos.</strong> Anos de tratamento dirigido ao alvo errado, e a conclusão razoável, do lado do doente, de que nada funciona e de que o problema é ele.",
       "Vale a pena dizê-lo com clareza: a Perturbação da Personalidade Borderline é <strong>uma das condições psiquiátricas graves mais tratáveis</strong>, e a evidência disso é forte. Muitas pessoas cumprem critérios num momento da vida e não noutro. O prognóstico é genuinamente bom quando o tratamento é o certo."
     ],
     bpdWhySpecialistTitle: "Porque importa o tratamento especializado",
     bpdWhySpecialistParagraphs: [
-      "Os cuidados gerais de saúde mental não foram desenhados para isto. A terapia de apoio sem estrutura tende a não ajudar e pode tornar as coisas mais difíceis; a medicação isolada não tem uma base de evidência sólida para a própria Perturbação da Personalidade Borderline.",
-      "O que tem evidência é a terapia estruturada e guiada por protocolo, sobretudo a DBT, que foi desenvolvida especificamente para esta população e foi testada mais aprofundadamente do que qualquer alternativa.",
+      "Os cuidados gerais de saúde mental <strong>não foram desenhados para isto.</strong> A terapia de apoio sem estrutura tende a não ajudar e pode tornar as coisas mais difíceis; a medicação isolada não tem uma base de evidência sólida para a própria Perturbação da Personalidade Borderline.",
+      "O que tem evidência é a terapia estruturada e guiada por protocolo, sobretudo a DBT, que foi desenvolvida especificamente para esta população e foi <strong>testada mais aprofundadamente do que qualquer alternativa</strong>.",
       "É esse todo o argumento a favor de um contexto especializado. <em>Não um edifício mais bonito:</em> uma equipa formada num modelo, a aplicá-lo por inteiro, com a estrutura de supervisão que o mantém honesto."
     ],
     /* PLACEHOLDER: os dados de mortalidade e suicídio aparecem uma única vez,
@@ -478,8 +478,8 @@ window.avalonContent.pt = {
       "Pensamentos sobre a morte ou sobre não querer estar aqui"
     ],
     depressionWhyParagraphs: [
-      "A depressão é muito comum a par da Perturbação da Personalidade Borderline, e as duas são frequentemente confundidas. Isso importa, porque precisam de coisas diferentes. A depressão que é, na realidade, parte de uma perturbação da regulação emocional responde mal aos antidepressivos isolados, e bem ao tratamento baseado em competências.",
-      "Na Avalon, a depressão é tratada por direito próprio quando é o problema principal, e tratada como parte do quadro global quando não é."
+      "A depressão é muito comum a par da Perturbação da Personalidade Borderline, e as duas são frequentemente confundidas. Isso importa, porque precisam de coisas diferentes. A depressão que é, na realidade, parte de uma perturbação da regulação emocional responde <strong>mal aos antidepressivos isolados, e bem ao tratamento baseado em competências</strong>.",
+      "Na Avalon, a depressão é <strong>tratada por direito próprio</strong> quando é o problema principal, e tratada como parte do quadro global quando não é."
     ],
 
     /* ---- Ansiedade ---- */
@@ -487,7 +487,7 @@ window.avalonContent.pt = {
     anxietyLead: "Um sistema de ameaça que não se desliga.",
     anxietyWhatParagraphs: [
       "A ansiedade é a resposta da mente e do corpo a uma ameaça percebida ou a uma incerteza. Quando se torna persistente ou avassaladora, pode interferir com o sono, a concentração, as relações e a capacidade de estar presente no dia a dia.",
-      "A ansiedade pode surgir como preocupação excessiva, tensão física, inquietação, medo, ou uma sensação constante de estar em alerta. A terapia pode ajudar a identificar os padrões que mantêm a ansiedade, e a desenvolver novas formas de responder à incerteza, ao stress e às emoções difíceis."
+      "A ansiedade pode surgir como preocupação excessiva, tensão física, inquietação, medo, ou uma sensação constante de estar em alerta. A terapia pode ajudar a identificar <strong>os padrões que mantêm a ansiedade</strong>, e a desenvolver novas formas de responder à incerteza, ao stress e às emoções difíceis."
     ],
     anxietySignsTitle: "Sinais comuns",
     anxietySignsList: [
@@ -500,7 +500,7 @@ window.avalonContent.pt = {
     ],
     anxietyWhyParagraphs: [
       "A ansiedade responde bem a tratamento estruturado e baseado na evidência, e vários dos módulos de competências da DBT, em particular a tolerância ao mal-estar e o mindfulness, visam exatamente os mecanismos que a mantêm.",
-      "Quando a ansiedade coexiste com a Perturbação da Personalidade Borderline ou com trauma, tratá-la isoladamente tende a desiludir. Tratá-la como parte de uma formulação única funciona melhor."
+      "Quando a ansiedade coexiste com a Perturbação da Personalidade Borderline ou com trauma, <em>tratá-la isoladamente tende a desiludir</em>. Tratá-la como parte de uma formulação única funciona melhor."
     ],
 
     /* ---- PSPT ---- */
@@ -508,7 +508,7 @@ window.avalonContent.pt = {
     ptsdLead: "Quando ninguém disse ao sistema nervoso que já acabou.",
     ptsdWhatParagraphs: [
       "A PSPT pode ocorrer quando o sistema nervoso permanece afetado por uma experiência que foi avassaladora, ameaçadora ou traumática. A pessoa pode ter memórias intrusivas, pesadelos, evitamento, estado de alerta aumentado, reatividade emocional, ou uma dificuldade persistente em sentir-se segura.",
-      "Estas respostas são muitas vezes a tentativa do sistema nervoso de proteger a pessoa de um perigo que já passou. O tratamento especializado e informado pelo trauma pode ajudar a processar o que aconteceu, e a restaurar gradualmente uma maior sensação de segurança, ligação e controlo."
+      "Estas respostas são muitas vezes a tentativa do sistema nervoso de proteger a pessoa de <strong>um perigo que já passou</strong>. O tratamento especializado e informado pelo trauma pode ajudar a processar o que aconteceu, e a restaurar gradualmente uma maior sensação de segurança, ligação e controlo."
     ],
     ptsdSignsTitle: "Sinais comuns",
     ptsdSignsList: [
@@ -518,10 +518,10 @@ window.avalonContent.pt = {
       "Sentir-se permanentemente em guarda, sobressaltar-se com facilidade, não conseguir assentar",
       "Anestesia emocional, ou a sensação de se observar a si próprio de fora",
       "Sono que não repõe nada",
-      "Crenças formadas na altura e nunca revistas: que a culpa foi sua, que está danificado, que nenhum lugar é seguro"
+      "Crenças formadas na altura e nunca revistas: <em>que a culpa foi sua, que está danificado, que nenhum lugar é seguro</em>"
     ],
     ptsdWhyParagraphs: [
-      "O tratamento do trauma tem de ser sequenciado corretamente. Processar memória traumática antes de a pessoa ter capacidade para tolerar o sofrimento que isso levanta pode desestabilizá-la, e é por isso que a Avalon trata a estabilização e as competências como o piso térreo e não como um preliminar.",
+      "O tratamento do trauma <strong>tem de ser sequenciado corretamente.</strong> Processar memória traumática antes de a pessoa ter capacidade para tolerar o sofrimento que isso levanta pode desestabilizá-la, e é por isso que a Avalon trata a estabilização e as competências como o piso térreo e não como um preliminar.",
       "Assente esse alicerce, o EMDR e outro trabalho focado no trauma podem começar, ao ritmo que a pessoa define."
     ],
     ptsdLink: "Saiba mais sobre o EMDR",
@@ -530,9 +530,9 @@ window.avalonContent.pt = {
     cptsdTitle: "Trauma Complexo e PSPT Complexa",
     cptsdLead: "Quando a adversidade foi prolongada, e aconteceu dentro de relações.",
     cptsdWhatParagraphs: [
-      "O trauma complexo desenvolve-se frequentemente no contexto de experiências de adversidade prolongadas ou repetidas, sobretudo quando ocorrem dentro de relações ou durante períodos importantes do desenvolvimento.",
+      "O trauma complexo desenvolve-se frequentemente no contexto de experiências de adversidade prolongadas ou repetidas, sobretudo quando ocorrem <strong>dentro de relações ou durante períodos importantes do desenvolvimento</strong>.",
       "Os seus efeitos podem ir além das memórias traumáticas, influenciando a regulação emocional, o valor próprio, as relações, a confiança, e o sentido de identidade ou de segurança da pessoa. A PSPT Complexa pode, por isso, exigir uma abordagem terapêutica mais ampla e mais individualizada.",
-      "O tratamento pode ajudar a reconstruir a estabilidade interna, a fortalecer as relações, e a desenvolver formas mais saudáveis de se relacionar consigo próprio e com o mundo."
+      "O tratamento pode ajudar a <strong>reconstruir a estabilidade interna</strong>, a fortalecer as relações, e a desenvolver formas mais saudáveis de se relacionar consigo próprio e com o mundo."
     ]
   },
 
@@ -554,15 +554,15 @@ window.avalonContent.pt = {
     dbtWhatTitle: "O que é a DBT?",
     dbtWhatParagraphs: [
       "A Terapia Comportamental Dialética (DBT) é uma <strong>forma de psicoterapia estruturada e baseada na evidência</strong>, concebida para ajudar as pessoas a compreender e a gerir melhor emoções intensas, a lidar com situações difíceis e a construir relações mais saudáveis. A DBT fornece competências práticas de regulação emocional, tolerância ao mal-estar, mindfulness e eficácia interpessoal, ajudando as pessoas a responder a experiências exigentes com maior consciência e flexibilidade.",
-      "Originalmente desenvolvida para a Perturbação da Personalidade Borderline, a DBT é hoje usada para apoiar pessoas com uma grande variedade de dificuldades emocionais e comportamentais, incluindo impulsividade, sobrecarga emocional, dificuldades relacionais e dificuldade em lidar com o sofrimento. A abordagem equilibra aceitação e compaixão com mudança comportamental significativa, ajudando as pessoas a desenvolver maior estabilidade, autoconhecimento e confiança na gestão das suas vidas."
+      "<strong>Originalmente desenvolvida para a Perturbação da Personalidade Borderline</strong>, a DBT é hoje usada para apoiar pessoas com uma grande variedade de dificuldades emocionais e comportamentais, incluindo impulsividade, sobrecarga emocional, dificuldades relacionais e dificuldade em lidar com o sofrimento. A abordagem equilibra aceitação e compaixão com mudança comportamental significativa, ajudando as pessoas a desenvolver maior estabilidade, autoconhecimento e confiança na gestão das suas vidas."
     ],
     dbtModulesTitle: "Os quatro módulos de competências",
     dbtModulesIntro: "As competências são a parte que as pessoas levam consigo quando saem do tratamento.",
     dbtAtAvalonTitle: "A DBT na Avalon",
     dbtAtAvalonParagraphs: [
-      "Na Avalon, a DBT está no centro da nossa abordagem terapêutica. Oferecemos um ambiente acolhedor e de apoio onde pode desenvolver competências práticas para compreender e regular emoções, fortalecer relações e enfrentar os desafios do dia a dia com mais confiança.",
-      "Os nossos programas são conduzidos por clínicos experientes, com muitos anos de prática clínica, apoiados por formação avançada e certificações reconhecidas internacionalmente. Mantemo-nos próximos da investigação atual e da prática baseada na evidência, oferecendo cuidados atentos, individualizados e assentes nos mais elevados padrões clínicos.",
-      "Você está no centro de tudo o que fazemos. O nosso objetivo não é apenas reduzir sintomas, mas ajudá-lo a construir maior estabilidade, ligação, independência e, em última análise, uma vida que valha a pena viver."
+      "Na Avalon, <strong>a DBT está no centro da nossa abordagem terapêutica</strong>. Oferecemos um ambiente acolhedor e de apoio onde pode desenvolver competências práticas para compreender e regular emoções, fortalecer relações e enfrentar os desafios do dia a dia com mais confiança.",
+      "Os nossos programas são conduzidos por clínicos experientes, com muitos anos de prática clínica, apoiados por formação avançada e <strong>certificações reconhecidas internacionalmente</strong>. Mantemo-nos próximos da investigação atual e da prática baseada na evidência, oferecendo cuidados atentos, individualizados e assentes nos mais elevados padrões clínicos.",
+      "Você está no centro de tudo o que fazemos. O nosso objetivo não é apenas reduzir sintomas, mas ajudá-lo a construir maior estabilidade, ligação, independência e, em última análise, <em>uma vida que valha a pena viver</em>."
     ],
     dbtLink: "Ver as terapias do programa",
 
@@ -571,7 +571,7 @@ window.avalonContent.pt = {
     emdrLead: "Dessensibilização e Reprocessamento através dos Movimentos Oculares.",
     emdrWhatTitle: "O que é o EMDR?",
     emdrWhatParagraphs: [
-      "O EMDR (Eye Movement Desensitisation and Reprocessing) é uma psicoterapia focada no trauma que ajuda as pessoas a processar experiências angustiantes ou traumáticas que continuam a influenciar a forma como se sentem, pensam, se relacionam ou reagem no presente. O objetivo é ajudar a processar a memória de modo a reduzir a sua intensidade emocional e a torná-la menos perturbadora no dia a dia.",
+      "O EMDR (Eye Movement Desensitisation and Reprocessing) é uma psicoterapia focada no trauma que ajuda as pessoas a processar experiências angustiantes ou traumáticas que continuam a influenciar a forma como se sentem, pensam, se relacionam ou reagem no presente. O objetivo é ajudar a processar a memória de modo a <strong>reduzir a sua intensidade emocional</strong> e a torná-la menos perturbadora no dia a dia.",
       "O EMDR tem <strong>o seu maior suporte na investigação</strong> no tratamento da Perturbação de Stress Pós-Traumático (PSPT) e é recomendado pelas principais orientações clínicas internacionais. Pode ajudar a reduzir sintomas como memórias intrusivas, sofrimento emocional, evitamento, hiperativação e outras reações relacionadas com o trauma.",
       "O EMDR pode também ser integrado no tratamento da PSPT Complexa (PSPT-C), da Perturbação da Personalidade Borderline, da depressão e da ansiedade, em particular quando experiências traumáticas ou adversas, memórias angustiantes ou gatilhos específicos contribuem para as dificuldades atuais.",
       "Na Perturbação da Personalidade Borderline, o EMDR pode complementar tratamentos como a DBT ao abordar experiências traumáticas ou adversas que continuam a contribuir para a desregulação emocional, para crenças negativas sobre si próprio, para dificuldades interpessoais e para respostas emocionais intensificadas. Enquanto a DBT se centra em desenvolver competências para gerir emoções e comportamentos no presente, o EMDR pode ajudar a processar experiências do passado que continuam a influenciar essas respostas.",
@@ -579,21 +579,21 @@ window.avalonContent.pt = {
     ],
     emdrSafetyTitle: "Segurança e preparação",
     emdrSafetyParagraphs: [
-      "O EMDR é introduzido quando é clinicamente adequado e a um ritmo que tem em conta a preparação, a estabilidade emocional e a capacidade de gerir o sofrimento de cada pessoa. A preparação, a avaliação contínua e o apoio adequado estão presentes ao longo de todo o processo, para ajudar a garantir que o processamento do trauma é conduzido de forma segura e responsável."
+      "O EMDR é introduzido quando é clinicamente adequado e a um ritmo que tem em conta <strong>a preparação, a estabilidade emocional e a capacidade de gerir o sofrimento</strong> de cada pessoa. A preparação, a avaliação contínua e o apoio adequado estão presentes ao longo de todo o processo, para ajudar a garantir que o processamento do trauma é conduzido de forma segura e responsável."
     ],
     emdrAtAvalonTitle: "O EMDR na Avalon",
     emdrAtAvalonParagraphs: [
-      "Na Avalon, o EMDR é aplicado com sensibilidade, experiência e respeito pela história individual de cada pessoa. O trabalho com trauma exige confiança e segurança, e é por isso que ponderamos cuidadosamente a preparação, as necessidades e a estabilidade emocional de cada pessoa ao longo de todo o processo.",
-      "Os nossos clínicos de EMDR trazem muitos anos de experiência, formação avançada e certificações reconhecidas internacionalmente, mantendo-se comprometidos com a investigação atual, a prática baseada na evidência e os mais elevados padrões de cuidado clínico.",
-      "O EMDR é integrado com critério no tratamento de cada pessoa quando é clinicamente adequado, e a um ritmo seguro e comportável. O nosso objetivo é ajudar a reduzir o impacto de experiências dolorosas do passado, e apoiar cada pessoa a caminhar para uma vida mais estável, ligada e gratificante."
+      "Na Avalon, o EMDR é aplicado com sensibilidade, experiência e respeito pela história individual de cada pessoa. <strong>O trabalho com trauma exige confiança e segurança</strong>, e é por isso que ponderamos cuidadosamente a preparação, as necessidades e a estabilidade emocional de cada pessoa ao longo de todo o processo.",
+      "Os nossos clínicos de EMDR trazem muitos anos de experiência, formação avançada e <strong>certificações reconhecidas internacionalmente</strong>, mantendo-se comprometidos com a investigação atual, a prática baseada na evidência e os mais elevados padrões de cuidado clínico.",
+      "O EMDR é integrado com critério no tratamento de cada pessoa quando é clinicamente adequado, e a um ritmo seguro e comportável. O nosso objetivo é ajudar a reduzir o impacto de experiências dolorosas do passado, e apoiar cada pessoa a caminhar para <strong>uma vida mais estável, ligada e gratificante</strong>."
     ],
     /* ---- Mindfulness ---- */
     mindfulnessTitle: "Mindfulness na Avalon",
     mindfulnessLead: "Yoga, meditação e workshops, a par do trabalho clínico.",
     mindfulnessParagraphs: [
-      "O mindfulness é uma prática terapêutica central que ajuda a desenvolver a consciência do momento presente, a regulação emocional e a capacidade de responder a experiências difíceis com maior estabilidade. Na Avalon é um apoio importante à DBT, e pode também ajudar a construir o enraizamento, a consciência e a disponibilidade emocional necessários na preparação para o EMDR.",
+      "O mindfulness é uma prática terapêutica central que ajuda a desenvolver <strong>a consciência do momento presente</strong>, a regulação emocional e a capacidade de responder a experiências difíceis com maior estabilidade. Na Avalon é um apoio importante à DBT, e pode também ajudar a construir o enraizamento, a consciência e a disponibilidade emocional necessários na preparação para o EMDR.",
       "Tem, por isso, duas vidas aqui. É um dos quatro módulos de competências da DBT, ensinado clinicamente e praticado como competência. É também uma camada mais silenciosa, não clínica, que acompanha o programa.",
-      "Essa segunda camada não é tratamento e não é apresentada como tratamento. Existe porque um dia feito só de terapia é um dia difícil, e porque a atenção, a respiração e o movimento são coisas úteis de praticar num sítio que não seja um consultório. É opcional, e é suposto sê-lo."
+      "Essa segunda camada <em>não é tratamento e não é apresentada como tratamento</em>. Existe porque um dia feito só de terapia é um dia difícil, e porque a atenção, a respiração e o movimento são coisas úteis de praticar num sítio que não seja um consultório. <em>É opcional, e é suposto sê-lo.</em>"
     ],
     offersTitle: "A nossa oferta",
     offersIntro: "A camada não clínica, tal como está neste momento.",
@@ -617,18 +617,18 @@ window.avalonContent.pt = {
     heroLede: "Sabemos como pode ser difícil ver alguém de quem gosta a viver com uma condição de saúde mental.",
 
     introParagraphs: [
-      "Se ama alguém com Perturbação da Personalidade Borderline, é provável que já lhe tenham dito muito sobre o que está a fazer mal, e muito pouco sobre o que realmente ajuda. Pode ter passado anos a reagir a emergências, a pisar ovos, ou a ser tratado alternadamente como a única pessoa segura e como a origem do problema.",
+      "Se ama alguém com Perturbação da Personalidade Borderline, é provável que já lhe tenham dito muito sobre o que está a fazer mal, e muito pouco sobre o que realmente ajuda. Pode ter passado anos a reagir a emergências, <em>a pisar ovos</em>, ou a ser tratado alternadamente como a única pessoa segura e como a origem do problema.",
       "<strong>Isso não é uma falha de amor nem de esforço.</strong> É o que acontece quando se pede a pessoas que giram uma condição clínica grave sem formação e sem apoio."
     ],
 
     resourcesTitle: "Recursos para Família e Amigos",
     resourcesParagraphs: [
       "Na Avalon damos às famílias recursos práticos para compreenderem melhor aquilo que a pessoa que amam está a viver, e como responder de formas úteis e compassivas.",
-      "Com um enfoque particular no apoio informado pela DBT, as famílias podem aprender competências de validação, comunicação mais saudável, regulação emocional, limites, e de gestão de momentos difíceis. Damos também orientação e psicoeducação a famílias que apoiam alguém com depressão, ansiedade, PSPT ou PSPT Complexa.",
+      "Com um enfoque particular no apoio informado pela DBT, as famílias podem aprender <strong>competências de validação, comunicação mais saudável, regulação emocional, limites</strong>, e de gestão de momentos difíceis. Damos também orientação e psicoeducação a famílias que apoiam alguém com depressão, ansiedade, PSPT ou PSPT Complexa.",
       "O nosso objetivo é ajudar as famílias a sentirem-se <strong>mais informadas, mais apoiadas e melhor preparadas</strong> para caminhar ao lado de quem amam ao longo do processo de recuperação."
     ],
     ctaTitle: "Se é você quem procura ajuda em nome de outra pessoa",
-    ctaBody: "Essa é uma das opções do formulário da lista de espera, e uma forma muito comum de as pessoas chegarem até nós. Não precisa da autorização da pessoa para nos fazer uma pergunta."
+    ctaBody: "Essa é uma das opções do formulário da lista de espera, e uma forma muito comum de as pessoas chegarem até nós. <strong>Não precisa da autorização da pessoa para nos fazer uma pergunta.</strong>"
   },
 
   /* ======================================================================
@@ -648,7 +648,7 @@ window.avalonContent.pt = {
     beliefsParagraphs: [
       "Acreditamos que existem abordagens abrangentes e integrativas para responder ao sofrimento emocional e às perturbações psicológicas.",
       "O nosso trabalho reúne algumas das técnicas de psicoterapia baseadas na evidência mais eficazes, tendo a <strong>Terapia Comportamental Dialética (DBT) como pilar fundamental</strong>, sobretudo no tratamento da Perturbação da Personalidade Borderline.",
-      "A nossa abordagem procura responder à pessoa como um todo, integrando ferramentas terapêuticas que apoiam a regulação emocional, a resiliência, as relações interpessoais e um bem-estar psicológico duradouro."
+      "A nossa abordagem procura responder à <strong>pessoa como um todo</strong>, integrando ferramentas terapêuticas que apoiam a regulação emocional, a resiliência, as relações interpessoais e um bem-estar psicológico duradouro."
     ],
 
     joinTitle: "Junte-se à Nossa Equipa",

@@ -87,7 +87,7 @@ window.avalonContent.en = {
     body: "Avalon is not open yet. The waitlist is how we stay in touch with the people who want a place when it is, and it is the simplest way to start a conversation with us. <strong>It commits you to nothing at all.</strong>",
     button: "Join the waitlist",
     secondary: "Read how admission works",
-    aside: "If you would rather just talk to someone first, say so in the message field. That is a completely normal way to begin."
+    aside: "If you would rather just talk to someone first, say so in the message field. <em>That is a completely normal way to begin.</em>"
   },
 
   /* ---- Footer ----------------------------------------------------------- */
@@ -131,13 +131,13 @@ window.avalonContent.en = {
     errorSelect: "Please choose an option.",
     waitlistConfirmTitle: "Thank you. We have you.",
     waitlistConfirmBody: [
-      "Someone from Avalon will write to you personally. Not an automated sequence, and not a sales call. A real reply from a real person, so you can ask whatever you actually want to ask.",
+      "Someone from Avalon will write to you personally. Not an automated sequence, and not a sales call. <strong>A real reply from a real person</strong>, so you can ask whatever you actually want to ask.",
       "Reaching out is often the hardest part, and you have done it. There is nothing else you need to do today."
     ],
     teamConfirmTitle: "Thank you for getting in touch.",
     teamConfirmBody: [
       "We will come back to you about where things stand with the clinical team and the training pathway.",
-      "Avalon is being built slowly and deliberately, so timelines are honest rather than urgent. We would rather tell you exactly where we are than rush you."
+      "Avalon is being built slowly and deliberately, so timelines are <em>honest rather than urgent</em>. We would rather tell you exactly where we are than rush you."
     ]
   },
 
@@ -167,14 +167,14 @@ window.avalonContent.en = {
     trustOneLabel: "DBT Linehan Board aligned",
     trustOneText: "Clinical training and supervision built to standards aligned with the DBT Linehan Board of Certification.",
     trustTwoLabel: "Evidence-based, and measured",
-    trustTwoText: "One validated protocol, delivered properly, with progress tracked using the same instruments used in DBT research.",
+    trustTwoText: "<strong>One validated protocol, delivered properly</strong>, with progress tracked using the same instruments used in DBT research.",
     trustThreeLabel: "Sintra, Portugal",
     trustThreeText: "An elegant 1887 residence surrounded by historic gardens, nestled in the hills of the Serra de Sintra.",
 
     exploreEyebrow: "Explore Avalon",
     exploreTitle: "Where to start.",
     cardProgramsTitle: "Our Programs",
-    cardProgramsText: "Residential, day hospital and outpatient care, delivered by one team, at the intensity a person needs right now.",
+    cardProgramsText: "Residential, day hospital and outpatient care, delivered by one team, <strong>at the intensity a person needs right now</strong>.",
     cardTreatmentsTitle: "Treatments",
     cardTreatmentsText: "BPD, depression, anxiety and PTSD: what they are, and why specialist treatment changes the outcome.",
     cardSolutionsTitle: "Solutions",
@@ -190,7 +190,7 @@ window.avalonContent.en = {
     aboutEyebrow: "About us",
     aboutTitle: "Built from love, and from knowing how hard it is to face this illness without the right help.",
     aboutBody: [
-      "Avalon was born from lived experience. From understanding how deeply BPD can affect not only the person living with it, but also their family and those who care for them.",
+      "<strong>Avalon was born from lived experience.</strong> From understanding how deeply BPD can affect not only the person living with it, but also their family and those who care for them.",
       "It was created out of love, and from the conviction that <strong>no one should have to navigate that experience without the right support, understanding and care</strong>.",
       "<em>Avalon is the place we wished had existed when we needed it.</em>"
     ],
@@ -212,67 +212,67 @@ window.avalonContent.en = {
     residenceTitle: "Residence",
     residenceLead: "An intensive treatment programme, lived in.",
     residenceParagraphs: [
-      "At Avalon, we offer an intensive treatment programme in which a person temporarily lives in a therapeutic setting while receiving multidisciplinary care.",
-      "Our programme includes defined goals, treatment phases, ongoing assessment, and a plan for returning to daily life. Our common objectives are to stabilise symptoms, ensure safety, improve coping skills, address substance use or medical needs, strengthen daily routines, and involve the person's support system."
+      "At Avalon, we offer an intensive treatment programme in which a person <strong>temporarily lives in a therapeutic setting</strong> while receiving multidisciplinary care.",
+      "Our programme includes defined goals, treatment phases, ongoing assessment, and <strong>a plan for returning to daily life</strong>. Our common objectives are to stabilise symptoms, ensure safety, improve coping skills, address substance use or medical needs, strengthen daily routines, and involve the person's support system."
     ],
     residenceStepsIntro: "Our programme typically includes:",
 
     residenceStepOneTitle: "Assessment",
     residenceStepOneText: "We review each person's psychiatric, medical, social and safety needs.",
     residenceStepTwoTitle: "Stabilisation",
-    residenceStepTwoText: "We develop safety plans, establish daily routines, manage medications when appropriate, and support therapeutic engagement.",
+    residenceStepTwoText: "We develop <strong>safety plans</strong>, establish daily routines, manage medications when appropriate, and support therapeutic engagement.",
     residenceStepThreeTitle: "Active treatment",
     residenceStepThreeText: "We provide individual and group therapy, family work, psychoeducation, and life-skills training.",
     residenceStepFourTitle: "Discharge preparation",
-    residenceStepFourText: "We review progress, develop relapse-prevention strategies, and coordinate housing, work, education and community-care needs.",
+    residenceStepFourText: "We review progress, develop <strong>relapse-prevention strategies</strong>, and coordinate housing, work, education and community-care needs.",
     residenceStepFiveTitle: "Transition and follow-up",
     residenceStepFiveText: "We connect each person with outpatient services and ongoing support.",
 
     residenceClosingParagraphs: [
       "We regularly adjust each treatment plan according to the person's symptoms, risks, preferences and progress.",
-      "At Avalon, we base admission, continued stay, transfer and discharge on clinical need and safety, while respecting each person's dignity, autonomy and active participation in care."
+      "At Avalon, we base admission, continued stay, transfer and discharge on clinical need and safety, while respecting each person's <strong>dignity, autonomy and active participation in care</strong>."
     ],
     dayHospitalTitle: "Day Hospitalisation",
     dayHospitalLead: "Full clinical intensity, evenings at home.",
     dayHospitalParagraphs: [
-      "The Day Programme is an intensive and structured mental health treatment programme in which individuals receive comprehensive therapeutic and clinical support during the day, while continuing to live at home or in their own community.",
-      "The programme provides a structured therapeutic environment without requiring residential admission. It allows individuals to participate in intensive treatment while maintaining their family, educational, professional and social routines whenever clinically appropriate.",
+      "The Day Programme is an intensive and structured mental health treatment programme in which individuals receive comprehensive therapeutic and clinical support during the day, while <strong>continuing to live at home or in their own community</strong>.",
+      "The programme provides a structured therapeutic environment <strong>without requiring residential admission</strong>. It allows individuals to participate in intensive treatment while maintaining their family, educational, professional and social routines whenever clinically appropriate.",
       "The programme typically includes individualised assessment, individual and group psychotherapy, psychiatric follow-up when indicated, skills training, psychoeducation, emotional regulation work, family involvement, and ongoing clinical monitoring.",
-      "The goal is to provide intensive support, strengthen coping and emotional regulation skills, improve daily functioning, and help individuals progressively return to greater independence and stability in their everyday lives."
+      "The goal is to provide intensive support, strengthen coping and emotional regulation skills, improve daily functioning, and help individuals progressively return to <strong>greater independence and stability</strong> in their everyday lives."
     ],
     outpatientTitle: "Outpatient",
     outpatientLead: "The same protocol, at the pace of an ordinary life.",
     outpatientParagraphs: [
-      "Our Outpatient Programme provides personalised mental health care for individuals who do not require residential or day treatment. Clients attend scheduled therapy sessions while continuing to live independently and maintain their daily routines.",
-      "Treatment may include individual psychotherapy, group therapy, and specialised approaches such as DBT and EMDR, according to each person's individual needs and treatment goals."
+      "Our Outpatient Programme provides personalised mental health care for individuals who do not require residential or day treatment. Clients attend scheduled therapy sessions while <strong>continuing to live independently</strong> and maintain their daily routines.",
+      "Treatment may include individual psychotherapy, group therapy, and specialised approaches such as <strong>DBT and EMDR</strong>, according to each person's individual needs and treatment goals."
     ],
 
     activitiesTitle: "Activities",
     activitiesLead: "Treatment is not the only thing that happens here.",
     activitiesParagraphs: [
-      "Alongside clinical treatment, Avalon offers a program of therapeutic and community activities designed to support recovery in daily life."
+      "Alongside clinical treatment, Avalon offers a program of therapeutic and community activities designed to <strong>support recovery in daily life</strong>."
     ],
     therapiesTitle: "Therapies",
     therapiesLead: "What actually happens, week to week.",
     therapiesIntro: "Full DBT is not a single therapy but a set of components that <strong>only work properly together</strong>. Avalon delivers all of them.",
 
     therapyIndividualTitle: "Individual DBT therapy",
-    therapyIndividualText: "Every patient works with an individual DBT therapist. This is the thread that runs through everything else: a structured weekly session where skills stop being abstract and get applied to whatever is actually happening in a person's life this week.",
+    therapyIndividualText: "Every patient works with an individual DBT therapist. This is <em>the thread that runs through everything else</em>: a structured weekly session where skills stop being abstract and get applied to whatever is actually happening in a person's life this week.",
 
     therapySkillsTitle: "DBT skills groups",
-    therapySkillsText: "Skills are taught in a group, in four modules. People often expect the group to be the hard part and find it is the part they miss most afterwards.",
+    therapySkillsText: "Skills are taught in a group, in four modules. People often expect the group to be the hard part and find it is <em>the part they miss most afterwards</em>.",
 
     moduleMindfulnessTitle: "Mindfulness",
     moduleMindfulnessText: "Noticing what is happening, inside and around you, without immediately having to act on it.",
     moduleDistressTitle: "Distress Tolerance",
-    moduleDistressText: "Getting through the worst moments without making them worse: crisis survival skills, and the harder practice of accepting what cannot be changed right now.",
+    moduleDistressText: "Getting through the worst moments <strong>without making them worse</strong>: crisis survival skills, and the harder practice of accepting what cannot be changed right now.",
     moduleEmotionTitle: "Emotion Regulation",
-    moduleEmotionText: "Understanding what emotions are doing, reducing vulnerability to them, and changing the ones that do not fit the facts.",
+    moduleEmotionText: "Understanding what emotions are doing, reducing vulnerability to them, and <strong>changing the ones that do not fit the facts</strong>.",
     moduleInterpersonalTitle: "Interpersonal Effectiveness",
-    moduleInterpersonalText: "Asking for what you need, saying no, and keeping both the relationship and your self-respect intact while you do it.",
+    moduleInterpersonalText: "Asking for what you need, saying no, and keeping both <strong>the relationship and your self-respect</strong> intact while you do it.",
 
     therapyPsychiatryTitle: "Psychiatric consultation",
-    therapyPsychiatryText: "Regular psychiatric review sits alongside the therapy, not above it. Medication is considered where it helps and questioned where it does not.",
+    therapyPsychiatryText: "Regular psychiatric review sits alongside the therapy, <em>not above it</em>. Medication is considered where it helps and questioned where it does not.",
 
     therapyConsultTitle: "The clinical consultation team",
     therapyConsultText: "Once a week, the clinicians treating you meet as a team, not for administration, but to help each other deliver the therapy properly. In DBT this is <em>not</em> optional; the consultation team is a formal part of the treatment model, on the principle that therapists doing this work need support too. We mention it because it is one of the clearest signals of whether a programme is genuinely doing DBT, or borrowing the name."
@@ -339,15 +339,15 @@ window.avalonContent.en = {
     stepOneTitle: "Initial contact",
     stepOneList: [
       "First contact with Avalon.",
-      "Voluntary participation. We admit only people who are willing to engage in the process and to make changes. We do not accept anyone who has been coerced into coming, or who is ambivalent about being here.",
+      "<strong>Voluntary participation.</strong> We admit only people who are willing to engage in the process and to make changes. We do not accept anyone who has been coerced into coming, or who is ambivalent about being here.",
       "Behavioural commitment: an attitude and a willingness to change.",
-      "Admission criteria: no substance use, not in a critical or emergency condition, not requiring hospitalisation, and not being pressed into it by another person.",
+      "Admission criteria: <strong>no substance use, not in a critical or emergency condition</strong>, not requiring hospitalisation, and not being pressed into it by another person.",
       "A preliminary assessment, which leads into the assessment stage below.",
       "The Admissions Coordinator carries out a telephone assessment of the person's medical records and needs, to determine whether Avalon has a programme appropriate for them."
     ],
 
     stepTwoTitle: "Assessment",
-    stepTwoText: "Standardised psychometric testing is required. Where a person does not already have it, Avalon carries out comprehensive psychiatric and neuropsychiatric assessment in an intensive format, in order to arrive at an accurate diagnosis.",
+    stepTwoText: "<strong>Standardised psychometric testing is required.</strong> Where a person does not already have it, Avalon carries out comprehensive psychiatric and neuropsychiatric assessment in an intensive format, in order to arrive at an accurate diagnosis.",
 
     stepThreeTitle: "Treatment programme",
     stepThreeText: "The assessment determines which programme fits:",
@@ -360,7 +360,7 @@ window.avalonContent.en = {
     stepFourText: "Financial, admission and payment requirements are confirmed.",
 
     stepFiveTitle: "Health insurance coverage",
-    stepFiveText: "Medical insurance is required, as regulations oblige. It is not intended as a means of paying for the programme through insurance.",
+    stepFiveText: "<strong>Medical insurance is required</strong>, as regulations oblige. It is not intended as a means of paying for the programme through insurance.",
 
     stepSixTitle: "Admission session and preparing for the stay",
     stepSixText: "A final session covers the practical detail of arriving:",
@@ -375,7 +375,7 @@ window.avalonContent.en = {
     progressTitle: "How Do We Track Progress?",
     progressLead: "Recovery is more than symptom reduction.",
     progressParagraphs: [
-      "At Avalon, progress is understood as meaningful change in how a person feels, functions, relates to others and manages everyday life.",
+      "At Avalon, progress is understood as <strong>meaningful change</strong> in how a person feels, functions, relates to others and manages everyday life.",
       "We combine clinical observation, validated psychological measures, individualised treatment goals and real-life functioning to understand each person's progress over time."
     ],
     progressDomainsIntro: "We look at changes in:",
@@ -391,9 +391,9 @@ window.avalonContent.en = {
     progressAutonomyTitle: "Autonomy",
     progressAutonomyText: "Increasing confidence and ability to make decisions, manage responsibilities and function with greater independence.",
     progressQualityTitle: "Quality of life",
-    progressQualityText: "Ultimately, progress means more than feeling less distressed. It means being increasingly able to build and participate in a life that feels stable, meaningful and worth living.",
+    progressQualityText: "Ultimately, progress means more than feeling less distressed. It means being increasingly able to build and participate in <em>a life that feels stable, meaningful and worth living</em>.",
 
-    progressClosing: "Progress is reviewed throughout the programme using evidence-based clinical measures and regular multidisciplinary assessment, allowing each treatment plan to evolve as the person's needs and goals change.",
+    progressClosing: "Progress is reviewed throughout the programme using <strong>evidence-based clinical measures</strong> and regular multidisciplinary assessment, allowing each treatment plan to evolve as the person's needs and goals change.",
     waitlistTitle: "Join Our Waitlist",
   },
 
@@ -410,7 +410,7 @@ window.avalonContent.en = {
     heroLede: "Written for someone trying to understand what is happening to them, or to someone they love, <em>not</em> for a clinical audience.",
 
     introParagraphs: [
-      "A diagnosis is a useful shorthand, not a description of a person. What follows is meant to be recognisable rather than exhaustive: enough to know whether you are in the right place, and what specialist treatment would actually involve.",
+      "A diagnosis is a useful shorthand, <em>not a description of a person</em>. What follows is meant to be recognisable rather than exhaustive: enough to know whether you are in the right place, and what specialist treatment would actually involve.",
       "None of it is a substitute for an assessment by a clinician who knows your situation."
     ],
 
@@ -419,8 +419,8 @@ window.avalonContent.en = {
     bpdLead: "The condition Avalon was built around.",
     bpdWhatTitle: "What it is",
     bpdWhatParagraphs: [
-      "Borderline Personality Disorder can make emotions feel exceptionally intense and difficult to regulate. It may affect relationships, self-image, impulse control, and the ability to feel emotionally secure. People may experience strong sensitivity to rejection or abandonment, rapid shifts in mood, or periods of overwhelming distress.",
-      "With the right therapeutic support, emotional regulation and interpersonal stability can improve significantly. Evidence-based approaches such as DBT can provide practical tools for creating a more balanced and fulfilling life."
+      "Borderline Personality Disorder can make emotions feel <strong>exceptionally intense and difficult to regulate</strong>. It may affect relationships, self-image, impulse control, and the ability to feel emotionally secure. People may experience strong sensitivity to rejection or abandonment, rapid shifts in mood, or periods of overwhelming distress.",
+      "With the right therapeutic support, <strong>emotional regulation and interpersonal stability can improve significantly</strong>. Evidence-based approaches such as DBT can provide practical tools for creating a more balanced and fulfilling life."
     ],
     bpdSignsTitle: "Common signs",
     bpdSignsList: [
@@ -436,14 +436,14 @@ window.avalonContent.en = {
     ],
     bpdMisdiagnosisTitle: "Why it is so often missed",
     bpdMisdiagnosisParagraphs: [
-      "BPD is frequently misdiagnosed, most often as bipolar disorder, depression, or treatment-resistant anxiety. The reasons are understandable: the mood shifts look similar from the outside, depression genuinely is present much of the time, and the person in front of the clinician is usually there because of a crisis rather than a pattern.",
-      "The cost of getting it wrong is years. Years of treatment aimed at the wrong target, and the reasonable conclusion, on the patient's side, that nothing works and they are the problem.",
+      "BPD is <strong>frequently misdiagnosed</strong>, most often as bipolar disorder, depression, or treatment-resistant anxiety. The reasons are understandable: the mood shifts look similar from the outside, depression genuinely is present much of the time, and the person in front of the clinician is usually there because of a crisis rather than a pattern.",
+      "<strong>The cost of getting it wrong is years.</strong> Years of treatment aimed at the wrong target, and the reasonable conclusion, on the patient's side, that nothing works and they are the problem.",
       "It is worth saying plainly: BPD is <strong>one of the more treatable serious psychiatric conditions</strong>, and the evidence for that is strong. Many people meet criteria at one point in their lives and not at another. The prognosis is genuinely good when the treatment is the right one."
     ],
     bpdWhySpecialistTitle: "Why specialist treatment matters",
     bpdWhySpecialistParagraphs: [
-      "General mental health care is not designed for this. Supportive therapy without structure tends not to help and can make things harder; medication alone has no strong evidence base for BPD itself.",
-      "What does have evidence is structured, protocol-driven therapy, above all DBT, which was developed specifically for this population and has been tested more thoroughly than any alternative.",
+      "<strong>General mental health care is not designed for this.</strong> Supportive therapy without structure tends not to help and can make things harder; medication alone has no strong evidence base for BPD itself.",
+      "What does have evidence is structured, protocol-driven therapy, above all DBT, which was developed specifically for this population and has been <strong>tested more thoroughly than any alternative</strong>.",
       "That is the whole argument for a specialist setting. <em>Not a nicer building:</em> a team trained in one model, delivering it completely, with the supervision structure that keeps it honest."
     ],
     /* PLACEHOLDER: mortality and suicide data appears once, gently, with a
@@ -472,8 +472,8 @@ window.avalonContent.en = {
       "Thoughts of death or of not wanting to be here"
     ],
     depressionWhyParagraphs: [
-      "Depression is very common alongside BPD, and the two are often confused. That matters, because they need different things. Depression that is really part of an emotional regulation disorder responds poorly to antidepressants alone, and well to skills-based treatment.",
-      "At Avalon, depression is treated in its own right where it is the primary problem, and treated as part of the whole picture where it is not."
+      "Depression is very common alongside BPD, and the two are often confused. That matters, because they need different things. Depression that is really part of an emotional regulation disorder responds <strong>poorly to antidepressants alone, and well to skills-based treatment</strong>.",
+      "At Avalon, depression is <strong>treated in its own right</strong> where it is the primary problem, and treated as part of the whole picture where it is not."
     ],
 
     /* ---- Anxiety ---- */
@@ -481,7 +481,7 @@ window.avalonContent.en = {
     anxietyLead: "A threat system that will not stand down.",
     anxietyWhatParagraphs: [
       "Anxiety is the mind and body's response to a perceived threat or uncertainty. When it becomes persistent or overwhelming, it can interfere with sleep, concentration, relationships, and the ability to feel present in everyday life.",
-      "Anxiety may appear as excessive worry, physical tension, restlessness, fear, or a constant sense of being on alert. Therapy can help identify the patterns that maintain anxiety, and develop new ways of responding to uncertainty, stress and difficult emotions."
+      "Anxiety may appear as excessive worry, physical tension, restlessness, fear, or a constant sense of being on alert. Therapy can help identify <strong>the patterns that maintain anxiety</strong>, and develop new ways of responding to uncertainty, stress and difficult emotions."
     ],
     anxietySignsTitle: "Common signs",
     anxietySignsList: [
@@ -494,7 +494,7 @@ window.avalonContent.en = {
     ],
     anxietyWhyParagraphs: [
       "Anxiety responds well to structured, evidence-based treatment, and several of the DBT skill modules, distress tolerance and mindfulness in particular, target exactly the mechanisms that keep it going.",
-      "Where anxiety sits alongside BPD or trauma, treating it in isolation tends to disappoint. Treating it as part of one formulation works better."
+      "Where anxiety sits alongside BPD or trauma, <em>treating it in isolation tends to disappoint</em>. Treating it as part of one formulation works better."
     ],
 
     /* ---- PTSD ---- */
@@ -502,7 +502,7 @@ window.avalonContent.en = {
     ptsdLead: "When the nervous system has not been told it is over.",
     ptsdWhatParagraphs: [
       "PTSD can occur when the nervous system remains affected by an experience that was overwhelming, threatening or traumatic. A person may experience intrusive memories, nightmares, avoidance, heightened alertness, emotional reactivity, or a persistent difficulty feeling safe.",
-      "These responses are often the nervous system's attempt to protect the individual from danger that has already passed. Specialised trauma-informed treatment can help process what happened, and gradually restore a greater sense of safety, connection and control."
+      "These responses are often the nervous system's attempt to protect the individual from <strong>danger that has already passed</strong>. Specialised trauma-informed treatment can help process what happened, and gradually restore a greater sense of safety, connection and control."
     ],
     ptsdSignsTitle: "Common signs",
     ptsdSignsList: [
@@ -512,10 +512,10 @@ window.avalonContent.en = {
       "Feeling permanently on guard, startling easily, unable to settle",
       "Numbness, or a sense of watching yourself from outside",
       "Sleep that does not restore anything",
-      "Beliefs formed at the time that have never been revisited: that it was your fault, that you are damaged, that nowhere is safe"
+      "Beliefs formed at the time that have never been revisited: <em>that it was your fault, that you are damaged, that nowhere is safe</em>"
     ],
     ptsdWhyParagraphs: [
-      "Trauma treatment has to be sequenced properly. Processing traumatic memory before a person has the capacity to tolerate the distress it raises can destabilise them, which is why Avalon treats stabilisation and skills as the ground floor rather than a preliminary.",
+      "<strong>Trauma treatment has to be sequenced properly.</strong> Processing traumatic memory before a person has the capacity to tolerate the distress it raises can destabilise them, which is why Avalon treats stabilisation and skills as the ground floor rather than a preliminary.",
       "Once that ground is there, EMDR and other trauma-focused work can begin, at a pace the person sets."
     ],
     ptsdLink: "Read about EMDR",
@@ -524,9 +524,9 @@ window.avalonContent.en = {
     cptsdTitle: "Complex Trauma and Complex PTSD",
     cptsdLead: "When the adversity was prolonged, and happened inside relationships.",
     cptsdWhatParagraphs: [
-      "Complex trauma often develops in the context of prolonged or repeated experiences of adversity, particularly when they occur within relationships or during important developmental periods.",
+      "Complex trauma often develops in the context of prolonged or repeated experiences of adversity, particularly when they occur <strong>within relationships or during important developmental periods</strong>.",
       "Its effects can extend beyond traumatic memories, influencing emotional regulation, self-worth, relationships, trust, and a person's sense of identity or safety. Complex PTSD may therefore require a broader and more individualised therapeutic approach.",
-      "Treatment can help rebuild internal stability, strengthen relationships, and develop healthier ways of relating to oneself and the world."
+      "Treatment can help <strong>rebuild internal stability</strong>, strengthen relationships, and develop healthier ways of relating to oneself and the world."
     ]
   },
 
@@ -548,15 +548,15 @@ window.avalonContent.en = {
     dbtWhatTitle: "What is DBT?",
     dbtWhatParagraphs: [
       "Dialectical Behaviour Therapy (DBT) is an <strong>evidence-based, structured form of psychotherapy</strong> designed to help people better understand and manage intense emotions, navigate difficult situations, and build healthier relationships. DBT provides practical skills for emotional regulation, distress tolerance, mindfulness and interpersonal effectiveness, helping individuals respond to challenging experiences with greater awareness and flexibility.",
-      "Originally developed for Borderline Personality Disorder (BPD), DBT is now used to support people experiencing a wide range of emotional and behavioural difficulties, including impulsivity, emotional overwhelm, relationship challenges, and difficulty coping with distress. The approach balances acceptance and compassion with meaningful behavioural change, helping individuals develop greater stability, self-understanding and confidence in managing their lives."
+      "<strong>Originally developed for Borderline Personality Disorder (BPD)</strong>, DBT is now used to support people experiencing a wide range of emotional and behavioural difficulties, including impulsivity, emotional overwhelm, relationship challenges, and difficulty coping with distress. The approach balances acceptance and compassion with meaningful behavioural change, helping individuals develop greater stability, self-understanding and confidence in managing their lives."
     ],
     dbtModulesTitle: "The four skill modules",
     dbtModulesIntro: "The skills are the part people carry out of treatment with them.",
     dbtAtAvalonTitle: "DBT at Avalon",
     dbtAtAvalonParagraphs: [
-      "At Avalon, DBT is at the heart of our therapeutic approach. We offer a warm, supportive environment where you can develop practical skills to understand and regulate emotions, strengthen relationships, and navigate everyday challenges with greater confidence.",
-      "Our programmes are led by experienced clinicians with many years of clinical practice, supported by advanced training and internationally recognised certifications. We stay closely connected to current research and evidence-based practice, while providing care that is thoughtful, individualised and grounded in the highest clinical standards.",
-      "You are at the centre of everything we do. Our goal is not only to reduce symptoms, but to help you build greater stability, connection, independence and, ultimately, a life worth living."
+      "At Avalon, <strong>DBT is at the heart of our therapeutic approach</strong>. We offer a warm, supportive environment where you can develop practical skills to understand and regulate emotions, strengthen relationships, and navigate everyday challenges with greater confidence.",
+      "Our programmes are led by experienced clinicians with many years of clinical practice, supported by advanced training and <strong>internationally recognised certifications</strong>. We stay closely connected to current research and evidence-based practice, while providing care that is thoughtful, individualised and grounded in the highest clinical standards.",
+      "You are at the centre of everything we do. Our goal is not only to reduce symptoms, but to help you build greater stability, connection, independence and, ultimately, <em>a life worth living</em>."
     ],
     dbtLink: "See the therapies in the programme",
 
@@ -565,7 +565,7 @@ window.avalonContent.en = {
     emdrLead: "Eye Movement Desensitisation and Reprocessing.",
     emdrWhatTitle: "What is EMDR?",
     emdrWhatParagraphs: [
-      "Eye Movement Desensitisation and Reprocessing (EMDR) is a trauma-focused psychotherapy that helps people process distressing or traumatic experiences that may continue to influence how they feel, think, relate to others, or respond in the present. The goal is to help process the memory in a way that reduces its emotional intensity and allows it to become less disruptive in everyday life.",
+      "Eye Movement Desensitisation and Reprocessing (EMDR) is a trauma-focused psychotherapy that helps people process distressing or traumatic experiences that may continue to influence how they feel, think, relate to others, or respond in the present. The goal is to help process the memory in a way that <strong>reduces its emotional intensity</strong> and allows it to become less disruptive in everyday life.",
       "EMDR has its <strong>strongest research support</strong> for the treatment of Post-Traumatic Stress Disorder (PTSD) and is recommended by major international clinical guidelines. It can help reduce symptoms such as intrusive memories, emotional distress, avoidance, hyperarousal and other trauma-related reactions.",
       "EMDR may also be integrated into the treatment of Complex PTSD (C-PTSD), Borderline Personality Disorder (BPD), depression and anxiety, particularly when traumatic or adverse experiences, distressing memories or specific triggers contribute to current difficulties.",
       "In BPD, EMDR can complement treatments such as DBT by addressing traumatic or adverse experiences that may continue to contribute to emotional dysregulation, negative beliefs about oneself, interpersonal difficulties and heightened emotional responses. While DBT focuses on developing skills to manage emotions and behaviours in the present, EMDR can help process experiences from the past that may continue to influence those responses.",
@@ -573,21 +573,21 @@ window.avalonContent.en = {
     ],
     emdrSafetyTitle: "Safety and readiness",
     emdrSafetyParagraphs: [
-      "EMDR is introduced when clinically appropriate and at a pace that considers each person's readiness, emotional stability and ability to manage distress. Preparation, ongoing assessment and appropriate support are incorporated throughout the process, to help ensure that trauma processing is conducted safely and responsibly."
+      "EMDR is introduced when clinically appropriate and at a pace that considers each person's <strong>readiness, emotional stability and ability to manage distress</strong>. Preparation, ongoing assessment and appropriate support are incorporated throughout the process, to help ensure that trauma processing is conducted safely and responsibly."
     ],
     emdrAtAvalonTitle: "EMDR at Avalon",
     emdrAtAvalonParagraphs: [
-      "At Avalon, EMDR is delivered with sensitivity, experience and respect for each person's individual story. Trauma work requires trust and safety, which is why we carefully consider each person's readiness, needs and emotional stability throughout the process.",
-      "Our EMDR clinicians bring many years of experience, advanced training and internationally recognised certifications, while remaining committed to current research, evidence-based practice and the highest standards of clinical care.",
-      "EMDR is thoughtfully integrated into each person's treatment when clinically appropriate, and at a safe and manageable pace. Our aim is to help reduce the impact of painful experiences from the past, and to support each person in moving toward a more stable, connected and fulfilling life."
+      "At Avalon, EMDR is delivered with sensitivity, experience and respect for each person's individual story. <strong>Trauma work requires trust and safety</strong>, which is why we carefully consider each person's readiness, needs and emotional stability throughout the process.",
+      "Our EMDR clinicians bring many years of experience, advanced training and <strong>internationally recognised certifications</strong>, while remaining committed to current research, evidence-based practice and the highest standards of clinical care.",
+      "EMDR is thoughtfully integrated into each person's treatment when clinically appropriate, and at a safe and manageable pace. Our aim is to help reduce the impact of painful experiences from the past, and to support each person in moving toward <strong>a more stable, connected and fulfilling life</strong>."
     ],
     /* ---- Mindfulness ---- */
     mindfulnessTitle: "Mindfulness at Avalon",
     mindfulnessLead: "Yoga, meditation and workshops, alongside the clinical work.",
     mindfulnessParagraphs: [
-      "Mindfulness is a core therapeutic practice that helps develop present-moment awareness, emotional regulation, and the ability to respond to difficult experiences with greater stability. At Avalon it is an important support for DBT, and can also help build the grounding, awareness and emotional readiness needed when preparing for EMDR.",
+      "Mindfulness is a core therapeutic practice that helps develop <strong>present-moment awareness</strong>, emotional regulation, and the ability to respond to difficult experiences with greater stability. At Avalon it is an important support for DBT, and can also help build the grounding, awareness and emotional readiness needed when preparing for EMDR.",
       "It therefore has two lives here. It is one of the four DBT skill modules, taught clinically and practised as a skill. It is also a quieter, non-clinical layer running alongside the programme.",
-      "That second layer is not treatment and is not presented as treatment. It exists because a day made only of therapy is a hard day, and because attention, breath and movement are useful things to practise somewhere other than a consulting room. It is optional, and it is meant to be."
+      "That second layer <em>is not treatment and is not presented as treatment</em>. It exists because a day made only of therapy is a hard day, and because attention, breath and movement are useful things to practise somewhere other than a consulting room. <em>It is optional, and it is meant to be.</em>"
     ],
     offersTitle: "Our offers",
     offersIntro: "The non-clinical layer, as it currently stands.",
@@ -611,18 +611,18 @@ window.avalonContent.en = {
     heroLede: "We know how difficult it can be when someone you care about is struggling with a mental health condition.",
 
     introParagraphs: [
-      "If you love someone with BPD, you have probably been told a great deal about what you are doing wrong, and very little about what actually helps. You may have spent years reacting to emergencies, walking on eggshells, or being cast alternately as the only safe person and the source of the problem.",
+      "If you love someone with BPD, you have probably been told a great deal about what you are doing wrong, and very little about what actually helps. You may have spent years reacting to emergencies, <em>walking on eggshells</em>, or being cast alternately as the only safe person and the source of the problem.",
       "<strong>That is not a failure of love or of effort.</strong> It is what happens when people are asked to manage a serious clinical condition with no training and no support."
     ],
 
     resourcesTitle: "Resources for Family and Friends",
     resourcesParagraphs: [
       "At Avalon we provide families with practical resources to better understand what their loved one is experiencing, and how to respond in helpful and compassionate ways.",
-      "With a particular focus on DBT-informed support, families can learn skills for validation, healthier communication, emotional regulation, boundaries, and navigating difficult moments. We also provide guidance and psychoeducation for families supporting someone experiencing depression, anxiety, PTSD or Complex PTSD.",
+      "With a particular focus on DBT-informed support, families can learn skills for <strong>validation, healthier communication, emotional regulation, boundaries</strong>, and navigating difficult moments. We also provide guidance and psychoeducation for families supporting someone experiencing depression, anxiety, PTSD or Complex PTSD.",
       "Our goal is to help families feel <strong>more informed, supported and better prepared</strong> to walk alongside their loved one through the recovery process."
     ],
     ctaTitle: "If you are the one looking for help on someone else's behalf",
-    ctaBody: "That is one of the options on the waitlist form, and a very common way for people to reach us. You do not need the person's permission to ask us a question."
+    ctaBody: "That is one of the options on the waitlist form, and a very common way for people to reach us. <strong>You do not need the person's permission to ask us a question.</strong>"
   },
 
   /* ======================================================================
@@ -642,7 +642,7 @@ window.avalonContent.en = {
     beliefsParagraphs: [
       "We believe that there are comprehensive, integrative approaches to addressing emotional distress and psychological disorders.",
       "Our work brings together some of the most effective evidence-based psychotherapy techniques, with <strong>Dialectical Behaviour Therapy (DBT) as a fundamental pillar</strong>, particularly in the treatment of Borderline Personality Disorder (BPD).",
-      "Our approach seeks to address the person as a whole, integrating therapeutic tools that support emotional regulation, resilience, interpersonal relationships, and lasting psychological well-being."
+      "Our approach seeks to address <strong>the person as a whole</strong>, integrating therapeutic tools that support emotional regulation, resilience, interpersonal relationships, and lasting psychological well-being."
     ],
 
     joinTitle: "Join Our Team",
