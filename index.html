@@ -60,6 +60,11 @@
         <div class="sectionShell">
           <span class="eyebrow" data-hero-item data-i18n="home.heroEyebrow"></span>
 
+          <!-- On wide screens the opening statement below is moved in here,
+               above the buttons. On phones it stays where it is written, under
+               the photograph. See initOpeningStatement() in js/avalon.js. -->
+          <div data-opening-slot></div>
+
           <div class="buttonRow" data-hero-item>
             <a class="buttonPrimary" href="admissions.html#waitlist" data-i18n="nav.waitlist"></a>
             <a class="buttonGhost" href="#whatAvalonIs" data-i18n="home.introLink"></a>
@@ -74,12 +79,13 @@
 
     <!-- ================================================================
          OPENING STATEMENT
-         Sits between the photograph and the first section, so the headline
-         is read on parchment rather than over the image.
+         Written here, under the photograph, which is where it stays on a
+         phone. On wide screens the script lifts it into the hero instead,
+         and hides this section.
          ================================================================ -->
-    <section class="sectionBlock">
+    <section class="sectionBlock" data-opening-home>
       <div class="sectionShell">
-        <div class="shellMid revealItem shellFlush">
+        <div class="shellMid revealItem shellFlush" data-opening-statement>
           <h1 class="displayLg openingTitle" data-i18n="home.heroTitle"></h1>
           <div class="stackMd marginTopLg" data-i18n-paras="home.heroParagraphs"
                data-i18n-class="leadText"></div>

@@ -387,6 +387,62 @@
     window.addEventListener("resize", scan);
   }
 
+  /* ======================================================================
+     OPENING STATEMENT
+
+     Wide screens read it inside the hero, above the buttons. Phones read it
+     under the photograph, where the hero has no room for it. It is one
+     element moved between two places rather than two copies, so the page
+     keeps exactly one h1 and the copy has a single source.
+
+     This runs before animations.js, so whichever position it lands in at
+     load is the one the entrance animation sees.
+     ====================================================================== */
+
+  function initOpeningStatement() {
+    var statement = document.querySelector("[data-opening-statement]");
+    var slot = document.querySelector("[data-opening-slot]");
+    var section = document.querySelector("[data-opening-home]");
+    if (!statement || !slot || !section) return;
+
+    var wide = window.matchMedia("(min-width: 900px)");
+    var home = statement.parentElement;
+    var firstRun = true;
+
+    function place() {
+      var intoHero = wide.matches;
+      var alreadyThere = intoHero
+        ? statement.parentElement === slot
+        : statement.parentElement === home;
+      if (!alreadyThere) {
+        statement.classList.toggle("openingInHero", intoHero);
+        if (intoHero) {
+          statement.setAttribute("data-hero-item", "");
+        } else {
+          statement.removeAttribute("data-hero-item");
+        }
+        (intoHero ? slot : home).appendChild(statement);
+        section.hidden = intoHero;
+      }
+
+      /* The reveal class is only safe on the very first placement. After
+         animations.js has run, nothing would ever un-hide it again, so a
+         later move would leave it invisible. */
+      if (firstRun) {
+        statement.classList.toggle("revealItem", !intoHero);
+        firstRun = false;
+      } else {
+        statement.classList.remove("revealItem");
+        statement.style.opacity = "1";
+        statement.style.transform = "none";
+      }
+    }
+
+    place();
+    if (wide.addEventListener) wide.addEventListener("change", place);
+    else if (wide.addListener) wide.addListener(place);
+  }
+
   function init() {
     initHeader();
     initMobileMenu();
@@ -394,6 +450,7 @@
     initCurrentNav();
     initForms();
     initFooterYear();
+    initOpeningStatement();
     initOverflowDebug();
   }
 

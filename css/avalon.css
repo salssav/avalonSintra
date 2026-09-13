@@ -726,6 +726,23 @@ body.menuOpen .menuButton span:nth-child(3) { transform: translateY(-6px) rotate
   line-height: 1.25;
 }
 
+/* The same block once the script has moved it into the hero on wide screens.
+   It has to share a screen with the eyebrow, the buttons and the scroll hint,
+   so it runs tighter than it does on the page, and it sits on photography
+   rather than parchment. */
+.openingInHero { max-width: 62ch; margin-bottom: var(--spaceLg); }
+.openingInHero .openingTitle {
+  font-size: clamp(1.3rem, 2.1vw, 1.95rem);
+  max-width: 32ch;
+  color: var(--colorOnDark);
+}
+.openingInHero .leadText {
+  font-size: 0.98rem;
+  color: rgba(241,236,225,0.9);
+  max-width: 58ch;
+}
+.openingInHero .stackMd { margin-top: var(--spaceMd); }
+
 .heroLede {
   font-size: var(--sizeLead);
   line-height: var(--leadingLead);
