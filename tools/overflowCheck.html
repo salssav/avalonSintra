@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Avalon — horizontal overflow check</title>
+<!--
+  LOCAL TOOL, not part of the site. Nothing links to it.
+  Run `npm run dev`, then open http://localhost:5173/tools/overflowCheck.html
+
+  Loads every page in a phone-width iframe and reports any element whose box
+  extends past the right edge of the viewport. Those are what cause the page
+  to slide sideways on a phone.
+-->
+<style>
+  body { font: 13px/1.5 ui-monospace, Menlo, Consolas, monospace;
+         background: #14120f; color: #eae4d8; margin: 0; padding: 16px; }
+  h1 { font-size: 14px; margin: 0 0 12px; }
+  .page { margin-bottom: 14px; border-left: 3px solid #4C5F52; padding-left: 10px; }
+  .page h2 { font-size: 13px; margin: 0 0 4px; color: #C6BCAA; }
+  .ok { color: #7fbf8f; }
+  .bad { color: #e08a72; }
+  .row { white-space: pre-wrap; }
+  iframe { position: absolute; left: -9999px; width: 360px; height: 780px; border: 0; }
+</style>
+</head>
+<body>
+<h1>Horizontal overflow at 360px wide</h1>
+<div id="out">Measuring…</div>
+
+<script>
+var PAGES = ["index.html", "house.html", "programs.html", "treatments.html",
+             "solutions.html", "family.html", "admissions.html", "about.html"];
+var VIEWPORT = 360;
+var out = document.getElementById("out");
+out.textContent = "";
+
+function describe(el) {
+  var name = el.tagName.toLowerCase();
+  if (el.id) name += "#" + el.id;
+  if (el.className && typeof el.className === "string") {
+    name += "." + el.className.trim().split(/\s+/).slice(0, 3).join(".");
+  }
+  return name;
+}
+
+function check(page) {
+  return new Promise(function (resolve) {
+    var frame = document.createElement("iframe");
+    frame.src = "../" + page;
+    document.body.appendChild(frame);
+    frame.addEventListener("load", function () {
+      setTimeout(function () {
+        var doc = frame.contentDocument;
+        var docWidth = doc.documentElement.scrollWidth;
+        var offenders = [];
+        var all = doc.body.querySelectorAll("*");
+        for (var i = 0; i < all.length; i++) {
+          var el = all[i];
+          var r = el.getBoundingClientRect();
+          if (r.width === 0 || r.height === 0) continue;
+          var right = Math.round(r.right);
+          var left = Math.round(r.left);
+          if (right > VIEWPORT + 1 || left < -1) {
+            offenders.push({ el: describe(el), left: left, right: right,
+                             w: Math.round(r.width) });
+          }
+        }
+        /* Only report the outermost offenders: a wide parent drags its whole
+           subtree past the edge, and listing all of it buries the cause. */
+        var trimmed = offenders.filter(function (o, idx) {
+          return idx === 0 || o.left !== offenders[idx - 1].left ||
+                 o.right !== offenders[idx - 1].right;
+        }).slice(0, 12);
+        resolve({ page: page, docWidth: docWidth, offenders: trimmed,
+                  total: offenders.length });
+        frame.remove();
+      }, 1200);
+    });
+  });
+}
+
+(function run(i) {
+  if (i >= PAGES.length) return;
+  check(PAGES[i]).then(function (res) {
+    var div = document.createElement("div");
+    div.className = "page";
+    var overflow = res.docWidth - VIEWPORT;
+    var head = "<h2>" + res.page + " — document width " + res.docWidth + "px " +
+      (overflow > 1
+        ? "<span class='bad'>(" + overflow + "px too wide, " + res.total + " elements past the edge)</span>"
+        : "<span class='ok'>(fits)</span>") + "</h2>";
+    var body = res.offenders.map(function (o) {
+      return "<div class='row'>   " + o.el + "  left:" + o.left + " right:" + o.right + " w:" + o.w + "</div>";
+    }).join("");
+    div.innerHTML = head + body;
+    out.appendChild(div);
+    run(i + 1);
+  });
+})(0);
+</script>
+</body>
+</html>

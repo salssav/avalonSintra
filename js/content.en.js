@@ -170,8 +170,6 @@ window.avalonContent.en = {
 
     exploreEyebrow: "Explore Avalon",
     exploreTitle: "Where to start.",
-    exploreLead: "Six ways into the same place. Take whichever one matches the question you actually came here with.",
-
     cardProgramsTitle: "Our Programs",
     cardProgramsText: "Residential, day hospital and outpatient care, delivered by one team, at the intensity a person needs right now.",
     cardTreatmentsTitle: "Treatments",

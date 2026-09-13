@@ -741,8 +741,23 @@ body.menuOpen .menuButton span:nth-child(3) { transform: translateY(-6px) rotate
   gap: var(--spaceLg);
   overflow-x: auto;
   scrollbar-width: none;
+  /* A sideways swipe here must not chain into the page behind it. */
+  overscroll-behavior-x: contain;
 }
 .subNavInner::-webkit-scrollbar { display: none; }
+
+/* On a phone this strip is sticky and holds more links than fit, so it became
+   a sideways scroller sitting over the page for the whole scroll. Wrapping
+   costs one extra line and removes the horizontal movement entirely. */
+@media (max-width: 699px) {
+  .subNavInner {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    gap: var(--spaceSm) var(--spaceMd);
+    padding-block: var(--space2xs);
+  }
+  .subNavLink { padding-block: var(--spaceXs); }
+}
 
 .subNavLink {
   flex: none;
@@ -771,6 +786,18 @@ body.menuOpen .menuButton span:nth-child(3) { transform: translateY(-6px) rotate
   gap: clamp(1rem, 2vw, 1.75rem);
 }
 .cardGridTwo { grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); }
+
+/* Picture tiles go two across on a phone. One per row made each card a full
+   screen tall and buried everything below them. Only tile grids do this:
+   the text-heavy card grids elsewhere stay one column, where they are
+   readable. */
+@media (max-width: 699px) {
+  .cardGridTiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cardGridTiles .teaserCard { min-height: 240px; }
+  .cardGridTiles .teaserCardBody { padding: var(--spaceSm); }
+  .cardGridTiles .teaserCardTitle { font-size: 1.05rem; }
+  .cardGridTiles .teaserCardText { display: none; }
+}
 
 /* ---- Teaser card: photograph, title, one line, quiet link ---------------- */
 .teaserCard {

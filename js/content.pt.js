@@ -175,8 +175,6 @@ window.avalonContent.pt = {
 
     exploreEyebrow: "Explorar a Avalon",
     exploreTitle: "Por onde começar.",
-    exploreLead: "Seis entradas para o mesmo lugar. Escolha a que corresponde à pergunta com que realmente veio até aqui.",
-
     cardProgramsTitle: "Os Nossos Programas",
     cardProgramsText: "Cuidados residenciais, em hospital de dia e em ambulatório, prestados por uma só equipa, na intensidade de que a pessoa precisa neste momento.",
     cardTreatmentsTitle: "Tratamentos",
