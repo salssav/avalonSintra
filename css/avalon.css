@@ -704,6 +704,13 @@ body.menuOpen .menuButton span:nth-child(3) { transform: translateY(-6px) rotate
   object-position: center 55%;
 }
 
+/* The home photograph is a tall portrait of the town with the castle on the
+   ridge above it. At the shared 55% the crop landed on the rooftops and cut
+   the hill off entirely, so this one is framed higher up the image. Scoped to
+   .heroSection, which only the home page uses: the other pages' heroes are
+   .pageHero and keep the default. */
+.heroSection .heroMedia img { object-position: center 30%; }
+
 .heroScrim { position: absolute; inset: 0; z-index: 1; background: var(--scrimHero); }
 
 .heroContent {
