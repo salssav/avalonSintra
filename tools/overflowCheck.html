@@ -8,31 +8,34 @@
   Run `npm run dev`, then open http://localhost:5173/tools/overflowCheck.html
 
   Loads every page in a phone-width iframe and reports any element whose box
-  extends past the right edge of the viewport. Those are what cause the page
-  to slide sideways on a phone.
+  extends past the right edge, or any page whose document is wider than the
+  viewport. It measures at several scroll positions, because the parallax and
+  scroll-reveal transforms only move things once scrolling has started, and
+  again with the mobile menu open.
 -->
 <style>
-  body { font: 13px/1.5 ui-monospace, Menlo, Consolas, monospace;
+  body { font: 12px/1.5 ui-monospace, Menlo, Consolas, monospace;
          background: #14120f; color: #eae4d8; margin: 0; padding: 16px; }
-  h1 { font-size: 14px; margin: 0 0 12px; }
-  .page { margin-bottom: 14px; border-left: 3px solid #4C5F52; padding-left: 10px; }
-  .page h2 { font-size: 13px; margin: 0 0 4px; color: #C6BCAA; }
+  h1 { font-size: 14px; margin: 0 0 4px; }
+  .sub { color: #8d8578; margin: 0 0 14px; }
+  .page { margin-bottom: 12px; border-left: 3px solid #4C5F52; padding-left: 10px; }
+  .page h2 { font-size: 12px; margin: 0 0 3px; color: #C6BCAA; font-weight: normal; }
   .ok { color: #7fbf8f; }
   .bad { color: #e08a72; }
-  .row { white-space: pre-wrap; }
-  iframe { position: absolute; left: -9999px; width: 360px; height: 780px; border: 0; }
+  .row { white-space: pre-wrap; color: #e08a72; }
+  iframe { position: absolute; left: -9999px; width: 360px; height: 760px; border: 0; }
 </style>
 </head>
 <body>
-<h1>Horizontal overflow at 360px wide</h1>
-<div id="out">Measuring…</div>
+<h1>Horizontal overflow at 360px</h1>
+<p class="sub">Measured at four scroll positions per page, plus once with the menu open.</p>
+<div id="out"></div>
 
 <script>
 var PAGES = ["index.html", "house.html", "programs.html", "treatments.html",
              "solutions.html", "family.html", "admissions.html", "about.html"];
 var VIEWPORT = 360;
 var out = document.getElementById("out");
-out.textContent = "";
 
 function describe(el) {
   var name = el.tagName.toLowerCase();
@@ -43,38 +46,55 @@ function describe(el) {
   return name;
 }
 
+function measure(win, doc) {
+  var worst = [];
+  var all = doc.body.querySelectorAll("*");
+  for (var i = 0; i < all.length; i++) {
+    var el = all[i];
+    var r = el.getBoundingClientRect();
+    if (r.width === 0 || r.height === 0) continue;
+    if (getComputedStyle(el).position === "fixed") continue;
+    if (Math.round(r.right) > VIEWPORT + 1 || Math.round(r.left) < -1) {
+      worst.push(describe(el) + "  left:" + Math.round(r.left) +
+                 " right:" + Math.round(r.right));
+    }
+  }
+  return { docWidth: doc.documentElement.scrollWidth, offenders: worst };
+}
+
 function check(page) {
   return new Promise(function (resolve) {
     var frame = document.createElement("iframe");
     frame.src = "../" + page;
     document.body.appendChild(frame);
     frame.addEventListener("load", function () {
-      setTimeout(function () {
-        var doc = frame.contentDocument;
-        var docWidth = doc.documentElement.scrollWidth;
-        var offenders = [];
-        var all = doc.body.querySelectorAll("*");
-        for (var i = 0; i < all.length; i++) {
-          var el = all[i];
-          var r = el.getBoundingClientRect();
-          if (r.width === 0 || r.height === 0) continue;
-          var right = Math.round(r.right);
-          var left = Math.round(r.left);
-          if (right > VIEWPORT + 1 || left < -1) {
-            offenders.push({ el: describe(el), left: left, right: right,
-                             w: Math.round(r.width) });
-          }
+      var win = frame.contentWindow, doc = frame.contentDocument;
+      var results = [];
+      var stops = [0, 600, 1600, 3200];
+      var step = 0;
+
+      function next() {
+        if (step < stops.length) {
+          win.scrollTo(0, stops[step]);
+          setTimeout(function () {
+            var m = measure(win, doc);
+            results.push({ at: "scroll " + stops[step], m: m });
+            step++;
+            next();
+          }, 700);
+          return;
         }
-        /* Only report the outermost offenders: a wide parent drags its whole
-           subtree past the edge, and listing all of it buries the cause. */
-        var trimmed = offenders.filter(function (o, idx) {
-          return idx === 0 || o.left !== offenders[idx - 1].left ||
-                 o.right !== offenders[idx - 1].right;
-        }).slice(0, 12);
-        resolve({ page: page, docWidth: docWidth, offenders: trimmed,
-                  total: offenders.length });
-        frame.remove();
-      }, 1200);
+        /* Once more with the drawer open. */
+        win.scrollTo(0, 0);
+        var button = doc.querySelector(".menuButton");
+        if (button) button.click();
+        setTimeout(function () {
+          results.push({ at: "menu open", m: measure(win, doc) });
+          resolve({ page: page, results: results });
+          frame.remove();
+        }, 700);
+      }
+      setTimeout(next, 1000);
     });
   });
 }
@@ -82,17 +102,20 @@ function check(page) {
 (function run(i) {
   if (i >= PAGES.length) return;
   check(PAGES[i]).then(function (res) {
+    var widest = 0, lines = [];
+    res.results.forEach(function (r) {
+      if (r.m.docWidth > widest) widest = r.m.docWidth;
+      r.m.offenders.slice(0, 4).forEach(function (o) {
+        lines.push("<div class='row'>   [" + r.at + "] " + o + "</div>");
+      });
+    });
+    var over = widest - VIEWPORT;
     var div = document.createElement("div");
     div.className = "page";
-    var overflow = res.docWidth - VIEWPORT;
-    var head = "<h2>" + res.page + " — document width " + res.docWidth + "px " +
-      (overflow > 1
-        ? "<span class='bad'>(" + overflow + "px too wide, " + res.total + " elements past the edge)</span>"
-        : "<span class='ok'>(fits)</span>") + "</h2>";
-    var body = res.offenders.map(function (o) {
-      return "<div class='row'>   " + o.el + "  left:" + o.left + " right:" + o.right + " w:" + o.w + "</div>";
-    }).join("");
-    div.innerHTML = head + body;
+    div.innerHTML = "<h2>" + res.page + " — widest document " + widest + "px " +
+      (over > 1 || lines.length
+        ? "<span class='bad'>(" + (over > 1 ? over + "px too wide" : "elements past edge") + ")</span>"
+        : "<span class='ok'>(fits at every stop)</span>") + "</h2>" + lines.join("");
     out.appendChild(div);
     run(i + 1);
   });

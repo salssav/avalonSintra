@@ -136,8 +136,12 @@
 
   /* ---- Z-index ledger --------------------------------------------------- */
   --zSubNav:     40;
+  /* The drawer sits BELOW the header on purpose. The burger animates into a
+     close cross, so the header has to stay on top of the open drawer or there
+     is no way out of the menu. The drawer reserves header height in its top
+     padding so nothing is hidden underneath. */
+  --zMobileMenu: 90;
   --zHeader:     100;
-  --zMobileMenu: 110;
   --zSkipLink:   120;
 }
 
@@ -173,6 +177,13 @@ body {
 }
 
 body.menuOpen { overflow: hidden; }
+
+/* Nothing should ever be able to scroll the page sideways. `clip` rather than
+   `hidden` on purpose: `hidden` would turn the body into a scroll container
+   and break every `position: sticky` inside it, the sub-nav included. This is
+   a guard, not the fix for a known overflow: the sub-nav that was causing it
+   is handled where it is defined. */
+body { overflow-x: clip; }
 
 img { max-width: 100%; display: block; height: auto; }
 
@@ -567,6 +578,9 @@ em { font-style: italic; }
   flex: none;
   flex-direction: column;
   justify-content: center;
+  /* The bars are narrower than the 40px hit area, so they have to be centred
+     explicitly or they sit flush against its left edge. */
+  align-items: center;
   gap: 5px;
   width: 40px; height: 40px;
   padding: 0;
@@ -588,6 +602,12 @@ em { font-style: italic; }
 .siteHeader.isScrolled .menuButton span,
 .siteHeader.headerOnLight .menuButton span { background-color: var(--colorInk); }
 
+/* With the drawer open, the header floats over parchment rather than over
+   photography, so everything still in it has to switch to ink or it goes
+   invisible. */
+body.menuOpen .brandWordmark { color: var(--colorInk); }
+body.menuOpen .langOption { color: var(--colorInk); }
+body.menuOpen .langToggle { border-color: var(--colorStone); }
 body.menuOpen .menuButton span { background-color: var(--colorInk); }
 body.menuOpen .menuButton span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 body.menuOpen .menuButton span:nth-child(2) { opacity: 0; }
@@ -858,6 +878,11 @@ body.menuOpen .menuButton span:nth-child(3) { transform: translateY(-6px) rotate
 }
 .bandParchmentDeep .plainCard { border-color: transparent; }
 .plainCardTitle { font-size: var(--sizeDisplaySm); font-weight: var(--weightDisplayHeavy); }
+
+/* The programs page is a long list of sections and sub-sections, so its
+   headings carry the weight that tells them apart from the body copy. */
+body[data-page="programs"] h2,
+body[data-page="programs"] h3 { font-weight: var(--weightDisplayHeavy); }
 .plainCardIndex {
   font-family: var(--fontDisplay);
   font-size: var(--sizeSmall);
